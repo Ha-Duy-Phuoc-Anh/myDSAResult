@@ -116,9 +116,80 @@ def removeLast(head: Node) -> Node:
 #### C++
 ---
 ``` cpp
+// Hàm xóa nút nhất định trong danh sách liên kết
+Node* remove(Node* head, int pos) {
+    // Điều kiện này cho biết vị trí có ít hơn 1 không, nếu có thì báo lỗi
+    if (pos < 1) {
+        std::println("ERROR 001: Position out of range");
+        return head;
+    }
 
+    // Điều kiện này cho biết vị trí có phải một hay không, nếu phải thì thao tác giống với xóa nút vào đầu danh sách liên kết
+    if (pos == 1) {
+        head = removeFirst(head);
+        return head;
+    }
+
+    // Tạo một nút tạm để duyệt đến vị trí mà người dùng đưa ra
+    Node* curr = head;
+    for (int i = 1; curr != nullptr && i < pos - 1; i++) curr = curr->next;
+
+    // Kiểm tra nếu curr là NULL thì báo lỗi, vì NULL chỉ xuất hiện ở cuối cùng danh sách
+    if (curr == nullptr || curr->next == nullptr) {
+        std::println("ERROR 001: Position out of range");
+        return head;
+    }
+
+    // Tạo một nút tạm để xóa nút
+    Node* temp = curr->next;
+
+    // Chuyển con trỏ của nút tạm đến nút tiếp theo
+    curr->next = temp->next;
+
+    // Xóa nút tạm
+    delete temp;
+
+    // Trả về danh sách đã sửa
+    return head;
+}
 ```
 #### Python
 ---
 ``` python
+# Hàm xóa nút nhất định trong danh sách liên kết
+def remove(head: Node, pos: int) -> Node:
+    # Điều kiện này cho biết vị trí có ít hơn 1 không, nếu có thì báo lỗi
+    if pos < 1:
+        print("ERROR 001: Position out of range")
+        return head
+
+    # Điều kiện này cho biết vị trí có phải một hay không, nếu phải thì thao tác giống với xóa nút vào đầu danh sách liên kết
+    if pos == 1:
+        head = removeFirst(head)
+        return head
+
+    # Tạo một nút tạm để duyệt đến vị trí mà người dùng đưa ra
+    curr: Node = head
+    if curr is not None:
+        for i in range(1, pos - 1):
+            if curr is None:
+                break
+            curr = curr.next
+
+    # Kiểm tra nếu curr là NULL thì báo lỗi, vì NULL chỉ xuất hiện ở cuối cùng danh sách
+    if curr is None or curr.next is None:
+        print("ERROR 001: Position out of range")
+        return head
+
+    # Tạo một nút tạm để xóa nút
+    temp: Node = curr.next
+
+    # Chuyển con trỏ của nút tạm đến nút tiếp theo
+    curr.next = temp.next
+
+    # Xóa nút tạm
+    del temp
+
+    # Trả về danh sách đã sửa
+    return head
 ```

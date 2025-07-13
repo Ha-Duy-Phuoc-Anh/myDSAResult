@@ -189,7 +189,27 @@ Node* remove(Node* head, int pos) {
         return head;
     }
 
-    
+    // Tạo một nút tạm để duyệt đến vị trí mà người dùng đưa ra
+    Node* curr = head;
+    for (int i = 1; curr != nullptr && i < pos - 1; i++) curr = curr->next;
+
+    // Kiểm tra nếu curr là NULL thì báo lỗi, vì NULL chỉ xuất hiện ở cuối cùng danh sách
+    if (curr == nullptr || curr->next == nullptr) {
+        std::println("ERROR 001: Position out of range");
+        return head;
+    }
+
+    // Tạo một nút tạm để xóa nút
+    Node* temp = curr->next;
+
+    // Chuyển con trỏ của nút tạm đến nút tiếp theo
+    curr->next = temp->next;
+
+    // Xóa nút tạm
+    delete temp;
+
+    // Trả về danh sách đã sửa
+    return head;
 }
 
 void deleteList(Node* &head) {
@@ -222,6 +242,8 @@ int main() {
     head = removeFirst(head);
     head = removeLast(head);
     head = removeLast(head);
+    head = remove(head, 2);
+    head = remove(head, 5);
 
     std::print("After delete: ");
     tranversalList(head);
