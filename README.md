@@ -11,7 +11,17 @@ To run the code, open Developer command prompt for VS 2022 and run these command
 cd "YourPath\Of\File"
 cd Test
 cd "test<number>"
-nmake
+```
+
+Then run these specific type of run:
+
+**Python**:
+``` bash
+nmake run_py
+```
+**C++**:
+``` bash
+nmake run_cpp
 ```
 
 Now everything is ready for you!
