@@ -19,10 +19,11 @@ void tranversalList(Node* head) {
 
     // Lặp nếu nút tiếp theo không phải là NULL
     while (temp != nullptr) {
-        std::println("{} ", temp->data);    // In ra cửa sổ dòng lệnh
+        std::print("{} ", temp->data);    // In ra cửa sổ dòng lệnh
         temp = temp->next;                  // Trỏ đến nút tiếp theo
     }
-    
+
+    std::println();  // Xuống dòng sau khi in xong    
 }
 
 // Hàm tìm kiếm trong danh sách liên kết đơn
