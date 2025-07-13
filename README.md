@@ -1,5 +1,5 @@
 # Welcome everyone!
-This repository was made for storing my study results and share to everyone
+This repository was made for storing my study results and share to everyone, all resource are not translated to English because i am lazy, also i focus to study DSA as fast as possible, so i will every learning files to Vietnamese as my default language, these text are English because there will be someone who aren't Vietnamese will understand
 
 # How to use
 Install this repository by GIT clone (if you have git) or direct install in github.
