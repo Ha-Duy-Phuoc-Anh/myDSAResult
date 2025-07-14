@@ -13,3 +13,4 @@
 - [[Số lượng nút trong danh sách liên kết đơn]]
 - [[Chèn nút trong Danh sách liên kết đơn]]
 - [[Xóa nút trong Danh sách liên kết đơn]]
+- [[Sửa đổi Danh sách liên kết đơn]]

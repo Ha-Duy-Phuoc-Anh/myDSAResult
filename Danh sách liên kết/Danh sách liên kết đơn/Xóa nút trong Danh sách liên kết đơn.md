@@ -193,3 +193,6 @@ def remove(head: Node, pos: int) -> Node:
     # Trả về danh sách đã sửa
     return head
 ```
+---
+**Bài trước**: [[Chèn nút trong Danh sách liên kết đơn]]
+**Bài sau**: [[Sửa đổi Danh sách liên kết đơn]]
