@@ -17,9 +17,9 @@ struct Node {
 };
 
 // Hàm duyệt qua danh sách liên kết đôi (từ phía sau)
-void tranversal(Node* tail) {
+void tranversal(Node* head) {
     // Tạo một biến tạm từ điểm cuổi cùng
-    Node* curr = tail;
+    Node* curr = head;
 
     // Lắp nếu curr không phải là NULL
     while (curr != nullptr) {
@@ -27,15 +27,15 @@ void tranversal(Node* tail) {
         std::print("{} ", curr->data);
 
         // Di chuyển về nút đằng sau
-        curr = curr->prev;
+        curr = curr->next;
     }
     std::println();
 }
 
 // Hàm tìm kích thước của danh sách liên kết đôi (từ dưới đi lên)
-int getLength(Node* tail) {
+int getLength(Node* head) {
     // Tạo một biến tạm từ điểm cuổi cùng
-    Node* curr = tail;
+    Node* curr = head;
 
     // Tạo một biến tạm lưu trữ kết quả
     int length = 0;
@@ -43,11 +43,25 @@ int getLength(Node* tail) {
     // Lặp cho tới khi curr là NULL
     while (curr != nullptr) {
         length++;           // Cập nhật độ dài
-        curr = curr->prev;  // Di chuyển đến nút trước đó
+        curr = curr->next;  // Di chuyển đến nút trước đó
     }
     return length;  // Trả về độ dài của danh sách
 }
 
+// Hàm thêm nút ở đầu danh sách liên kết đôi
+Node* insert(Node* head, int data) {
+    // Tạo một nút mới
+    Node* newNode = new Node(data);
+
+    // Gán newNode trở thành HEAD mới của danh sách liên kết đơn
+    newNode->next = head;
+
+    // Nếu HEAD không phải là NULL thì gán con trỏ PREV của head vào newNode
+    if (head != nullptr) head->prev = newNode;
+
+    // Trả về danh sách liên kết đã được chỉnh sửa
+    return newNode;
+}
 
 void deleteList(Node* head) {
     Node* current = head;
@@ -61,59 +75,20 @@ void deleteList(Node* head) {
 
 int main() {
     // Khởi tạo danh sách liên kết đơn
-    Node* first = new Node(1);
-    Node* second = new Node(2);
-    Node* third = new Node(3);
+    Node* head = new Node(1);
+    head->next = new Node(2);
+    head->next->prev = head;
+    head->next->next = new Node(3);
+    head->next->next->prev = head->next;
 
-    first->next = second;
-    second->next = third;
-    third->prev = second;
-    second->prev = first;
+    head = insert(head, 2);
+    head = insert(head, 3);
 
-    tranversal(third);
-    std::println("The list length: {}", getLength(third));
-
-    //head = insert(head, 2);
-    //head = insert(head, 3);
-    //head = insert(head, 4);
-    //head = insert(head, 5);
-    //head = append(head, 2);
-    //head = append(head, 3);
-    //head = append(head, 4);
-    //head = append(head, 5);
-    //head = add(head, 2, 10);
-    //head = add(head, 10, 20);
-
-    //// Duyệt danh sách liên kết đơn
-    //std::print("Before delete: ");
-    //tranversalList(head);
-
-    //head = removeFirst(head);
-    //head = removeFirst(head);
-    //head = removeLast(head);
-    //head = removeLast(head);
-    //head = remove(head, 2);
-    //head = remove(head, 5);
-
-    //std::print("After delete: ");
-    //tranversalList(head);
-
-    //head = reverse(head);
-    //std::print("After reverse: ");
-    //tranversalList(head);
-
-    //head = modify(head);
-    //std::print("After modified: ");
-    //tranversalList(head);
-
-    //// Test
-    //std::println("{} ", (search(head, 12) ? "TRUE" : "FALSE"));
-    //std::println("{} ", (search(head, 3) ? "TRUE" : "FALSE"));
-
-    //std::println("{}", count(head));
+    tranversal(head);
+    std::println("The list length: {}", getLength(head));
 
     // Giải phóng bộ nhớ
-    deleteList(first);
+    deleteList(head);
 
     return 0;
 }

@@ -29,4 +29,4 @@ class Node:
 ```
 ---
 **Bài trước:** [[Danh sách liên kết đôi]]
-**Bài sau**: [[Duyệt qua danh sách liên kết đôi]]
+**Bài sau**: [[Duyệt qua Danh sách liên kết đôi]]

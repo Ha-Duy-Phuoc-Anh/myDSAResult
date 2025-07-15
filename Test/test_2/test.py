@@ -7,9 +7,9 @@ class Node:
 		self.next: Node = None  # Gán con trỏ tới nút tiếp theo là NULL
 
 # Hàm duyệt qua danh sách liên kết đôi (từ phía sau)
-def tranversal(tail: Node) -> Node:
+def tranversal(head: Node) -> Node:
     # Tạo một biến tạm từ điểm cuổi cùng
-    curr: Node = tail
+    curr: Node = head
 
     # Lắp nếu curr không phải là NULL
     while curr is not None:
@@ -17,20 +17,51 @@ def tranversal(tail: Node) -> Node:
         print(f"{curr.data} ", end="")
 
         # Di chuyển về nút đằng sau
-        curr = curr.prev
+        curr = curr.next
+
+# Hàm tìm kích thước của danh sách liên kết đôi (từ dưới đi lên)
+def getLength(head: Node) -> int:
+    # Tạo một biến tạm từ điểm cuổi cùng
+    curr: Node = head
+
+    # Tạo một biến tạm lưu trữ kết quả
+    length: int = 0
+
+    # Lặp cho tới khi curr là NULL
+    while curr is not None:
+        length += 1;        # Cập nhật độ dài
+        curr = curr.next;   # Di chuyển đến nút trước đó
+    
+    return length;  # Trả về độ dài của danh sách
+
+# Hàm thêm nút ở đầu danh sách liên kết đôi
+def insert(head: Node, data: int) -> Node:
+    # Tạo một nút mới
+    newNode: Node = Node(data)
+
+    # Gán newNode trở thành HEAD mới của danh sách liên kết đơn
+    newNode.next = head
+
+    # Nếu HEAD không phải là NULL thì gán con trỏ PREV của head vào newNode
+    if head is not None:
+        head.prev = newNode
+
+    # Trả về danh sách liên kết đã được chỉnh sửa
+    return newNode
     
 
-first: Node = Node(1)
-second: Node = Node(2)
-third: Node = Node(3)
+# Khởi tạo danh sách liên kết đơn
+head: Node = Node(1)
+head.next = Node(2)
+head.next.prev = head
+head.next.next = Node(3)
+head.next.next.prev = head.next
 
-first.next = second
-second.next = third
+head = insert(head, 2)
+head = insert(head, 3)
 
-third.prev = second
-second.prev = first
-
-tranversal(third)
+tranversal(head)
+print("\nLength of the list:", getLength(head))
 
 # head = insert(head, 2)
 # head = insert(head, 3)

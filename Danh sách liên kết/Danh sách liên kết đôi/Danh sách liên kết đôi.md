@@ -7,5 +7,5 @@
 
 **Xem tiếp**:
 - [[Danh sách liên kết/Danh sách liên kết đôi/Khai báo kiểu dữ liệu|Khai báo kiểu dữ liệu]]
-- [[Duyệt qua danh sách liên kết đôi]]
+- [[Duyệt qua Danh sách liên kết đôi]]
 - [[Kích thước của Danh sách liên kết đôi]]
