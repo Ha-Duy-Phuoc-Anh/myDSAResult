@@ -99,5 +99,81 @@ Node* modify(Node* head) {
 #### Python
 ---
 ``` python
+# Hàm đảo ngược danh sách liên kết
+def reverse(head: Node) -> Node:
+    prev: Node = None
+    curr: Node = head
+    next: Node = None
 
+    while curr is not None:
+        next = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next
+
+    return prev
+
+# Hàm sửa đổi Danh sách liên kết đơn
+def modify(head: Node) -> Node:
+    # Kiểm tra nếu nút tiếp theo là NULL thì thoát
+    if not head.next:
+        return head
+
+    # Khởi tạo các nút hỗ trợ thao tác
+    slow: Node = head
+    fast: Node = head
+    mid = None
+
+    # Tìm nút ở giữa Danh sách liên kết
+    while fast.next and fast.next.next:
+        slow = slow.next
+        fast = fast.next.next
+    mid = slow
+
+    # Tạo nút đánh dấu điểm đảo ngược
+    reverseList: Node = mid.next
+
+    # Tách danh sahcs liên kết thành hai nửa
+    mid.next = None
+
+    # Tạo hai nút tạm để duyệt danh sách
+    curr1: Node = head
+    curr2: Node = reverseList
+    firstHalf: list[int] = []
+    secondHalf: list[int] = []
+
+    # Sao chép hết dữ liệu của hai nút vào hai vector
+    while curr1:
+        firstHalf.append(curr1.data)
+        curr1 = curr1.next
+
+    while curr2:
+        secondHalf.append(curr2.data)
+        curr2 = curr2.next
+
+    # Chỉnh sửa dữ liệu của vector
+    for i in range(len(secondHalf)):
+        x: int = firstHalf[i]
+        firstHalf[i] = secondHalf[i] - x
+        secondHalf[i] = x
+
+    # Chuyẻn Vector trở về Danh sách liên kết
+    curr1 = head
+    for value in firstHalf:
+        curr1.data = value
+        curr1 = curr1.next
+
+    curr2 = reverseList
+    for value in secondHalf:
+        curr2.data = value
+        curr2 = curr2.next
+
+    # Đảo ngược hai nửa và ráp lại hai danh sách liên kết
+    mid.next = reverse(reverseList)
+
+    # Trả về danh sách đã được chỉnh sửa
+    return head
 ```
+---
+**Bài trước**: [[Xóa nút trong Danh sách liên kết đơn]]
+**Bài sau**: [[Đảo ngược Danh sách liên kết đơn]]

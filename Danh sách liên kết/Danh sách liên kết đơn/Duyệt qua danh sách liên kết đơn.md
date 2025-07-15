@@ -63,5 +63,5 @@ def tranversalList(head: Node) -> None:
 </div>
 
 ---
-**Bài trước**: [[Khai báo kiểu dữ liệu]]
+**Bài trước**: [[Danh sách liên kết/Danh sách liên kết đơn/Khai báo kiểu dữ liệu]]
 **Bài sau**: [[Số lượng nút trong danh sách liên kết đơn]]

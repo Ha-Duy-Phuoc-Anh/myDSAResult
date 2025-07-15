@@ -3,7 +3,6 @@ Một số thao tác cơ bản của Danh sách liên kết đơn:
 	- <i><u>Chèn ở đầu</u></i>
 	- <i><u>Chèn ở cuối</u></i>
 	- <i><u>Chèn ở vị trí nhất định</u></i>
-	- <i><u>Chèn ở giữa hai nút</u></i>
 - **Xóa**: Xóa có ba loại thao tác
 	- <i><u>Xóa ở đầu</u></i>
 	- <i><u>Xóa ở cuối</u></i>

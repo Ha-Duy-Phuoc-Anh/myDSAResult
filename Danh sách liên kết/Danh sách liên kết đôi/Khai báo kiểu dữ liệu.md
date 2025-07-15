@@ -3,6 +3,9 @@
 ``` cpp
 // Khởi tạo kiểu dữ liệu của Danh sách liên kết đơn
 struct Node {
+	// Con trỏ đến nút trước đó
+	Node* prev;
+
 	// Phần dữ liệu của Danh sách liên kết đơn
 	int data;
 	
@@ -10,7 +13,7 @@ struct Node {
 	Node* next;
 
 	// Hàm khởi tạo Nút
-	Node(int value) : data(value), next(nullptr) {};
+	Node(int value) : prev(nullptr), data(value), next(nullptr) {};
 }
 ```
 ### Python
@@ -20,9 +23,10 @@ struct Node {
 class Node:
 	# Hàm khởi tạo nút mới trong Danh sách liên kết
 	def __init__(self, data):
+		self.prev: int = None   # Gán con trỏ tới nút trước là NULL
 		self.data: int = data   # Gán dữ liệu vào nút
 		self.next: Node = None  # Gán con trỏ tới nút tiếp theo là NULL
 ```
 ---
-**Bài trước:** [[Danh sách liên kết đơn]]
-**Bài sau**: [[Duyệt qua danh sách liên kết đơn]]
+**Bài trước:** [[Danh sách liên kết đôi]]
+**Bài sau**: [[Duyệt qua danh sách liên kết đôi]]

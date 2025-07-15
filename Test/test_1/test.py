@@ -199,16 +199,18 @@ def remove(head: Node, pos: int) -> Node:
 
 # Hàm đảo ngược danh sách liên kết
 def reverse(head: Node) -> Node:
-    prev: Node = None
-    curr: Node = head
-    next: Node = None
+    prev: Node = None	# Tạo nút đứng trước
+    curr: Node = head	# Tạo nút hiện tại
+    next: Node = None	# Tạo nút kiểm soát con trỏ
 
+	# Lặp khi curr không phải là NULL
     while curr is not None:
-        next = curr.next
-        curr.next = prev
-        prev = curr
-        curr = next
+        next = curr.next	# Chuyển next đến con trỏ tiếp theo của danh sách liên kết
+        curr.next = prev	# Chuyển con trỏ tiếp theo của danh sách liên kết đến nút đứng trước
+        prev = curr			# Nối con trỏ nút đứng trước đến nút hiện tại
+        curr = next			# Nối nút hiện tại đến nút kiểm soát con trỏ
 
+	# Trả về danh sách đã được chỉnh sửa
     return prev
 
 # Hàm sửa đổi Danh sách liên kết đơn

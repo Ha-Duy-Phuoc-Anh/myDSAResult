@@ -2,8 +2,7 @@ Một số thao tác cơ bản của Danh sách liên kết đôi:
 - **Chèn**: Chèn có bốn loại thao tác
 	- <i><u>Chèn ở đầu</u></i>
 	- <i><u>Chèn ở cuối</u></i>
-	- <i><u>Chèn ở trước một nút được đưa ra</u></i>
-	- <i><u>Chèn ở sau một nút được đưa ra</u></i>
+	- <i><u>Chèn ở vị trí nhất định</u></i>
 - **Xóa**: Xóa có ba loại thao tác
 	- <i><u>Xóa ở đầu</u></i>
 	- <i><u>Xóa ở cuối</u></i>

@@ -7,10 +7,11 @@
 
 ---
 **Xem tiếp**:
-- [[Khai báo kiểu dữ liệu]] 
+- [[Danh sách liên kết/Danh sách liên kết đơn/Khai báo kiểu dữ liệu]] 
 - [[Duyệt qua danh sách liên kết đơn]]
 - [[Tìm kiếm trong Danh sách liên kết đơn]]
 - [[Số lượng nút trong danh sách liên kết đơn]]
 - [[Chèn nút trong Danh sách liên kết đơn]]
 - [[Xóa nút trong Danh sách liên kết đơn]]
 - [[Sửa đổi Danh sách liên kết đơn]]
+- [[Đảo ngược Danh sách liên kết đơn]]
