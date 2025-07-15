@@ -10,7 +10,7 @@ To run the code, open Developer command prompt for VS 2022 and run these command
 ``` bash
 cd "YourPath\Of\File"
 cd Test
-cd "test<number>"
+cd "test_<number>"
 ```
 
 Then run these specific type of run:
