@@ -61,4 +61,4 @@ def search(head: Node, target: int) -> bool:
 ```
 ---
 **Bài trước**: [[Duyệt qua danh sách liên kết đơn]]
-**Bài sau**: [[Chèn trong danh sách liên kết đơn]]
+**Bài sau**: [[Chèn nút trong Danh sách liên kết đôi]]

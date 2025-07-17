@@ -63,6 +63,112 @@ Node* insert(Node* head, int data) {
     return newNode;
 }
 
+// Hàm thêm nút ở cuối danh sách liên kết đôi
+Node* append(Node* head, int data) {
+    // Tạo nút với dữ liệu được cho
+    Node* newNode = new Node(data);
+
+    // Kiểm tra nếu danh sách rỗng thì làm giống như thêm nút ở đầu danh sách liên kết đôi
+    if (head == nullptr) {
+        head = newNode;
+    }
+    else {
+        // Nếu không thì tạo một nút tạm duyệt đến cuối danh sách
+        Node* last = head;
+        while (last->next != nullptr) last = last->next;
+
+        // Thêm nút vào danh sách và nối con trỏ
+        last->next = newNode;
+        newNode->prev = last;
+    }
+
+    // Trả về danh sách đã được chỉnh sửa
+    return head;
+}
+
+// Hàm thêm nút ở một vị trí cụ thể trong Danh sách liên kết
+Node* add(Node* head, int data, int pos) {
+    // Tạo một nút với dữ liệu được cho
+    Node* newNode = new Node(data);
+
+    // Thêm nút ở đầu danh sách liên kết
+    if (pos == 1) {
+        head = insert(head, data);
+        return head;
+    }
+
+    // Tạo môt nút tạm để duyệt đến vị trí của người dùng
+    Node* temp = head;
+    for (int i = 1; i < pos - 1 && temp != nullptr; i++) temp = temp->next;
+
+    // Kiểm tra nếu vị trí mà người dùng đưa ra vượt kích thước của danh sách
+    if (temp == nullptr) {
+        std::println("ERROR 001: Index out of range");
+        delete newNode; // Giải phóng bộ nhớ
+        return head;
+    }
+
+    // Nếu không thì thêm nút và nối con trỏ vào danh sách
+    newNode->prev = temp;
+    newNode->next = temp->next;
+    temp->next = newNode;
+
+    // Nếu nút được thêm vào không phải là nút cuối cùng, thì nối con trỏ PREV mà nút trước đó
+    if (newNode->next != nullptr) newNode->next->prev = newNode;
+
+    // Trả về Danh sách liên kết đã được chỉnh sửa
+    return head;
+}
+
+// Hàm xóa nút đầu của Danh sách liên kết
+Node* removeFirst(Node* head) {
+    // Nếu danh sách rỗng thì báo lỗi và trả về null
+    if (head == nullptr) {
+        std::println("ERROR 002: List is empty");
+        return nullptr;
+    }
+
+    // Lưu trữ nút vào biến tạm để xóa sau
+    Node* temp = head;
+
+    // Chuyển con trỏ đến nút tiếp theo
+    head = head->next;
+
+    // Xóa nút và trả về danh sách đã chỉnh sửa
+    delete temp;
+    return head;
+}
+
+// Hàm xóa nút cuối của danh sách liên kết
+Node* removeLast(Node* head) {
+    // Kiểm tra nếu danh sách rỗng
+    if (head == nullptr) {
+        std::println("ERROR 002: List is empty");
+        return nullptr;
+    }
+
+    // Kiểm tra nếu chỉ có một nút trong danh sách
+    if (head->next == nullptr) {
+        delete head; // Xóa nút duy nhất
+        return nullptr; // Danh sách trở thành rỗng
+    }
+
+    // Duyệt tới nút cuối cùng
+    Node* last = head;
+    while (last->next != nullptr) {
+        last = last->next;
+    }
+
+    // Chuyển con trỏ của nút trước để bỏ nút sau để tránh lỗi không thể truy cập bộ nhớ
+    last->prev->next = nullptr;
+
+    // Xóa nút cuối cùng (đây là nút 'last')
+    delete last;
+
+    // Trả về head của danh sách đã được chỉnh sửa
+    return head;
+}
+
 void deleteList(Node* head) {
     Node* current = head;
     while (current != nullptr) {
@@ -76,15 +182,31 @@ void deleteList(Node* head) {
 int main() {
     // Khởi tạo danh sách liên kết đơn
     Node* head = new Node(1);
-    head->next = new Node(2);
-    head->next->prev = head;
-    head->next->next = new Node(3);
-    head->next->next->prev = head->next;
 
     head = insert(head, 2);
     head = insert(head, 3);
+    head = insert(head, 4);
+    head = insert(head, 5);
 
+    head = append(head, 2);
+    head = append(head, 3);
+    head = append(head, 4);
+    head = append(head, 5);
+
+    head = add(head, 10, 2);
+    head = add(head, 10, 10);
+
+    std::print("Before delete: ");
     tranversal(head);
+    
+    head = removeFirst(head);
+    head = removeFirst(head);
+    head = removeLast(head);
+    head = removeLast(head);
+
+    std::print("After delete: ");
+    tranversal(head);
+    
     std::println("The list length: {}", getLength(head));
 
     // Giải phóng bộ nhớ

@@ -11,4 +11,4 @@
 - [[Các thao tác của Danh sách liên kết đôi]]
 - [[Các thao tác của Danh sách liên kết vòng tròn]]
 - [[So sánh giữa Danh sách liên kết và Mảng]]
-- [[So sánh giữa Danh sách liên kết và Mảng]]
+- [[Tầm quan trọng của Danh sách liên kết]]

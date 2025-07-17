@@ -9,3 +9,5 @@
 - [[Danh sách liên kết/Danh sách liên kết đôi/Khai báo kiểu dữ liệu|Khai báo kiểu dữ liệu]]
 - [[Duyệt qua Danh sách liên kết đôi]]
 - [[Kích thước của Danh sách liên kết đôi]]
+- [[Chèn nút trong Danh sách liên kết đôi]]
+- [[Xóa nút trong Danh sách liên kết đôi]]
