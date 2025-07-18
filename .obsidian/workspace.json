@@ -8,17 +8,27 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4f63e1d42b594c7f",
+            "id": "ecabbc746af30d7f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Danh sách liên kết/Danh sách liên kết đôi/Xóa nút trong Danh sách liên kết đôi.md",
+                "file": "Danh sách liên kết/Danh sách liên kết đơn/Chèn nút trong Danh sách liên kết đơn.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Xóa nút trong Danh sách liên kết đôi"
+              "title": "Chèn nút trong Danh sách liên kết đơn"
+            }
+          },
+          {
+            "id": "4f63e1d42b594c7f",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Xem biểu đồ"
             }
           }
         ]
@@ -33,7 +43,6 @@
       {
         "id": "27976a4ea7da48e5",
         "type": "tabs",
-        "dimension": 71.26436781609196,
         "children": [
           {
             "id": "0e5dd752a84a2da0",
@@ -73,23 +82,6 @@
               "state": {},
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
-            }
-          }
-        ]
-      },
-      {
-        "id": "57506e6452e8b453",
-        "type": "tabs",
-        "dimension": 28.735632183908045,
-        "children": [
-          {
-            "id": "94cc5ee373442807",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Xem biểu đồ"
             }
           }
         ]
@@ -186,40 +178,42 @@
       "command-palette:Mở khay lệnh": false
     }
   },
-  "active": "4f63e1d42b594c7f",
+  "active": "0e5dd752a84a2da0",
   "lastOpenFiles": [
-    "Test/test_2/cpp/test_cpp.ilk",
+    "Test/test_3/cpp/test.cpp",
+    "Test/test_3/test.py",
+    "Test/test_3/Makefile",
+    "Test/test_3/cpp",
+    "Test/test_3",
+    "Test/test_2 copy/test.py",
+    "Test/test_2 copy/Makefile",
+    "Test/test_2 copy/cpp/test.cpp",
+    "Test/test_2 copy/cpp",
+    "Test/test_2 copy",
+    "Danh sách liên kết/Danh sách liên kết đôi/So sánh giữa Danh sách liên kết đơn và Danh sách liên kết đôi.md",
     "Danh sách liên kết/Danh sách liên kết đôi/Xóa nút trong Danh sách liên kết đôi.md",
+    "Danh sách liên kết/Danh sách liên kết đôi/Danh sách liên kết đôi.md",
+    "Danh sách liên kết/Danh sách liên kết đôi/Duyệt qua Danh sách liên kết đôi.md",
+    "Danh sách liên kết/Danh sách liên kết đơn/Danh sách liên kết đơn.md",
+    "Test/test_2/cpp/test_cpp.pdb",
     "Danh sách liên kết/Danh sách liên kết đơn/Xóa nút trong Danh sách liên kết đơn.md",
     "Danh sách liên kết/Danh sách liên kết đơn/Đảo ngược Danh sách liên kết đơn.md",
-    "Danh sách liên kết/Danh sách liên kết đôi/Danh sách liên kết đôi.md",
     "Danh sách liên kết/Danh sách liên kết đôi/Khai báo kiểu dữ liệu.md",
     "Danh sách liên kết/Danh sách liên kết đôi/Kích thước của Danh sách liên kết đôi.md",
     "Danh sách liên kết/Danh sách liên kết đơn/Tìm kiếm trong Danh sách liên kết đơn.md",
     "Danh sách liên kết/Danh sách liên kết đơn/Chèn nút trong Danh sách liên kết đơn.md",
-    "Danh sách liên kết/Danh sách liên kết đơn/Danh sách liên kết đơn.md",
     "Danh sách liên kết/Danh sách liên kết đơn/Duyệt qua danh sách liên kết đơn.md",
     "Danh sách liên kết/Danh sách liên kết đơn/Sửa đổi Danh sách liên kết đơn.md",
     "Danh sách liên kết/Danh sách liên kết đơn/Số lượng nút trong danh sách liên kết đơn.md",
     "Danh sách liên kết/Danh sách liên kết đôi/Chèn nút trong Danh sách liên kết đôi.md",
-    "Danh sách liên kết/Danh sách liên kết đôi/Duyệt qua Danh sách liên kết đôi.md",
     "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Tầm quan trọng của Danh sách liên kết.md",
     "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Một số thuật ngữ cơ bản của danh sách liên kết.md",
     "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Giới thiệu về danh sách liên kết.md",
     "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đơn.md",
     "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết vòng tròn.md",
     "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đôi.md",
-    "Test/test_2/cpp/test_cpp.pdb",
-    "Test/test_2/cpp/test_cpp.exe",
-    "Test/test_2/cpp/test.obj",
-    "Test/test_2/cpp/vc140.pdb",
     "Danh sách liên kết/Danh sách liên kết đơn/Khai báo kiểu dữ liệu.md",
     "Danh sách liên kết/IMG_3.png",
-    "Test/test_2/cpp/test.cpp",
-    "Test/test_2/test.py",
-    "Test/test_2/Makefile",
-    "Test/test_2/cpp",
-    "Test/test_2",
     "README.md",
     "Danh sách liên kết/Danh sách liên kết đơn/Chèn trong danh sách liên kết đơn.md",
     "Cấu trúc dữ liệu và giải thuật.md",
@@ -227,7 +221,6 @@
     "algorithms.png",
     "Danh sách liên kết/IMG_2.png",
     "Danh sách liên kết/GIF_1.gif",
-    "Theme Demo.md",
     "Danh sách liên kết/IMG_1.png"
   ]
 }

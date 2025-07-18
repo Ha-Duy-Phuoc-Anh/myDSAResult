@@ -11,3 +11,4 @@
 - [[Kích thước của Danh sách liên kết đôi]]
 - [[Chèn nút trong Danh sách liên kết đôi]]
 - [[Xóa nút trong Danh sách liên kết đôi]]
+- [[So sánh giữa Danh sách liên kết đơn và Danh sách liên kết đôi]]
