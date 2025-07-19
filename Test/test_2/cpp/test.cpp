@@ -1,4 +1,4 @@
-#include <print>
+#include <iostream>
 #include <vector>
 
 // Khởi tạo kiểu dữ liệu của Danh sách liên kết đơn
@@ -24,12 +24,12 @@ void tranversal(Node* head) {
     // Lắp nếu curr không phải là NULL
     while (curr != nullptr) {
         // In dữ liệu
-        std::print("{} ", curr->data);
+        std::cout << curr->data << " ";
 
         // Di chuyển về nút đằng sau
         curr = curr->next;
     }
-    std::println();
+    std::cout << std::endl;
 }
 
 // Hàm tìm kích thước của danh sách liên kết đôi (từ dưới đi lên)
@@ -103,7 +103,7 @@ Node* add(Node* head, int data, int pos) {
 
     // Kiểm tra nếu vị trí mà người dùng đưa ra vượt kích thước của danh sách
     if (temp == nullptr) {
-        std::println("ERROR 001: Index out of range");
+        std::cout << "ERROR 001: Index out of range" << std::endl;
         delete newNode; // Giải phóng bộ nhớ
         return head;
     }
@@ -124,7 +124,7 @@ Node* add(Node* head, int data, int pos) {
 Node* removeFirst(Node* head) {
     // Nếu danh sách rỗng thì báo lỗi và trả về null
     if (head == nullptr) {
-        std::println("ERROR 002: List is empty");
+        std::cout << "ERROR 002: List is empty" << std::endl;
         return nullptr;
     }
 
@@ -133,6 +133,9 @@ Node* removeFirst(Node* head) {
 
     // Chuyển con trỏ đến nút tiếp theo
     head = head->next;
+
+    // Nếu HEAD không phải là NULL thì gán con trỏ PREV của head vào null
+    if (head != nullptr) head->prev = nullptr;
 
     // Xóa nút và trả về danh sách đã chỉnh sửa
     delete temp;
@@ -143,7 +146,7 @@ Node* removeFirst(Node* head) {
 Node* removeLast(Node* head) {
     // Kiểm tra nếu danh sách rỗng
     if (head == nullptr) {
-        std::println("ERROR 002: List is empty");
+        std::cout << "ERROR 002: List is empty" << std::endl;
         return nullptr;
     }
 
@@ -173,7 +176,7 @@ Node* removeLast(Node* head) {
 Node* remove(Node* head, int pos) {
     // Kiểm tra nếu danh sách rỗng thì báo lỗi
     if (head == nullptr) {
-        std::println("ERROR 002: List is empty");
+        std::cout << "ERROR 002: List is empty" << std::endl;
         return nullptr;
     }
 
@@ -183,7 +186,7 @@ Node* remove(Node* head, int pos) {
 
     // Nếu như vị trí người dùng đưa ra vượt quá kích thước danh sách
     if (curr == nullptr) {
-        std::println("ERROR 001: Index out of range");
+        std::cout << "ERROR 001: Index out of range" << std::endl;
         return head;
     }
 
@@ -226,7 +229,7 @@ int main() {
     head = add(head, 10, 2);
     head = add(head, 10, 10);
 
-    std::print("Before delete: ");
+    std::cout << "Before delete: ";
     tranversal(head);
     
     head = removeFirst(head);
@@ -236,10 +239,10 @@ int main() {
     head = remove(head, 2);
     head = remove(head, 5);
 
-    std::print("After delete: ");
+    std::cout << "After delete: ";
     tranversal(head);
     
-    std::println("The list length: {}", getLength(head));
+    std::cout << "The list length: " << getLength(head) << std::endl;
 
     // Giải phóng bộ nhớ
     deleteList(head);

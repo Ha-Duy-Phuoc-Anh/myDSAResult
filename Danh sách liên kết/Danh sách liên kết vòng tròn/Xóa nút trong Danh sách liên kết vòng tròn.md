@@ -127,10 +127,94 @@ def delete(last: Node) -> Node:
 #### C++
 ---
 ``` cpp
+// Xóa nút ở nút cụ thể trong danh sách liên kết
+Node* delAt(Node* last, int val) {
+    // Kiểm tra nếu Danh sách rỗng
+    if (last == nullptr) {
+        std::cout << "ERROR 002: Nothing to delete\n";
+        return nullptr;
+    }
 
+    // Tạo nút duyệt đến vị trí người dùng đưa ra
+    Node* tmp = last->next;
+    Node* prev = last;
+
+    // Nếu nút để xóa là nút duy nhất trong danh sách
+    if (tmp == last && prev->data == val) {
+        delete tmp;
+        last = nullptr;
+        return last;
+    }
+
+    // Nêu nút để xóa là nút đâu tiên
+    if (tmp->data == val) {
+        last->next = tmp->next;
+        delete tmp;
+        return last;
+    }
+
+    // Duyệt tới nút dự định sẽ xóa
+    while (tmp != last && tmp->data != val) {
+        prev = tmp;
+        tmp = tmp->next;
+    }
+
+    // Nếu nút bị xóa được tìm thấy
+    if (tmp->data == val) {
+        prev->next = tmp->next;
+        if (tmp == last) {
+            last = prev;
+        }
+        delete tmp;
+    }
+    else {
+        std::cout << "Node with data " << val << " was not found\n";
+    }
+    return last;
+}
 ```
 #### Python
 ---
 ``` python
 
+# Xóa nút ở nút cụ thể trong danh sách liên kết
+def delAt(last: Node, val: int) -> Node:
+    # Kiểm tra nếu Danh sách rỗng
+    if last is None:
+        print("ERROR 002: Nothing to delete")
+        return None
+
+    # Tạo nút duyệt đến vị trí người dùng đưa ra
+    tmp = last.next
+    prev = last
+
+    # Nếu nút để xóa là nút duy nhất trong danh sách
+    if tmp == last and prev.data == val:
+        del tmp
+        last = None
+        return last
+
+    # Nêu nút để xóa là nút đâu tiên
+    if tmp.data == val:
+        last.next = tmp.next
+        del tmp
+        return last
+
+    # Duyệt tới nút dự định sẽ xóa
+    while tmp != last and tmp.data != val:
+        prev = tmp
+        tmp = tmp.next
+
+    # Nếu nút bị xóa được tìm thấy
+    if tmp.data == val:
+        prev.next = tmp.next
+        if tmp == last:
+            last = prev
+        del tmp
+    else:
+        print(f"ERROR 003: Node with data {val} was not found")
+    return last
 ```
+---
+**Bài trước**: [[Chèn nút trong Danh sách liên kết vòng tròn]]
+**Bài sau**: [[Tìm kiếm trong Danh sách liên kết vòng tròn]]

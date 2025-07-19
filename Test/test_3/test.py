@@ -135,6 +135,61 @@ def delete(last: Node) -> Node:
     # Trả về Danh sách đã được chỉnh sửa
     return last
 
+# Xóa nút ở nút cụ thể trong danh sách liên kết
+def delAt(last: Node, val: int) -> Node:
+    # Kiểm tra nếu Danh sách rỗng
+    if last is None:
+        print("ERROR 002: Nothing to delete")
+        return None
+
+    # Tạo nút duyệt đến vị trí người dùng đưa ra
+    tmp = last.next
+    prev = last
+
+    # Nếu nút để xóa là nút duy nhất trong danh sách
+    if tmp == last and prev.data == val:
+        del tmp
+        last = None
+        return last
+
+    # Nêu nút để xóa là nút đâu tiên
+    if tmp.data == val:
+        last.next = tmp.next
+        del tmp
+        return last
+
+    # Duyệt tới nút dự định sẽ xóa
+    while tmp != last and tmp.data != val:
+        prev = tmp
+        tmp = tmp.next
+
+    # Nếu nút bị xóa được tìm thấy
+    if tmp.data == val:
+        prev.next = tmp.next
+        if tmp == last:
+            last = prev
+        del tmp
+    else:
+        print(f"ERROR 003: Node with data {val} was not found")
+    return last
+
+# Hàm tìm kiếm trong danh sách liên kết đơn
+def search(last: Node | None, target: int) -> bool:
+    # Khởi tạo một nút tạm
+    curr: Node | None = last.next
+    
+    # Lắp nếu con trỏ nút tạm khôn phải là NULL
+    while curr != last:
+        # Trả về true để ngắt hàm nếu dữ liệu của nút tạm bằng với mục tiêu của người dùng
+        if curr.data == target:
+            return True
+
+        # Chuyển đến nút tiếp theo
+        curr = curr.next
+
+    # Trả về false nếu không có giá trị bằng với mục tiêu
+    return False
+
 
 def printList(last: Node) -> None:
 	if last is None:
@@ -171,6 +226,11 @@ last = remove(last)
 last = remove(last)
 last = delete(last)
 last = delete(last)
+last = delAt(last, 3)
+last = delAt(last, 3)
 
 print("After delete: ", end="")
 printList(last)
+
+print(search(last, 3))
+print(search(last, 4))
