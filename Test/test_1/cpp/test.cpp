@@ -1,4 +1,4 @@
-#include <print>
+#include <iostream>
 #include <vector>
 
 // Khởi tạo kiểu dữ liệu của Danh sách liên kết đơn
@@ -20,11 +20,11 @@ void tranversalList(Node* head) {
 
     // Lặp nếu nút tiếp theo không phải là NULL
     while (temp != nullptr) {
-        std::print("{} ", temp->data);    // In ra cửa sổ dòng lệnh
+        std::cout << temp->data << " ";    // In ra cửa sổ dòng lệnh
         temp = temp->next;                  // Trỏ đến nút tiếp theo
     }
 
-    std::println();  // Xuống dòng sau khi in xong    
+    std::cout << std::endl;  // Xuống dòng sau khi in xong    
 }
 
 // Hàm tìm kiếm trong danh sách liên kết đơn
@@ -101,7 +101,7 @@ Node* append(Node* head, int data) {
 Node* add(Node* head, int pos, int data) {
     // Điều kiện này cho biết vị trí của người dùng có ít hơn 1 không, nếu có thì báo lỗi
     if (pos < 1) {
-        std::println("ERROR 001: Position out of range");
+        std::cout << "ERROR 001: Position out of range" << std::endl;
         return head;
     }
 
@@ -118,7 +118,7 @@ Node* add(Node* head, int pos, int data) {
 
     // Kiểm tra nếu curr là NULL thì báo lỗi, vì NULL chỉ xuất hiện ở cuối cùng danh sách
     if (curr == nullptr) {
-        std::println("ERROR 001: Position out of range");
+        std::cout << "ERROR 001: Position out of range" << std::endl;
         return head;
     }
 
@@ -137,7 +137,7 @@ Node* add(Node* head, int pos, int data) {
 Node* removeFirst(Node* head) {
     // Kiểm tra nếu danh sách rỗng
     if (head == nullptr) {
-        std::println("ERROR 002: List is empty");
+        std::cout << "ERROR 002: List is empty" << std::endl;
         return nullptr;
     }
 
@@ -158,7 +158,7 @@ Node* removeFirst(Node* head) {
 Node* removeLast(Node* head) {
     // Kiểm tra nếu danh sách rỗng
     if (head == nullptr) {
-        std::println("ERROR 002: List is empty");
+        std::cout << "ERROR 002: List is empty" << std::endl;
         return nullptr;
     }
 
@@ -180,7 +180,7 @@ Node* removeLast(Node* head) {
 Node* remove(Node* head, int pos) {
     // Điều kiện này cho biết vị trí có ít hơn 1 không, nếu có thì báo lỗi
     if (pos < 1) {
-        std::println("ERROR 001: Position out of range");
+        std::cout << "ERROR 001: Position out of range" << std::endl;
         return head;
     }
 
@@ -196,7 +196,7 @@ Node* remove(Node* head, int pos) {
 
     // Kiểm tra nếu curr là NULL thì báo lỗi, vì NULL chỉ xuất hiện ở cuối cùng danh sách
     if (curr == nullptr || curr->next == nullptr) {
-        std::println("ERROR 001: Position out of range");
+        std::cout << "ERROR 001: Position out of range" << std::endl;
         return head;
     }
 
@@ -322,7 +322,7 @@ int main() {
     head = add(head, 10, 20);
 
     // Duyệt danh sách liên kết đơn
-    std::print("Before delete: ");
+    std::cout << "Before delete: ";
     tranversalList(head);
 
     head = removeFirst(head);
@@ -332,22 +332,22 @@ int main() {
     head = remove(head, 2);
     head = remove(head, 5);
 
-    std::print("After delete: ");
+    std::cout << "After delete: ";
     tranversalList(head);
 
     head = reverse(head);
-    std::print("After reverse: ");
+    std::cout << "After reverse: ";
     tranversalList(head);
 
     head = modify(head);
-    std::print("After modified: ");
+    std::cout << "After modified: ";
     tranversalList(head);
 
     // Test
-    std::println("{} ", (search(head, 12) ? "TRUE" : "FALSE"));
-    std::println("{} ", (search(head, 3) ? "TRUE" : "FALSE"));
+    std::cout << (search(head, 12) ? "TRUE" : "FALSE") << std::endl;
+    std::cout << (search(head, 3) ? "TRUE" : "FALSE") << std::endl;
 
-    std::println("{}", count(head));
+    std::cout << "The length: " << count(head) << std::endl;
 
     // Giải phóng bộ nhớ
     deleteList(head);
