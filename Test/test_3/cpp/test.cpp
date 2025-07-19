@@ -155,6 +155,29 @@ Node* delette(Node* last) {
     return last;
 }
 
+// Xóa nút ở nút cụ thể trong danh sách liên kết
+Node* delPos(Node* last, int pos) {
+    // Kiểm tra nếu Danh sách rỗng
+    if (last == nullptr) {
+        std::println("ERROR 002: Nothing to delete");
+        return nullptr;
+    }
+
+    // Tạo nút duyệt đến vị trí người dùng đưa ra
+    Node* tmp = last->next;
+    Node* prev = last;
+
+    // Nếu nút để xóa là nút duy nhất trong danh sách
+    if (tmp == last && prev->data == pos) {
+        delete tmp;
+        last = nullptr;
+        return last;
+    }
+
+
+
+}
+
 void deleteList(Node* last) {
     if (last == nullptr) return;
 

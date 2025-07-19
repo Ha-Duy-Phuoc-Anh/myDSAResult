@@ -117,3 +117,20 @@ def delete(last: Node) -> Node:
     # Trả về Danh sách đã được chỉnh sửa
     return last
 ```
+
+## Xóa nút cụ thể trong Danh sách liên kết
+---
+> _Làm giống như [[Xóa nút trong Danh sách liên kết đơn]] thôi :), có điều nhớ là giá trị không phải vị trí_
+
+> **Time complexity**: $O(n)$
+> **Space complexity**: $O(1)$
+#### C++
+---
+``` cpp
+
+```
+#### Python
+---
+``` python
+
+```
