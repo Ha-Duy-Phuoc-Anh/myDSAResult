@@ -1,16 +1,16 @@
-#include <print>
+#include <iostream>
 #include <vector>
 
 // Khởi tạo kiểu dữ liệu của Danh sách liên kết đơn
 struct Node {
-	// Phần dữ liệu của Danh sách liên kết đơn
-	int data;
-	
-	// Con trỏ đến nút tiếp theo
-	Node* next;
+    // Phần dữ liệu của Danh sách liên kết đơn
+    int data;
+    
+    // Con trỏ đến nút tiếp theo
+    Node* next;
 
-	// Hàm khởi tạo Nút
-	Node(int value) : data(value), next(nullptr) {};
+    // Hàm khởi tạo Nút
+    Node(int value) : data(value), next(nullptr) {};
 };
 
 // Hàm thêm nút vào Danh sách liên kết rỗng
@@ -71,7 +71,7 @@ Node* add(Node* last, int pos, int data) {
     // Kiểm tra nếu danh sách rỗng và vị trí người dùng đưa ra không phải là 0
     if (last == nullptr) {
         if (pos != 0) {
-            std::println("ERROR 001: Position out of range");
+            std::cout << "ERROR 001: Position out of range\n";
             return last;
         }
         last = insertEmpty(last, data);
@@ -89,7 +89,7 @@ Node* add(Node* last, int pos, int data) {
     for (int i = 1; i < pos; ++i) {
         temp = temp->next;
         if (temp == last) {
-            std::println("ERROR 001: Position out of range");
+            std::cout << "ERROR 001: Position out of range\n";
             return last;
         }
     }
@@ -110,7 +110,7 @@ Node* add(Node* last, int pos, int data) {
 Node* remove(Node* last) {
     // Kiểm tra nếu Danh sách rỗng
     if (last == nullptr) {
-        std::println("ERROR 002: Nothing to delete");
+        std::cout << "ERROR 002: Nothing to delete\n";
         return nullptr;
     }
 
@@ -131,7 +131,7 @@ Node* remove(Node* last) {
 Node* delette(Node* last) {
     // Kiểm tra nếu Danh sách rỗng
     if (last == nullptr) {
-        std::println("ERROR 002: Nothing to delete");
+        std::cout << "ERROR 002: Nothing to delete\n";
         return nullptr;
     }
 
@@ -156,10 +156,10 @@ Node* delette(Node* last) {
 }
 
 // Xóa nút ở nút cụ thể trong danh sách liên kết
-Node* delPos(Node* last, int pos) {
+Node* delAt(Node* last, int val) {
     // Kiểm tra nếu Danh sách rỗng
     if (last == nullptr) {
-        std::println("ERROR 002: Nothing to delete");
+        std::cout << "ERROR 002: Nothing to delete\n";
         return nullptr;
     }
 
@@ -168,14 +168,57 @@ Node* delPos(Node* last, int pos) {
     Node* prev = last;
 
     // Nếu nút để xóa là nút duy nhất trong danh sách
-    if (tmp == last && prev->data == pos) {
+    if (tmp == last && prev->data == val) {
         delete tmp;
         last = nullptr;
         return last;
     }
 
+    // Nêu nút để xóa là nút đâu tiên
+    if (tmp->data == val) {
+        last->next = tmp->next;
+        delete tmp;
+        return last;
+    }
 
+    // Duyệt tới nút dự định sẽ xóa
+    while (tmp != last && tmp->data != val) {
+        prev = tmp;
+        tmp = tmp->next;
+    }
 
+    // Nếu nút bị xóa được tìm thấy
+    if (tmp->data == val) {
+        prev->next = tmp->next;
+        if (tmp == last) {
+            last = prev;
+        }
+        delete tmp;
+    }
+    else {
+        std::cout << "Node with data " << val << " was not found\n";
+    }
+    return last;
+}
+
+// Hàm tìm kiếm trong danh sách liên kết đơn
+bool search(Node* last, int target) {
+    // Khởi tạo một nút tạm
+    Node* curr = last->next;
+    
+    // Lắp nếu con trỏ nút tạm khôn phải là NULL
+    while (curr != last) {
+        // Trả về true để ngắt hàm nếu dữ liệu của nút tạm bằng với mục tiêu của người dùng
+        if (curr->data == target) {
+            return true;
+        }
+
+        // Chuyển đến nút tiếp theo
+        curr = curr->next;
+    } 
+
+    // Trả về false nếu không có giá trị bằng với mục tiêu
+    return false;
 }
 
 void deleteList(Node* last) {
@@ -198,10 +241,10 @@ void print(Node* last) {
 
     Node* current = last->next;
     do {
-        std::print("{} ", current->data);
+        std::cout << current->data << " ";
         current = current->next;
     } while (current != last->next);
-    std::println();
+    std::cout << std::endl;
 }
 
 
@@ -221,16 +264,21 @@ int main() {
     last = add(last, 2, 10);
     last = add(last, 10, 10);
 
-    std::print("Before delete: ");
+    std::cout << "Before delete: ";
     print(last);
 
     last = remove(last);
     last = remove(last);
     last = delette(last);
     last = delette(last);
+    last = delAt(last, 3);
+    last = delAt(last, 3);
 
-    std::print("After delete: ");
+    std::cout << "After delete: ";
     print(last);
+
+    std::cout << (search(last, 4) ? "TRUE" : "FALSE") << std::endl;
+    std::cout << (search(last, 3) ? "TRUE" : "FALSE") << std::endl;
 
     // Giải phóng bộ nhớ
     deleteList(last);

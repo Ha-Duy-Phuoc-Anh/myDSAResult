@@ -347,7 +347,7 @@ int main() {
     std::cout << (search(head, 12) ? "TRUE" : "FALSE") << std::endl;
     std::cout << (search(head, 3) ? "TRUE" : "FALSE") << std::endl;
 
-    std::cout << "The length: " << count(head) << std::endl;
+    std::cout << count(head) << std::endl;
 
     // Giải phóng bộ nhớ
     deleteList(head);
