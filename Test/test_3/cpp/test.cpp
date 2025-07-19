@@ -156,7 +156,7 @@ Node* delette(Node* last) {
 }
 
 // Xóa nút ở nút cụ thể trong danh sách liên kết
-Node* delPos(Node* last, int pos) {
+Node* delAt(Node* last, int val) {
     // Kiểm tra nếu Danh sách rỗng
     if (last == nullptr) {
         std::println("ERROR 002: Nothing to delete");
@@ -168,14 +168,37 @@ Node* delPos(Node* last, int pos) {
     Node* prev = last;
 
     // Nếu nút để xóa là nút duy nhất trong danh sách
-    if (tmp == last && prev->data == pos) {
+    if (tmp == last && prev->data == val) {
         delete tmp;
         last = nullptr;
         return last;
     }
 
+    // Nêu nút để xóa là nút đâu tiên
+    if (tmp->data == val) {
+        last->next = tmp->next;
+        delete tmp;
+        return last;
+    }
 
+    // Duyệt tới nút dự định sẽ xóa
+    while (tmp != last && tmp->data != val) {
+        prev = tmp;
+        tmp = tmp->next;
+    }
 
+    // Nếu nút bị xóa được tìm thấy
+    if (tmp->data == val) {
+        prev->next = tmp->next;
+        if (tmp == last) {
+            last = prev;
+        }
+        delete tmp;
+    }
+    else {
+        std::println("Node with data {} was not found", val);
+    }
+    return last;
 }
 
 void deleteList(Node* last) {
@@ -228,6 +251,8 @@ int main() {
     last = remove(last);
     last = delette(last);
     last = delette(last);
+    last = delAt(last, 3);
+    last = delAt(last, 3);
 
     std::print("After delete: ");
     print(last);
