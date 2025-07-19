@@ -1,9 +1,4 @@
 {
-    "files.exclude": {
-        ".obsidian": true,
-        "desktop.ini": true,
-        "folderICO.ico": true,
-    },
     "files.associations": {
         "utility": "cpp"
     }

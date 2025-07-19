@@ -109,6 +109,33 @@ def remove(last: Node) -> Node:
     del head
     return last
 
+# Xóa nút ở cuối danh sách liên kết
+def delete(last: Node) -> Node:
+    # Kiểm tra nếu Danh sách rỗng
+    if last is None:
+        print("ERROR 002: Nothing to delete")
+        return None
+
+    # Kiểm tra nếu nút tiếp theo là nullptr
+    if last.next is None:
+        del last
+        return None
+    
+    # Nếu không thì tạo nút duyệt đến nút trước nút cuối cùng và xóa
+    head: Node = last.next
+    temp: Node = last
+    while temp.next != last:
+        temp = temp.next
+
+    # Chỉnh con trỏ để tránh lỗi không thể truy cập bộ nhớ
+    temp.next = head
+    del last
+    last = temp
+
+    # Trả về Danh sách đã được chỉnh sửa
+    return last
+
+
 def printList(last: Node) -> None:
 	if last is None:
 		return None
@@ -142,6 +169,8 @@ printList(last)
 
 last = remove(last)
 last = remove(last)
+last = delete(last)
+last = delete(last)
 
 print("After delete: ", end="")
 printList(last)

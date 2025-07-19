@@ -60,10 +60,60 @@ def remove(last: Node) -> Node:
 #### C++
 ---
 ``` cpp
+// Xóa nút ở cuối danh sách liên kết
+Node* delette(Node* last) {
+    // Kiểm tra nếu Danh sách rỗng
+    if (last == nullptr) {
+        std::println("ERROR 002: Nothing to delete");
+        return nullptr;
+    }
 
+    // Kiểm tra nếu nút tiếp theo là nullptr
+    if (last->next == nullptr) {
+        delete last;
+        return nullptr;
+    }
+
+    // Nếu không thì tạo nút duyệt đến nút trước nút cuối cùng và xóa
+    Node* head = last->next;
+    Node* temp = last;
+    while (temp->next != last) temp = temp->next;
+
+    // Chỉnh con trỏ để tránh lỗi không thể truy cập bộ nhớ
+    temp->next = head;
+    delete last;
+    last = temp;
+
+    // Trả về Danh sách đã được chỉnh sửa
+    return last;
+}
 ```
 #### Python
 ---
 ``` python
+# Xóa nút ở cuối danh sách liên kết
+def delete(last: Node) -> Node:
+    # Kiểm tra nếu Danh sách rỗng
+    if last is None:
+        print("ERROR 002: Nothing to delete")
+        return None
 
+    # Kiểm tra nếu nút tiếp theo là nullptr
+    if last.next is None:
+        del last
+        return None
+    
+    # Nếu không thì tạo nút duyệt đến nút trước nút cuối cùng và xóa
+    head: Node = last.next
+    temp: Node = last
+    while temp.next != last:
+        temp = temp.next
+
+    # Chỉnh con trỏ để tránh lỗi không thể truy cập bộ nhớ
+    temp.next = head
+    del last
+    last = temp
+
+    # Trả về Danh sách đã được chỉnh sửa
+    return last
 ```
