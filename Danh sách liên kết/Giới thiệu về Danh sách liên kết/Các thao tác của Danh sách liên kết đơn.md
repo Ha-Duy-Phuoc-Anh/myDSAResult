@@ -1,3 +1,5 @@
+**Chủ đề**: [[Giới thiệu về danh sách liên kết]]
+
 Một số thao tác cơ bản của Danh sách liên kết đơn:
 - **Chèn**: Chèn có ba loại thao tác
 	- <i><u>Chèn ở đầu</u></i>

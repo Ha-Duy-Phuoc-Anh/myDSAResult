@@ -1,6 +1,7 @@
+**Chủ đề**: [[Danh sách liên kết đơn]]
 ## Chèn nút vào đầu Danh sách liên kết đơn
 ---
-> _Để chèn một nút ở trước dnah sách liên kết đơn, ta tạo một nút có dữ liệu đã cho trước đó, sau đó trỏ đến **HEAD** (sau đó trả về lại Danh sách liên kết với nút mới là **Head**)_
+> _Để chèn một nút ở trước danh sách liên kết đơn, ta tạo một nút có dữ liệu đã cho trước đó, sau đó trỏ đến **HEAD** (sau đó trả về lại Danh sách liên kết với nút mới là **Head**)_
 
 > **Time complexity**: $O(1)$
 > **Space complexity**: $O(1)$

@@ -1,3 +1,4 @@
+**Chủ đề**: [[Danh sách liên kết đôi]]
 ## Chèn nút ở đầu Danh sách liên kết
 ---
 > _Cách thực hiện cũng khá giống như [[Chèn nút trong Danh sách liên kết đơn]], nhưng ta phải kết nối nút **PREV** thành **NULL** (Cái này được auto thực hiện)_

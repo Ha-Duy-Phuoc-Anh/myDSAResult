@@ -1,3 +1,5 @@
+**Chủ đề**: [[Giới thiệu về danh sách liên kết]]
+
 | Thao tác                      | Danh sách liên kết | Mảng   |
 | ----------------------------- | ------------------ | ------ |
 | Tiếp cận ngẫu nhiên           | $O(n)$             | $O(1)$ |

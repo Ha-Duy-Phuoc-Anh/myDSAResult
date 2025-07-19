@@ -46,6 +46,115 @@ Node* insert(Node* last, int data) {
 	return last;
 }
 
+// Hàm thêm nút vào cuối Danh sách liên kết
+Node* append(Node* last, int data) {
+    // Kiểm tra nếu danh sách là rỗng
+    if (last == nullptr) {
+        last = insertEmpty(last, data);
+        return last;
+    }
+
+    // Tạo một nút mới với dữ liệu được cho
+    Node* newNode = new Node(data);
+
+    // Cập nhật con trỏ đên thêm nút vào Danh sách
+    newNode->next = last->next;
+    last->next = newNode;
+    last = newNode;
+
+    // Trả về Danh sách liên kết đã được chỉnh sửa
+    return last;
+}
+
+// Hàm thêm nút ở vị trí cụ thể trong danh sách liên kết
+Node* add(Node* last, int pos, int data) {
+    // Kiểm tra nếu danh sách rỗng và vị trí người dùng đưa ra không phải là 0
+    if (last == nullptr) {
+        if (pos != 0) {
+            std::println("ERROR 001: Position out of range");
+            return last;
+        }
+        last = insertEmpty(last, data);
+        return last;
+    }
+    // Nếu vị trí người dùng đưa ra là 1
+    if (pos == 1) {   
+        last = insert(last, data);
+        return last;
+    }
+
+    // Nếu hai điều kiện trên đều là FALSE
+    // Tạo một nút tạm và duyệt đến vị trí người dùng đưa ra (kèm theo việc kiểm tra nếu vị trí người dùng vượt quá kích thước danh sách)
+    Node* temp = last;
+    for (int i = 1; i < pos; ++i) {
+        temp = temp->next;
+        if (temp == last) {
+            std::println("ERROR 001: Position out of range");
+            return last;
+        }
+    }
+
+    // Tạo nút với dữ liệu đã cho và chèn nút
+    Node* newNode = new Node(data);
+    newNode->next = temp->next;
+    temp->next = newNode;
+
+    // Nếu nút được chèn ở vi trí cuối cùng thì update nút
+    if (newNode->next == last->next) last = newNode;
+    
+    // Trả về danh sách đã được chỉnh sửa
+    return last;
+}
+
+// Hàm xóa nút ở đầu danh sách liên kết
+Node* remove(Node* last) {
+    // Kiểm tra nếu Danh sách rỗng
+    if (last == nullptr) {
+        std::println("ERROR 002: Nothing to delete");
+        return nullptr;
+    }
+
+    // Kiểm tra nếu nút tiếp theo là nullptr
+    if (last->next == nullptr) {
+        delete last;
+        return nullptr;
+    }
+
+    // Nếu không thì xóa như bình thường
+    Node* head = last->next;
+    last->next = head->next;
+    delete head;
+    return last;
+} 
+
+// Xóa nút ở cuối danh sách liên kết
+Node* delette(Node* last) {
+    // Kiểm tra nếu Danh sách rỗng
+    if (last == nullptr) {
+        std::println("ERROR 002: Nothing to delete");
+        return nullptr;
+    }
+
+    // Kiểm tra nếu nút tiếp theo là nullptr
+    if (last->next == nullptr) {
+        delete last;
+        return nullptr;
+    }
+
+    // Nếu không thì tạo nút duyệt đến nút trước nút cuối cùng và xóa
+    Node* head = last->next;
+    Node* temp = last;
+    while (temp->next != last) temp = temp->next;
+
+    // Chỉnh con trỏ để tránh lỗi không thể truy cập bộ nhớ
+    temp->next = head;
+    delete last;
+    last = temp;
+
+    // Trả về Danh sách đã được chỉnh sửa
+    return last;
+}
+
 void deleteList(Node* last) {
     if (last == nullptr) return;
 
@@ -56,7 +165,9 @@ void deleteList(Node* last) {
         temp = current;
         current = current->next;
         delete temp;
-    } 
+    }
+    delete last; // Free the last node
+    last = nullptr; // Avoid dangling pointer
 }
 
 void print(Node* last) {
@@ -67,7 +178,7 @@ void print(Node* last) {
         std::print("{} ", current->data);
         current = current->next;
     } while (current != last->next);
-    std::println("");
+    std::println();
 }
 
 
@@ -80,7 +191,22 @@ int main() {
     last = insert(last, 3);
     last = insert(last, 4);
     last = insert(last, 5);
+    last = append(last, 2);
+    last = append(last, 3);
+    last = append(last, 4);
+    last = append(last, 5);
+    last = add(last, 2, 10);
+    last = add(last, 10, 10);
 
+    std::print("Before delete: ");
+    print(last);
+
+    last = remove(last);
+    last = remove(last);
+    last = delette(last);
+    last = delette(last);
+
+    std::print("After delete: ");
     print(last);
 
     // Giải phóng bộ nhớ

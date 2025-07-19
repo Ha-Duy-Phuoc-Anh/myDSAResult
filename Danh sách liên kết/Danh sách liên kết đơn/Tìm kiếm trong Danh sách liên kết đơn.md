@@ -1,3 +1,5 @@
+**Chủ đề**: [[Danh sách liên kết đơn]]
+
 > _Tìm kiếm trong danh sách liên kết đơn có hai loại tiếp cận là tiếp cận tuần tự và tiếp cận đệ quy, như ta đã có có hai loại thuật toán tìm kiếm là **Tìm kiếm tuần tự** và **Tìm kiếm chị phân**. Trong Danh sách liên kết ta dùng **Tiềm kiếm tuần tự** vì ta không thể tiếp cận phần tử ngẫu nhiên như Mảng đươc, thêm nữa là **Tiềm kiếm tuần tự** là $O(n)$ trong khi **Tìm kiếm nhị phân** là $O(n \times log(n))$, trong bài này ta dùng tiếp cận tuần tự_
 
 > Từng bước thực hiện thuật toán:

@@ -1,3 +1,4 @@
+**Chủ đề**: [[Danh sách liên kết vòng tròn]]
 ## Cách khởi tạo
 ---
 > _Về cách khởi tạo kiểu dữ liệu này thì cũng không cần phải nhắc đến nữa, vì ta có thể dùng cách khởi tạo của Danh sách liên kết đơn_

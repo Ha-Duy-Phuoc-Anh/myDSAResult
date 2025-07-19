@@ -8,17 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5dabc4f2849e3f8f",
+            "id": "e6e327fdf133411a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Danh sách liên kết/Danh sách liên kết vòng tròn/Chèn nút trong Danh sách liên kết vòng tròn.md",
+                "file": "Danh sách liên kết/Danh sách liên kết vòng tròn/Xóa nút trong Danh sách liên kết vòng tròn.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chèn nút trong Danh sách liên kết vòng tròn"
+              "title": "Xóa nút trong Danh sách liên kết vòng tròn"
+            }
+          },
+          {
+            "id": "3e50edb143467eda",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Danh sách liên kết/Danh sách liên kết vòng tròn/Danh sách liên kết vòng tròn.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Danh sách liên kết vòng tròn"
             }
           }
         ]
@@ -72,6 +86,22 @@
               "state": {},
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
+            }
+          }
+        ]
+      },
+      {
+        "id": "7bd1b852a98ddcf2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "43cedbb22055e299",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Xem biểu đồ"
             }
           }
         ]
@@ -168,47 +198,47 @@
       "command-palette:Mở khay lệnh": false
     }
   },
-  "active": "5dabc4f2849e3f8f",
+  "active": "43cedbb22055e299",
   "lastOpenFiles": [
+    "Danh sách liên kết/Danh sách liên kết vòng tròn/Xóa nút trong Danh sách liên kết vòng tròn.md",
+    "Danh sách liên kết/Danh sách liên kết vòng tròn/Chèn nút trong Danh sách liên kết vòng tròn.md",
+    "Danh sách liên kết/Danh sách liên kết vòng tròn/Danh sách liên kết vòng tròn.md",
+    "Danh sách liên kết/Danh sách liên kết vòng tròn/Khai báo kiểu dữ liệu.md",
     "Test/test_3/cpp/test_cpp.pdb",
     "Test/test_3/cpp/test_cpp.exe",
     "Test/test_3/cpp/test_cpp.ilk",
     "Test/test_3/cpp/test.obj",
     "Test/test_3/cpp/vc140.pdb",
-    "Danh sách liên kết/Danh sách liên kết vòng tròn/Danh sách liên kết vòng tròn.md",
-    "Danh sách liên kết/Danh sách liên kết vòng tròn/Khai báo kiểu dữ liệu.md",
-    "Danh sách liên kết/Danh sách liên kết vòng tròn/Chèn nút trong Danh sách liên kết vòng tròn.md",
-    "Danh sách liên kết vòng tròn/Khai báo kiểu dữ liệu.md",
-    "Danh sách liên kết vòng tròn",
-    "Danh sách liên kết/Danh sách liên kết đơn/Chèn nút trong Danh sách liên kết đơn.md",
+    "Danh sách liên kết/Danh sách liên kết đôi/Danh sách liên kết đôi.md",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đôi.md",
+    "Danh sách liên kết/Danh sách liên kết đôi/So sánh giữa Danh sách liên kết đơn và Danh sách liên kết đôi.md",
+    "Danh sách liên kết/Danh sách liên kết đơn/Danh sách liên kết đơn.md",
+    "Danh sách liên kết/Danh sách liên kết đôi/Duyệt qua Danh sách liên kết đôi.md",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Giới thiệu về danh sách liên kết.md",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Một số thuật ngữ cơ bản của danh sách liên kết.md",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết vòng tròn.md",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đơn.md",
+    "Danh sách liên kết/Danh sách liên kết đôi/Xóa nút trong Danh sách liên kết đôi.md",
+    "DSA.md",
+    "Danh sách liên kết/Danh sách liên kết đôi/Kích thước của Danh sách liên kết đôi.md",
     "Danh sách liên kết/Danh sách liên kết đôi/Khai báo kiểu dữ liệu.md",
+    "Danh sách liên kết/Danh sách liên kết đôi/Chèn nút trong Danh sách liên kết đôi.md",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Tầm quan trọng của Danh sách liên kết.md",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/So sánh giữa Danh sách liên kết và Mảng.md",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Phân tích thời gian của các thao tác trong Danh sách liên kết và Mảng.md",
     "Danh sách liên kết/IMG_1.png",
+    "Danh sách liên kết/Danh sách liên kết đơn/Xóa nút trong Danh sách liên kết đơn.md",
+    "Danh sách liên kết/Danh sách liên kết đơn/Tìm kiếm trong Danh sách liên kết đơn.md",
+    "Danh sách liên kết/Danh sách liên kết đơn/Sửa đổi Danh sách liên kết đơn.md",
+    "Danh sách liên kết/Danh sách liên kết đơn/Số lượng nút trong danh sách liên kết đơn.md",
+    "Danh sách liên kết/Danh sách liên kết đơn/Khai báo kiểu dữ liệu.md",
+    "Danh sách liên kết vòng tròn",
     "Danh sách liên kết/IMG_5.png",
     "Danh sách liên kết/IMG_4.png",
     "Danh sách liên kết/Danh sách liên kết vòng tròn",
     "Test/test_3/cpp/test.cpp",
     "Test/test_3/test.py",
     "Test/test_3/Makefile",
-    "Test/test_3/cpp",
-    "Danh sách liên kết/Danh sách liên kết đôi/So sánh giữa Danh sách liên kết đơn và Danh sách liên kết đôi.md",
-    "Danh sách liên kết/Danh sách liên kết đôi/Xóa nút trong Danh sách liên kết đôi.md",
-    "Danh sách liên kết/Danh sách liên kết đôi/Danh sách liên kết đôi.md",
-    "Danh sách liên kết/Danh sách liên kết đôi/Duyệt qua Danh sách liên kết đôi.md",
-    "Danh sách liên kết/Danh sách liên kết đơn/Danh sách liên kết đơn.md",
-    "Danh sách liên kết/Danh sách liên kết đơn/Xóa nút trong Danh sách liên kết đơn.md",
-    "Danh sách liên kết/Danh sách liên kết đơn/Đảo ngược Danh sách liên kết đơn.md",
-    "Danh sách liên kết/Danh sách liên kết đôi/Kích thước của Danh sách liên kết đôi.md",
-    "Danh sách liên kết/Danh sách liên kết đơn/Tìm kiếm trong Danh sách liên kết đơn.md",
-    "Danh sách liên kết/Danh sách liên kết đơn/Duyệt qua danh sách liên kết đơn.md",
-    "Danh sách liên kết/Danh sách liên kết đơn/Sửa đổi Danh sách liên kết đơn.md",
-    "Danh sách liên kết/Danh sách liên kết đơn/Số lượng nút trong danh sách liên kết đơn.md",
-    "Danh sách liên kết/Danh sách liên kết đôi/Chèn nút trong Danh sách liên kết đôi.md",
-    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Tầm quan trọng của Danh sách liên kết.md",
-    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Một số thuật ngữ cơ bản của danh sách liên kết.md",
-    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Giới thiệu về danh sách liên kết.md",
-    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đơn.md",
-    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết vòng tròn.md",
-    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đôi.md",
     "Danh sách liên kết/IMG_3.png",
     "folderICO.png",
     "algorithms.png",

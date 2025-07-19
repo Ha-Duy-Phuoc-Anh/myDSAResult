@@ -1,3 +1,4 @@
+**Chủ đề**: [[Danh sách liên kết đơn]]
 ### C++
 ---
 ``` cpp

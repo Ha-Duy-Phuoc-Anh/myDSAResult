@@ -1,3 +1,5 @@
+**Chủ đề**: [[Danh sách liên kết đơn]]
+
 > _Để đảo ngược danh sách liên kết, ta tạo một nút đầu ở phía sau nút đầu tiên, để cho các nút khác trỏ đến thứ tự ngược này, tạo một nút khác để cho phép di chuyển giữa các nút, và một biến để kiểm soát con trỏ_
 
 > **Time complexity**: $O(n)$ 

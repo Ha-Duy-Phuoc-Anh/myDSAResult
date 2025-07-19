@@ -1,3 +1,5 @@
+**Chủ đề**: [[Danh sách liên kết đơn]]
+
 ## Xóa nút đầu tiên trong Danh sách liên kết
 ---
 >_Để xóa nút nút ở đầu Danh sách liên kết đơn, ta xóa nút đó, sau đó trỏ con trỏ **HEAD** vào nút tiếp theo_

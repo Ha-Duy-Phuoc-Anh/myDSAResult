@@ -1,3 +1,5 @@
+**Chủ đề**: [[Danh sách liên kết đơn]]
+
 > _Để chỉnh sửa Danh sách liên kết đơn, ta làm như sau:
 > 	1. Tìm nút ở giữa Danh sách liên kết và **đảo ngược phần nửa thứ hai** bắt đầu từ sau **nút giữa**
 > 	2. Sau đó, duyệt đồng thời **nửa đầu** và **nửa thứ hai đảo ngược**, cập nhật nút của giá trị **nửa đầu** bằng cách trừ **trừ** giá trị của chúng khỏi các nút tương ứng trong nửa thứ hai và hoán đổi chúng

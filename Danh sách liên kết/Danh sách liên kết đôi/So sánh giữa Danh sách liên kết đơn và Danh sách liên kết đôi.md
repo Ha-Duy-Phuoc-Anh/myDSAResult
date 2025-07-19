@@ -1,3 +1,4 @@
+**Chủ đề**: [[Danh sách liên kết đôi]]
 ## Lợi thế của Danh sách liên kết đôi
 ---
 - Dễ dàng di chuyển lên trước, về sau

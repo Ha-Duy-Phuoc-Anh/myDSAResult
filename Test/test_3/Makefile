@@ -14,7 +14,7 @@ run_cpp:
 debug_leak:
 	cd cpp
 	cl.exe /Zi /Od /EHsc /MDd /W4 /std:c++23preview test.cpp /Fe:test_cpp.exe
-	drmemory.exe -- test_cpp.exe
+	drmemory.exe -callstack_max_frames 20 -- test_cpp.exe
 
 clean:
 	@for /R cpp %%F in (*) do ( \

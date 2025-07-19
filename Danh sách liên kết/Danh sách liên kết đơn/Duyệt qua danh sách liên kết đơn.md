@@ -1,3 +1,5 @@
+**Chủ đề**: [[Danh sách liên kết đơn]]
+
 _Duyệt qua danh sách liên kết đơn là một trong những thao tác cơ bản của Danh sách liên kết. Trong bài đọc này, ta sẽ tìm hiểu cách duyệt qua danh sách liên kết đơn_
 
 ![[VID_1.mp4]]

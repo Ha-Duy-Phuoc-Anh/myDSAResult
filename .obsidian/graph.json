@@ -1,8 +1,8 @@
 {
   "collapse-filter": false,
   "search": "",
-  "showTags": true,
-  "showAttachments": true,
+  "showTags": false,
+  "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": false,
@@ -18,7 +18,14 @@
       "query": "path:\"Danh sách liên kết\"  ",
       "color": {
         "a": 1,
-        "rgb": 16737894
+        "rgb": 14376243
+      }
+    },
+    {
+      "query": "file:DSA",
+      "color": {
+        "a": 1,
+        "rgb": 11206400
       }
     }
   ],
@@ -28,10 +35,10 @@
   "nodeSizeMultiplier": 0.763541666666667,
   "lineSizeMultiplier": 1.68229166666667,
   "collapse-forces": false,
-  "centerStrength": 0.5,
-  "repelStrength": 9.89583333333333,
+  "centerStrength": 0.505208333333333,
+  "repelStrength": 10,
   "linkStrength": 1,
-  "linkDistance": 500,
-  "scale": 0.885498954315046,
+  "linkDistance": 30,
+  "scale": 0.3213363860503588,
   "close": true
 }
