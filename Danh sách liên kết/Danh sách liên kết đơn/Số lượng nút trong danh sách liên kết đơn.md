@@ -1,4 +1,4 @@
-**Chủ đề**: [[Danh sách liên kết đơn]]
+#file **Chủ đề**: [[Danh sách liên kết đơn]]
 
 > _Cách làm cũng giống như Duyệt và in danh sách liên kết, nhưng chỉ khác là ta không in mà ta cộng từng nút vào một biến và trả về biến đó, tới đây thì không cần mô tả thuật toán rồi, và có hai cách tiếp cận là **đệ quy** và **tuần tự**. Trong bài đọc này ta dùng tuần tự vì chỉ cần dùng 1 space_
 

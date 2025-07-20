@@ -1,4 +1,4 @@
-**Chủ đề**: [[Giới thiệu về danh sách liên kết]]
+#file **Chủ đề**: [[Giới thiệu về danh sách liên kết]]
 
 Một số thao tác cơ bản của Danh sách liên kết đơn:
 - **Chèn**: Chèn có ba loại thao tác

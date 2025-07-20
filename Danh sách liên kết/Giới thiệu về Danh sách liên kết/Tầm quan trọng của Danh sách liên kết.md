@@ -1,4 +1,4 @@
-**Chủ đề**: [[Giới thiệu về danh sách liên kết]]
+#file **Chủ đề**: [[Giới thiệu về danh sách liên kết]]
 
 Đây là một số lợi ích của Danh sách liên kết đã được liệt kê ở dưới, nó sẽ giúp ta hiểu đượctaij sao cần biết về Danh sách liên kết:
 - **Cấu trúc dữ liệu động**: Kích thước của bộ nhớ có thể phân bổ hoặc hủy phân bổ ngay cùng thời gian chạy chương trình dựa vào thao tác chèn và xóa.

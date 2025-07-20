@@ -1,4 +1,4 @@
-**Chủ đề**: [[Danh sách liên kết vòng tròn]]
+#file **Chủ đề**: [[Danh sách liên kết vòng tròn]]
 ## Xóa nút ở đầu Danh sách liên kết vòng tròn
 ---
 > _Làm giống như [[Xóa nút trong Danh sách liên kết đơn]] nhưng nhớ rằng do nút đầu không phải **HEAD** mà là **LAST** nên phải thêm vào `last->next` thay vì chỉ ghi là `delete head` (CASE C++)_

@@ -1,4 +1,4 @@
-**Chủ đề**: [[Giới thiệu về danh sách liên kết]]
+#file **Chủ đề**: [[Giới thiệu về danh sách liên kết]]
 
 | Thao tác                      | Danh sách liên kết | Mảng   |
 | ----------------------------- | ------------------ | ------ |

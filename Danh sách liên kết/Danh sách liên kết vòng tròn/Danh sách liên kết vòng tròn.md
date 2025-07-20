@@ -1,4 +1,4 @@
-#linkedList  [[DSA]]
+#subtitle1  [[Danh sách liên kết]]
 
 > _**Danh sách liên kết vòng tròn** có một cấu trúc khá giống với **Danh sách liên kết đơn**, tuy nhiên, có một điểm khác biệt là nút cuối cùng sẽ không trỏ đến **NULL** mà sẽ trỏ đến nút đầu tiên của Danh sách, tạo ra một vòng tròn. Do đó danh sách liên kết vòng trong sẽ không có con trỏ nào trỏ đến **NULL**_
 

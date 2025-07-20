@@ -1,4 +1,4 @@
-**Chủ đề**: [[Danh sách liên kết vòng tròn]]
+#file **Chủ đề**: [[Danh sách liên kết vòng tròn]]
 
 > _Cũng giống như [[Tìm kiếm trong Danh sách liên kết đơn]] thôi :)_
 

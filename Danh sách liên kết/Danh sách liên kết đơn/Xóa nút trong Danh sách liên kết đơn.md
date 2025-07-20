@@ -1,4 +1,4 @@
-**Chủ đề**: [[Danh sách liên kết đơn]]
+#file **Chủ đề**: [[Danh sách liên kết đơn]]
 
 ## Xóa nút đầu tiên trong Danh sách liên kết
 ---

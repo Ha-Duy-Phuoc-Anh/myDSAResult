@@ -1,4 +1,4 @@
-**Chủ đề**: [[Danh sách liên kết đôi]]
+#file **Chủ đề**: [[Danh sách liên kết đôi]]
 ### C++
 ---
 ``` cpp

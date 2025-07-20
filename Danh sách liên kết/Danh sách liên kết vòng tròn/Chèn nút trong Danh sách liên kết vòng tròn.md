@@ -1,4 +1,4 @@
-**Chủ đề**: [[Danh sách liên kết vòng tròn]]
+#file **Chủ đề**: [[Danh sách liên kết vòng tròn]]
 ## Chèn nút vào Danh sách liên kết trống
 ---
 > _Có lẽ ta sẽ hỏi tại sao có cái này, nhưng thật ra cái gì cũng có lí do, danh sách liên kết vòng tròn có kết cấu đặc biệt, nên khi tạo một nút mới ta sẽ phải dùng nút vòng liên kết ngay chính nó_

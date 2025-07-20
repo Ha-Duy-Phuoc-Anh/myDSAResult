@@ -8,24 +8,31 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "tag:#linkedList  ",
-      "color": {
-        "a": 1,
-        "rgb": 16711680
-      }
-    },
-    {
-      "query": "path:\"Danh sách liên kết\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 14376243
-      }
-    },
-    {
       "query": "file:DSA",
       "color": {
         "a": 1,
-        "rgb": 11206400
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "tag:#title ",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "tag:#subtitle1  ",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    },
+    {
+      "query": "tag:#file  ",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
       }
     }
   ],
@@ -39,6 +46,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.16348370567220524,
+  "scale": 0.11660891579457455,
   "close": true
 }

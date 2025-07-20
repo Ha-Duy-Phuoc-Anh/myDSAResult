@@ -8,35 +8,48 @@
         "type": "tabs",
         "children": [
           {
-            "id": "475f198717fa5cb4",
+            "id": "50265c7abd970faa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Danh sách liên kết/Danh sách liên kết vòng tròn/Xóa nút trong Danh sách liên kết vòng tròn.md",
+                "file": "Ngăn xếp/Biểu diễn dưới dạng Mảng.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Xóa nút trong Danh sách liên kết vòng tròn"
+              "title": "Biểu diễn dưới dạng Mảng"
             }
           },
           {
-            "id": "3252c53a6ee42590",
+            "id": "e22f64cf59c32124",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Danh sách liên kết/Danh sách liên kết vòng tròn/Tìm kiếm trong Danh sách liên kết vòng tròn.md",
+                "file": "Ngăn xếp/Phân tích Ngăn xếp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tìm kiếm trong Danh sách liên kết vòng tròn"
+              "title": "Phân tích Ngăn xếp"
+            }
+          },
+          {
+            "id": "43cedbb22055e299",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ngăn xếp/Ngăn xếp.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ngăn xếp"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#linkedList",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +90,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Tìm kiếm"
             }
           },
           {
@@ -93,12 +106,12 @@
         ]
       },
       {
-        "id": "7bd1b852a98ddcf2",
+        "id": "79c6ff396f216857",
         "type": "tabs",
         "dimension": 28.735632183908045,
         "children": [
           {
-            "id": "43cedbb22055e299",
+            "id": "fc43782b9cab970a",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -201,50 +214,53 @@
       "command-palette:Mở khay lệnh": false
     }
   },
-  "active": "43cedbb22055e299",
+  "active": "50265c7abd970faa",
   "lastOpenFiles": [
-    "Danh sách liên kết/Danh sách liên kết vòng tròn/Tìm kiếm trong Danh sách liên kết vòng tròn.md",
-    "Test/test_3/cpp/test_cpp.pdb",
-    "Test/test_3/cpp/test_cpp.exe",
-    "Test/test_3/cpp/test_cpp.ilk",
-    "Test/test_3/cpp/test.obj",
-    "Test/test_3/cpp/vc140.pdb",
-    "Danh sách liên kết/Danh sách liên kết vòng tròn/Danh sách liên kết vòng tròn.md",
-    "Danh sách liên kết/Danh sách liên kết vòng tròn/Khai báo kiểu dữ liệu.md",
+    "Test/test_4/test.py",
+    "Test/test_4/Makefile",
+    "Test/test_4/cpp/test.cpp",
+    "Test/test_4/cpp",
+    "Test/test_4",
+    "Ngăn xếp/Phân tích Ngăn xếp.md",
+    "Ngăn xếp/Ngăn xếp.md",
+    "Ngăn xếp/Một số thao tác của Ngăn xếp.md",
+    "Ngăn xếp/Biểu diễn Ngăn xếp.md",
+    "Ngăn xếp/Cấu trúc LIFO.md",
+    "Ngăn xếp/Biểu diễn dưới dạng Mảng.md",
+    "Ngăn xếp/IMG_6.png",
+    "Ngăn xếp/IMG_5.png",
+    "Ngăn xếp/IMG_2.png",
+    "Ngăn xếp/IMG_7.png",
+    "Ngăn xếp/VID_1.mp4",
+    "Ngăn xếp/Giới thiệu về ngăn xếp.md",
+    "Ngăn xếp/IMG_6/Bản chiếu3.PNG",
+    "Ngăn xếp/IMG_6/Bản chiếu4.PNG",
+    "Ngăn xếp/IMG_6/IMG_6.png",
+    "Ngăn xếp/IMG_6/Bản chiếu2.PNG",
+    "Ngăn xếp/IMG_6/Bản chiếu1.PNG",
+    "Ngăn xếp/IMG_6",
+    "Ngăn xếp/IMG_4.png",
     "Danh sách liên kết/Danh sách liên kết vòng tròn/Xóa nút trong Danh sách liên kết vòng tròn.md",
-    "Danh sách liên kết/Danh sách liên kết đôi/Duyệt qua Danh sách liên kết đôi.md",
+    "Danh sách liên kết/Danh sách liên kết vòng tròn/Tìm kiếm trong Danh sách liên kết vòng tròn.md",
+    "Danh sách liên kết/Danh sách liên kết vòng tròn/Khai báo kiểu dữ liệu.md",
+    "Danh sách liên kết/Danh sách liên kết vòng tròn/Danh sách liên kết vòng tròn.md",
     "Danh sách liên kết/Danh sách liên kết vòng tròn/Chèn nút trong Danh sách liên kết vòng tròn.md",
     "Danh sách liên kết/Danh sách liên kết đôi/Danh sách liên kết đôi.md",
-    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đôi.md",
-    "Danh sách liên kết/Danh sách liên kết đôi/So sánh giữa Danh sách liên kết đơn và Danh sách liên kết đôi.md",
-    "Danh sách liên kết/Danh sách liên kết đơn/Danh sách liên kết đơn.md",
-    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Giới thiệu về danh sách liên kết.md",
+    "Danh sách liên kết/Danh sách liên kết.md",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Tầm quan trọng của Danh sách liên kết.md",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Phân tích thời gian của các thao tác trong Danh sách liên kết và Mảng.md",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/So sánh giữa Danh sách liên kết và Mảng.md",
     "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Một số thuật ngữ cơ bản của danh sách liên kết.md",
     "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết vòng tròn.md",
     "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đơn.md",
-    "Danh sách liên kết/Danh sách liên kết đôi/Xóa nút trong Danh sách liên kết đôi.md",
-    "DSA.md",
-    "Danh sách liên kết/Danh sách liên kết đôi/Kích thước của Danh sách liên kết đôi.md",
-    "Danh sách liên kết/Danh sách liên kết đôi/Khai báo kiểu dữ liệu.md",
-    "Danh sách liên kết/Danh sách liên kết đôi/Chèn nút trong Danh sách liên kết đôi.md",
-    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Tầm quan trọng của Danh sách liên kết.md",
-    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/So sánh giữa Danh sách liên kết và Mảng.md",
-    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Phân tích thời gian của các thao tác trong Danh sách liên kết và Mảng.md",
-    "Danh sách liên kết/IMG_1.png",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đôi.md",
     "Danh sách liên kết/Danh sách liên kết đơn/Xóa nút trong Danh sách liên kết đơn.md",
     "Danh sách liên kết/Danh sách liên kết đơn/Tìm kiếm trong Danh sách liên kết đơn.md",
     "Danh sách liên kết/Danh sách liên kết đơn/Sửa đổi Danh sách liên kết đơn.md",
-    "Danh sách liên kết vòng tròn",
-    "Danh sách liên kết/IMG_5.png",
-    "Danh sách liên kết/IMG_4.png",
-    "Danh sách liên kết/Danh sách liên kết vòng tròn",
-    "Test/test_3/cpp/test.cpp",
-    "Test/test_3/test.py",
-    "Test/test_3/Makefile",
-    "Danh sách liên kết/IMG_3.png",
-    "folderICO.png",
-    "algorithms.png",
-    "Danh sách liên kết/IMG_2.png",
-    "Danh sách liên kết/GIF_1.gif"
+    "Danh sách liên kết/Danh sách liên kết đơn/Số lượng nút trong danh sách liên kết đơn.md",
+    "Ngăn xếp/Giới thiệu về ngăn xếp",
+    "Ngăn xếp",
+    "Test/test_3/cpp/test_cpp.pdb",
+    "Test/test_3/cpp/test_cpp.exe"
   ]
 }

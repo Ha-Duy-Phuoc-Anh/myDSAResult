@@ -1,4 +1,4 @@
-**Chủ đề**: [[Danh sách liên kết đôi]]
+#file **Chủ đề**: [[Danh sách liên kết đôi]]
 ## Xóa nút ở đầu Danh sách liên kết
 ---
 > _Thao tác này giống như [[Xóa nút trong Danh sách liên kết đơn]], chỉ khác là cần nối **PREV** vào **HEAD**_

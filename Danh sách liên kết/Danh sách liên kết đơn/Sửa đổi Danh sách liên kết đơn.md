@@ -1,4 +1,4 @@
-**Chủ đề**: [[Danh sách liên kết đơn]]
+#file **Chủ đề**: [[Danh sách liên kết đơn]]
 
 > _Để chỉnh sửa Danh sách liên kết đơn, ta làm như sau:
 > 	1. Tìm nút ở giữa Danh sách liên kết và **đảo ngược phần nửa thứ hai** bắt đầu từ sau **nút giữa**
