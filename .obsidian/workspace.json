@@ -4,49 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "04ca05d888684b16",
+        "id": "89b9be5535d899ec",
         "type": "tabs",
         "children": [
           {
-            "id": "50265c7abd970faa",
+            "id": "9fe5bf7ce3708802",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ngăn xếp/Biểu diễn dưới dạng Mảng.md",
+                "file": "Ngăn xếp/Biểu diễn dưới dạng Danh sách liên kết.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Biểu diễn dưới dạng Mảng"
-            }
-          },
-          {
-            "id": "e22f64cf59c32124",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ngăn xếp/Phân tích Ngăn xếp.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Phân tích Ngăn xếp"
-            }
-          },
-          {
-            "id": "43cedbb22055e299",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Ngăn xếp/Ngăn xếp.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ngăn xếp"
+              "title": "Biểu diễn dưới dạng Danh sách liên kết"
             }
           }
         ]
@@ -140,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cấu trúc dữ liệu và giải thuật.md",
+                "file": "Ngăn xếp/Biểu diễn dưới dạng Danh sách liên kết.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +122,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Cấu trúc dữ liệu và giải thuật"
+              "title": "Liên kết đến của Biểu diễn dưới dạng Danh sách liên kết"
             }
           },
           {
@@ -201,8 +173,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -214,31 +185,37 @@
       "command-palette:Mở khay lệnh": false
     }
   },
-  "active": "50265c7abd970faa",
+  "active": "9fe5bf7ce3708802",
   "lastOpenFiles": [
-    "Test/test_4/test.py",
-    "Test/test_4/Makefile",
-    "Test/test_4/cpp/test.cpp",
-    "Test/test_4/cpp",
-    "Test/test_4",
-    "Ngăn xếp/Phân tích Ngăn xếp.md",
-    "Ngăn xếp/Ngăn xếp.md",
-    "Ngăn xếp/Một số thao tác của Ngăn xếp.md",
-    "Ngăn xếp/Biểu diễn Ngăn xếp.md",
-    "Ngăn xếp/Cấu trúc LIFO.md",
+    "Test/test_5/cpp/test_cpp.pdb",
+    "Test/test_5/cpp/test_cpp.exe",
+    "Test/test_5/cpp/test_cpp.ilk",
+    "Test/test_5/cpp/test.obj",
+    "Test/test_5/cpp/vc140.pdb",
+    "Test/test_4/cpp/test_cpp.exe",
+    "Test/test_4/cpp/test.obj",
+    "check.md",
+    "Test/test_5/Makefile",
+    "Test/test_5/cpp/dsfadsf",
+    "Test/test_5/cpp/linkedlist",
+    "Test/test_4/cpp/test_cpp.pdb",
     "Ngăn xếp/Biểu diễn dưới dạng Mảng.md",
+    "Ngăn xếp/Phân tích Ngăn xếp.md",
+    "Ngăn xếp/Biểu diễn Ngăn xếp.md",
+    "Ngăn xếp/Biểu diễn dưới dạng Danh sách liên kết.md",
+    "Ngăn xếp/Một số thao tác của Ngăn xếp.md",
+    "Ngăn xếp/Ngăn xếp.md",
+    "Ngăn xếp/Cấu trúc LIFO.md",
     "Ngăn xếp/IMG_6.png",
     "Ngăn xếp/IMG_5.png",
     "Ngăn xếp/IMG_2.png",
     "Ngăn xếp/IMG_7.png",
-    "Ngăn xếp/VID_1.mp4",
     "Ngăn xếp/Giới thiệu về ngăn xếp.md",
     "Ngăn xếp/IMG_6/Bản chiếu3.PNG",
     "Ngăn xếp/IMG_6/Bản chiếu4.PNG",
     "Ngăn xếp/IMG_6/IMG_6.png",
     "Ngăn xếp/IMG_6/Bản chiếu2.PNG",
     "Ngăn xếp/IMG_6/Bản chiếu1.PNG",
-    "Ngăn xếp/IMG_6",
     "Ngăn xếp/IMG_4.png",
     "Danh sách liên kết/Danh sách liên kết vòng tròn/Xóa nút trong Danh sách liên kết vòng tròn.md",
     "Danh sách liên kết/Danh sách liên kết vòng tròn/Tìm kiếm trong Danh sách liên kết vòng tròn.md",
@@ -255,12 +232,6 @@
     "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đơn.md",
     "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đôi.md",
     "Danh sách liên kết/Danh sách liên kết đơn/Xóa nút trong Danh sách liên kết đơn.md",
-    "Danh sách liên kết/Danh sách liên kết đơn/Tìm kiếm trong Danh sách liên kết đơn.md",
-    "Danh sách liên kết/Danh sách liên kết đơn/Sửa đổi Danh sách liên kết đơn.md",
-    "Danh sách liên kết/Danh sách liên kết đơn/Số lượng nút trong danh sách liên kết đơn.md",
-    "Ngăn xếp/Giới thiệu về ngăn xếp",
-    "Ngăn xếp",
-    "Test/test_3/cpp/test_cpp.pdb",
-    "Test/test_3/cpp/test_cpp.exe"
+    "Danh sách liên kết/Danh sách liên kết đơn/Tìm kiếm trong Danh sách liên kết đơn.md"
   ]
 }

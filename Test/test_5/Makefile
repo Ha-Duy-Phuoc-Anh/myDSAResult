@@ -1,6 +1,6 @@
 .PHONY: all run_cpp_msvc debug_leak_drmemory run_cpp_gcc debug_leak_valgrind clean
 
-all: run_cpp debug_leak_drmemory run_cpp_gcc debug_leak_valgrind
+all: run_cpp_msvc debug_leak_drmemory run_cpp_gcc debug_leak_valgrind
 
 run_cpp_msvc:
 	cd cpp
@@ -25,5 +25,5 @@ debug_leak_valgrind:
 
 clean:
 	@for /R cpp %%F in (*) do ( \
-		if /I not "%%~nxF"=="test.cpp" del "%%F" \
+		if /I not "%%~nxF"=="test.cpp" if /I not "%%~nF"=="linkedlist" del "%%F" \
 	)

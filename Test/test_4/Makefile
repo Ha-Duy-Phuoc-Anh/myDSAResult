@@ -1,9 +1,6 @@
-.PHONY: all run_py run_cpp_msvc debug_leak_drmemory run_cpp_gcc debug_leak_valgrind clean
+.PHONY: all run_cpp_msvc debug_leak_drmemory run_cpp_gcc debug_leak_valgrind clean
 
-all: run_py run_cpp debug_leak_drmemory run_cpp_gcc debug_leak_valgrind
-
-run_py:
-	python test.py
+all: run_cpp debug_leak_drmemory run_cpp_gcc debug_leak_valgrind
 
 run_cpp_msvc:
 	cd cpp
