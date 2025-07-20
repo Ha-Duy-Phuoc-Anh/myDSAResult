@@ -10,3 +10,5 @@
 - [[Một số thao tác của Ngăn xếp]]
 - [[Phân tích Ngăn xếp]]
 - [[Biểu diễn dưới dạng Mảng]]
+- [[Biểu diễn dưới dạng Danh sách liên kết]]
+- [[Sử dụng C++ STL]]
