@@ -1,8 +1,5 @@
-#file [[Hàng đợi]]
+#include <iostream>
 
-## Mẫu FULL Method
----
-``` cpp
 // Khởi tạo kiểu dữ liệu
 class Queue {
 private:
@@ -73,5 +70,31 @@ public:
         delete[] data;
     }
 };
-```
 
+int main() {
+    Queue newQueue(4);
+    newQueue.enqueue(31);
+    newQueue.enqueue(28);
+    newQueue.enqueue(54);
+    newQueue.enqueue(49);
+
+    std::cout << "Before delete: ";
+    newQueue.display();
+
+    std::cout << "Is queue full: " << (newQueue.isFull() ? "TRUE" : "FALSE") << std::endl;
+    std::cout << "Is queue empty: " << (newQueue.isEmpty() ? "TRUE" : "FALSE") << std::endl;
+
+    newQueue.dequeue();
+    newQueue.dequeue();
+
+    std::cout << "Size after 2 dequeue: " << newQueue.size() << std::endl;
+    std::cout << "The FRONT element: " << newQueue.peek() << std::endl;
+
+    newQueue.dequeue();
+    newQueue.dequeue();
+
+    std::cout << "Is queue full after dequeue: " << (newQueue.isFull() ? "TRUE" : "FALSE") << std::endl;
+    std::cout << "Is queue empty after dequeue: " << (newQueue.isEmpty() ? "TRUE" : "FALSE") << std::endl;
+
+    return 0;
+}

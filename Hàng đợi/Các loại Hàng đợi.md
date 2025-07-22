@@ -18,4 +18,7 @@
 
 ---
 **Xem tiếp**: 
-- [[Hàng đợi/Biểu diễn dưới dạng Mảng]]
+- [[Hàng đợi/Biểu diễn dưới dạng Mảng|Biểu diễn dưới dạng Mảng]]
+- [[Biểu diễn dưới dạng Mảng động (VECTOR)]]
+- [[Hàng đợi/Biểu diễn dưới dạng Danh sách liên kết|Biểu diễn dưới dạng Danh sách liên kết]]
+- [[Hàng đợi hai đầu STL]]
