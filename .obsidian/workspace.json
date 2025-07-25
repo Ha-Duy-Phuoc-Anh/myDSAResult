@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "08c2a6d881de849a",
+        "id": "3f70e27b19b36b7f",
         "type": "tabs",
         "children": [
           {
-            "id": "7248a9f7bf7c5052",
+            "id": "a3776d6864702404",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bảng băm/Khái niệm băm.md",
+                "file": "Bảng băm/Tạo bảng băm xử lí chuỗi riêng biệt.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Khái niệm băm"
-            }
-          },
-          {
-            "id": "6ac4ccd868fd9556",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bảng băm/Va chạm của băm.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Va chạm của băm"
+              "title": "Tạo bảng băm xử lí chuỗi riêng biệt"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -48,7 +33,6 @@
       {
         "id": "27976a4ea7da48e5",
         "type": "tabs",
-        "dimension": 69.25287356321839,
         "children": [
           {
             "id": "0e5dd752a84a2da0",
@@ -93,12 +77,11 @@
         ]
       },
       {
-        "id": "0a1b0fbee8345b6e",
+        "id": "73fa1946f3b0e736",
         "type": "tabs",
-        "dimension": 30.747126436781606,
         "children": [
           {
-            "id": "56b69d05049ce71c",
+            "id": "6f30672a18e610d0",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -111,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 302.5
   },
   "right": {
     "id": "5925326fffbdaef7",
@@ -201,15 +184,36 @@
       "command-palette:Mở khay lệnh": false
     }
   },
-  "active": "6ac4ccd868fd9556",
+  "active": "6f30672a18e610d0",
   "lastOpenFiles": [
-    "Bảng băm/Các thành phần của băm.md",
-    "Bảng băm/Khái niệm băm.md",
+    "Bảng băm/Tạo bảng băm xử lí chuỗi riêng biệt.md",
+    "Bảng băm/Các kỹ thuật xử lí va chạm.md",
+    "Bảng băm/Chuỗi riêng biệt.md",
+    "Bảng băm/Cách băm hoạt động.md",
+    "Bảng băm/Các thành phần của bảng băm.md",
+    "Bảng băm/Tổng quan về bảng băm.md",
+    "Bảng băm/VID_2.mp4",
+    "Bảng băm/Các loại hàm băm.md",
+    "Bảng băm/VID_1.mp4",
+    "Bảng băm/IMG_2.png",
+    "Bảng băm/Cách hàm băm hoạt động.md",
     "Bảng băm/Bảng băm.md",
+    "Bảng băm/IMG_5.png",
+    "Bảng băm/Va chạm trong băm.md",
+    "Ngăn xếp/Một số thao tác của Ngăn xếp.md",
+    "Bảng băm/IMG_4.png",
+    "Bảng băm/IMG_1.png",
+    "Bảng băm/IMG_3.png",
+    "Bảng băm/IMG_3/Bản chiếu5.PNG",
+    "Bảng băm/IMG_3/Bản chiếu4.PNG",
+    "Bảng băm/IMG_3/Bản chiếu3.PNG",
+    "Bảng băm/IMG_3/Bản chiếu2.PNG",
+    "Bảng băm/IMG_3/Bản chiếu1.PNG",
+    "Bảng băm/IMG_3",
+    "Bảng băm/Khái niệm băm.md",
     "Bảng băm/Load Factor là gì.md",
     "Bảng băm/Va chạm của băm.md",
-    "Bảng băm/IMG_1.png",
-    "Pasted image 20250722134808.png",
+    "Bảng băm/Các thành phần của băm.md",
     "Hàng đợi/Hàng đợi hai đầu STL.md",
     "Bảng băm",
     "Test/test_10/cpp/test_cpp.pdb",
@@ -218,36 +222,15 @@
     "Test/test_10/cpp/test.obj",
     "Test/test_10/cpp/vc140.pdb",
     "Test/test_9/cpp/test_cpp.pdb",
-    "Test/test_9/cpp/test_cpp.exe",
-    "Test/test_9/cpp/test_cpp.ilk",
-    "Test/test_9/cpp/test.obj",
     "Hàng đợi/Các loại Hàng đợi.md",
     "Hàng đợi/Hàng đợi.md",
     "Hàng đợi/Biểu diễn Hàng đợi.md",
     "Hàng đợi/Biểu diễn dưới dạng Danh sách liên kết.md",
-    "Hàng đợi/IMG_3.png",
-    "Hàng đợi/IMG_2.png",
     "Hàng đợi/Biểu diễn dưới dạng Mảng động (VECTOR).md",
     "Hàng đợi/Biểu diễn dưới dạng Mảng.md",
     "Hàng đợi/Phân tích Hàng đợi.md",
     "Hàng đợi/Một số thuật ngữ của Hàng đợi.md",
     "Ngăn xếp/Ngăn xếp.md",
-    "Hàng đợi/IMG_1.png",
-    "Ngăn xếp/Phân tích Ngăn xếp.md",
-    "Ngăn xếp/Sử dụng C++ STL.md",
-    "Ngăn xếp/Một số thao tác của Ngăn xếp.md",
-    "Ngăn xếp/Cấu trúc LIFO.md",
-    "Ngăn xếp/Biểu diễn dưới dạng Mảng.md",
-    "Ngăn xếp/Biểu diễn dưới dạng Danh sách liên kết.md",
-    "Ngăn xếp/Biểu diễn Ngăn xếp.md",
-    "check.md",
-    "Ngăn xếp/IMG_6.png",
-    "Ngăn xếp/IMG_5.png",
-    "Ngăn xếp/IMG_2.png",
-    "Ngăn xếp/IMG_7.png",
-    "Ngăn xếp/Giới thiệu về ngăn xếp.md",
-    "Ngăn xếp/IMG_6/Bản chiếu3.PNG",
-    "Danh sách liên kết/Danh sách liên kết vòng tròn/Xóa nút trong Danh sách liên kết vòng tròn.md",
-    "Danh sách liên kết/Danh sách liên kết vòng tròn/Tìm kiếm trong Danh sách liên kết vòng tròn.md"
+    "Ngăn xếp/Phân tích Ngăn xếp.md"
   ]
 }
