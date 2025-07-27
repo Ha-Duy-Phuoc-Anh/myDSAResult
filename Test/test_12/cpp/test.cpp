@@ -1,8 +1,3 @@
-#file [[Các kỹ thuật xử lí va chạm]]
-
-## Xử lí chuỗi riêng biệt theo kiểu chuỗi đơn giản
----
-``` cpp
 // Thêm các thư viện cần thiết
 #include <iostream>
 #include <vector>
@@ -72,28 +67,27 @@ private:
         return static_cast<int> (bucketCount * step);
     }
 };
-```
 
-> **Tìm kiếm**: $O(1+(n \div m))$
-> **Xóa**: $O(1+(n \div m))$
-> **Chiều dài chuỗi dữ kiến**: $O(∝)$
-> **Thời gian tìm kiếm dữ kiến**: $O(1\space+∝)$
-> **Thời gian dữ kiến để chèn / xóa**: $O(1 \space +∝ )$
+int main() {
+    Hash hashTable(6);
 
-> _Trong đó:_
-> 	_$n$: Tổng số phần tử trong một bảng._
-> 	_$m$: Kích thước của bảng băm._
-> 	_$n \div m \space (∝)$: Hệ số tải._
+    hashTable.insert(14);
+    hashTable.insert(23);
+    hashTable.insert(39);
+    hashTable.insert(47);
+    hashTable.insert(55);
+    hashTable.insert(34);
 
-> **Không gian**: $O(1)$
+    std::cout << "BEFORE DELETE: " << std::endl;
+    hashTable.display();
 
-> [!WARNING]
-> **Hệ số tải (∝)** cần nhỏ nhất có thể
-> Nếu **Hệ số tải** tăng, khả năng xảy ra va chạm càng cao
-> **Hệ số tải** là giao dịch giữa không gian và thời gian của chương trình
+    hashTable.remove(14);
+    hashTable.remove(34);
+    hashTable.remove(55);
+    hashTable.insert(58);
 
-## Xử lí chuỗi riêng biệt theo kiểu băm lại
----
-``` cpp
+    std::cout << std::endl << "AFTER DELETE: " << std::endl;
+    hashTable.display();
 
-```
+    return 0;
+}
