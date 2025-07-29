@@ -1,3 +1,13 @@
+#file [[Địa chỉ mở]]
+
+_Trong đây, ta sẽ không sử dụng kỹ thuật giống như trước. Kỹ thuật này yêu cầu phải có hai hàm băm, một hàm băm chính để sử dụng, và một hàm băm phụ để tính bước nhảy, thay vì cộng dồn gây nên lỗi dồn nén bảng băm_
+
+> **Time complexity**: $O(n)$
+> **Space complexity**: $O(l)$
+
+## Tạo bảng băm xử lí va chạm kiểu Băm đôi
+---
+``` cpp
 // Thêm các thư viện cần thiết
 #include <iostream>
 #include <vector>
@@ -42,7 +52,7 @@ public:
 
         // Lặp để tìm vị trí còn sót lại
         for (int i = 0; i < bucketCount; ++i) {
-            int probe = i * i;
+            int probe = i * jumpStep(key);
             if (table[index] == EMPTY_SLOT) {
                 table[index] = key;
                 return;
@@ -66,7 +76,7 @@ public:
 
         // Lặp để tìm vị trí còn sót lại
         for (int i = 0; i < bucketCount; ++i) {
-            int probe = i * i;
+            int probe = i * jumpStep(key);
             if (table[index] == key) {
                 table[index] = EMPTY_SLOT;
                 return;
@@ -99,6 +109,11 @@ private:
         return static_cast<int> (bucketCount * step);
     }
 
+    // Hàm băm phụ cho việc tính bước nhảy khi có va chạm
+    int jumpStep(int key) {
+        return 1 + (key % (bucketCount - 1));
+    }
+
     // Hàm băm lại bảng băm
     void rehash() {
         std::vector<int> oldTable = table;
@@ -113,28 +128,4 @@ private:
         }
     }
 };
-
-int main() {
-    Hash hashTable(6);
-
-    hashTable.insert(14);
-    hashTable.insert(23);
-    hashTable.insert(39);
-    hashTable.insert(47);
-    hashTable.insert(34);
-    hashTable.insert(15);
-    hashTable.insert(35);
-
-    std::cout << "BEFORE DELETE: " << std::endl;
-    hashTable.display();
-
-    hashTable.remove(14);
-    hashTable.remove(34);
-    hashTable.remove(47);
-    hashTable.insert(58);
-
-    std::cout << std::endl << "AFTER DELETE: " << std::endl;
-    hashTable.display();
-
-    return 0;
-}
+```

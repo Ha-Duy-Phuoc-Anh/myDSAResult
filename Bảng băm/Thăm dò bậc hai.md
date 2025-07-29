@@ -1,3 +1,15 @@
+#file [[Địa chỉ mở]]
+
+_Khác với thăm dò tuyến tính, thăm dò bậc hai sẽ tính theo bình phương thay vì chỉ cộng mỗi số. Ví dụ như slot 1 đã bị chiếm dụng thì ta sẽ dùng $1+1^2$, nếu slot đó bị chiếm dụng tiếp thì tiếp tục cộng lên cho tới khi tìm thấy slot rỗng: $1+2^2$, $1+2^3$,.._
+
+> **Time complexity**: $O(l * 1)$
+> **Space complexity**: $O(1)$
+
+> [!BUG] Không làm video nữa
+
+## Tạo bảng băm xử lí va chạm kiểu thăm dò bậc hai
+---
+``` cpp
 // Thêm các thư viện cần thiết
 #include <iostream>
 #include <vector>
@@ -113,28 +125,4 @@ private:
         }
     }
 };
-
-int main() {
-    Hash hashTable(6);
-
-    hashTable.insert(14);
-    hashTable.insert(23);
-    hashTable.insert(39);
-    hashTable.insert(47);
-    hashTable.insert(34);
-    hashTable.insert(15);
-    hashTable.insert(35);
-
-    std::cout << "BEFORE DELETE: " << std::endl;
-    hashTable.display();
-
-    hashTable.remove(14);
-    hashTable.remove(34);
-    hashTable.remove(47);
-    hashTable.insert(58);
-
-    std::cout << std::endl << "AFTER DELETE: " << std::endl;
-    hashTable.display();
-
-    return 0;
-}
+```

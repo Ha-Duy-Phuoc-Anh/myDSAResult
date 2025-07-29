@@ -42,7 +42,7 @@ public:
 
         // Lặp để tìm vị trí còn sót lại
         for (int i = 0; i < bucketCount; ++i) {
-            int probe = i * i;
+            int probe = i * jumpStep(key);
             if (table[index] == EMPTY_SLOT) {
                 table[index] = key;
                 return;
@@ -66,7 +66,7 @@ public:
 
         // Lặp để tìm vị trí còn sót lại
         for (int i = 0; i < bucketCount; ++i) {
-            int probe = i * i;
+            int probe = i * jumpStep(key);
             if (table[index] == key) {
                 table[index] = EMPTY_SLOT;
                 return;
@@ -97,6 +97,11 @@ private:
     int getHash(int key) {
         double step = fmod(key * RANDOM_NUMBER, 1);
         return static_cast<int> (bucketCount * step);
+    }
+
+    // Hàm băm phụ cho việc tính bước nhảy khi có va chạm
+    int jumpStep(int key) {
+        return 1 + (key % (bucketCount - 1));
     }
 
     // Hàm băm lại bảng băm
