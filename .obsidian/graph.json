@@ -29,23 +29,30 @@
       }
     },
     {
-      "query": "tag:#file  ",
+      "query": "tag:#subtitle2",
       "color": {
         "a": 1,
         "rgb": 5431378
+      }
+    },
+    {
+      "query": "tag:#file  ",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
       }
     }
   ],
   "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1.08255208333333,
+  "nodeSizeMultiplier": 0.699739583333333,
   "lineSizeMultiplier": 0.98046875,
   "collapse-forces": false,
   "centerStrength": 0.5390625,
   "repelStrength": 10,
   "linkStrength": 1,
-  "linkDistance": 198,
-  "scale": 0.22920135941749456,
+  "linkDistance": 30,
+  "scale": 0.8854989543150498,
   "close": true
 }

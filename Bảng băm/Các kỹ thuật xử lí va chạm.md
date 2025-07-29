@@ -10,6 +10,7 @@ Chúng ta có hai kỹ thuật xử lí va chạm chính
 ---
 - **[[Chuỗi riêng biệt]]**
 - **[[Tạo bảng băm xử lí chuỗi riêng biệt]]
+- **[[Địa chỉ mở]]**
 
 ---
 **Bài trước**: [[Va chạm trong băm]]
