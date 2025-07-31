@@ -13,3 +13,4 @@ Bảng bảm là một cấu trúc dữ liệu phi tuyến tính, dùng để ch
 - [[Các loại hàm băm]]
 - [[Va chạm trong băm]]
 - [[Các kỹ thuật xử lí va chạm]]
+- [[Hệ số tải]]

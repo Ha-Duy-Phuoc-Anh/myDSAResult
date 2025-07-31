@@ -14,3 +14,4 @@ Chúng ta có hai kỹ thuật xử lí va chạm chính
 
 ---
 **Bài trước**: [[Va chạm trong băm]]
+**Bài sau**: [[Hệ số tải]]
