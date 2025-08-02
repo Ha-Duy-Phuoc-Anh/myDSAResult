@@ -4,81 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "c7aeca3dcbb97c9a",
+        "id": "7cb4ef26662d0b44",
         "type": "tabs",
         "children": [
           {
-            "id": "c7f5de656da26120",
+            "id": "b11a62d9d95d8ecb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cây/Cấu trúc dữ liệu cây.md",
+                "file": "Cây/Cây nhị phân/Cây nhị phân.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cấu trúc dữ liệu cây"
+              "title": "Cây nhị phân"
             }
           },
           {
-            "id": "cd0ac05ca6d6b6f8",
+            "id": "68ac6299ef2727f3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cây/Một số thuật ngữ của Cây.md",
+                "file": "Cây/Cây nhị phân/Khởi tạo kiểu dữ liệu.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Một số thuật ngữ của Cây"
-            }
-          },
-          {
-            "id": "8bf0b5b9a3d09d29",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cây/Tại sao Cây lại là cấu trúc dữ liệu phi tuyến tính.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Tại sao Cây lại là cấu trúc dữ liệu phi tuyến tính"
-            }
-          },
-          {
-            "id": "35ddf9a9aa763f20",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cây/Tại sao Cây lại là cấu trúc dữ liệu phi tuyến tính.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Tại sao Cây lại là cấu trúc dữ liệu phi tuyến tính"
-            }
-          },
-          {
-            "id": "26aa63e3db75af1d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cây/Khai báo kiểu dữ liệu.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Khai báo kiểu dữ liệu"
+              "title": "Khởi tạo kiểu dữ liệu"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -244,14 +202,27 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "26aa63e3db75af1d",
+  "active": "68ac6299ef2727f3",
   "lastOpenFiles": [
-    "Cây/Cấu trúc dữ liệu cây.md",
+    "Cây/Cây nhị phân/Khởi tạo kiểu dữ liệu.md",
+    "Cây/Cây nhị phân/Cây nhị phân.md",
     "Cây/Tại sao Cây lại là cấu trúc dữ liệu phi tuyến tính.md",
+    "Cây/Lợi ích và bất lợi khi dùng cấu trúc dữ liệu cây.md",
+    "Cây/IMG_1.png",
+    "Cây/Các thao tác cơ bản của cây.md",
+    "Cây/Các loại cây.md",
+    "Cây/Cây nhị phân",
+    "Excalidraw/Cây_IMG2.excalidraw.md",
+    "Cây/IMG_2.png",
+    "Excalidraw/Cây_IMG1.excelidraw.md",
+    "Cây/Cấu trúc dữ liệu cây.md",
     "Cây/Một số thuật ngữ của Cây.md",
     "Cây/Khai báo kiểu dữ liệu.md",
-    "Cây/IMG_1.png",
-    "Excalidraw/Cây_IMG1.excelidraw.md",
+    "Danh sách liên kết/Danh sách liên kết.md",
+    "Test/test_16/cpp/test.cpp",
+    "Test/test_16/Makefile",
+    "Test/test_16/cpp",
+    "Test/test_16",
     "Cây/IMG_1 (1).png",
     "Excalidraw",
     "Cây",
@@ -271,25 +242,13 @@
     "Bảng băm/Thăm dò bậc hai.md",
     "Bảng băm/Tạo bảng băm xử lí chuỗi riêng biệt.md",
     "Bảng băm/Bảng băm.md",
-    "Bảng băm/Địa chỉ mở.md",
-    "Bảng băm/Băm đôi.md",
     "Test/test_15/cpp/test_cpp.pdb",
-    "Test/test_15/cpp/test_cpp.exe",
-    "Test/test_15/cpp/test_cpp.ilk",
-    "Test/test_15/cpp/test.obj",
-    "Test/test_15/cpp/vc140.pdb",
-    "Test/test_15/cpp/test.cpp",
-    "Bảng băm/Thăm dò tuyến tính.md",
-    "Bảng băm/Chuỗi riêng biệt.md",
-    "Bảng băm/Các loại hàm băm.md",
-    "Bảng băm/Các thành phần của bảng băm.md",
     "Bảng băm/IMG_5.png",
     "Bảng băm/IMG_2.png",
     "Bảng băm/IMG_4.png",
     "Bảng băm/IMG_1.png",
     "Bảng băm/IMG_3.png",
     "Bảng băm/IMG_3/Bản chiếu5.PNG",
-    "Bảng băm/IMG_3/Bản chiếu4.PNG",
-    "Bảng băm/IMG_3/Bản chiếu3.PNG"
+    "Bảng băm/IMG_3/Bản chiếu4.PNG"
   ]
 }

@@ -22,7 +22,6 @@ debug_leak_valgrind:
 	g++ -g -O0 -Wall -Wextra -std=c++17 test.cpp -o test_cpp
 	valgrind --leak-check=full ./test_cpp
 
-
 clean:
 	@for /R cpp %%F in (*) do ( \
 		if /I not "%%~nxF"=="test.cpp" del "%%F" \

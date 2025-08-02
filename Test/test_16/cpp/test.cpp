@@ -3,15 +3,15 @@
 #include <vector>
     
 // Khởi tạo kiểu dữ liệu
-class Tree {
+class Node {
     // Dữ liệu
     int data;
 
     // Nút con
-    std::vector<Tree*> child;
+    std::vector<Node*> child;
 
     // Khai báo dữ liệu
-    Tree(int val) : data(val), child({}) {};
+    Node(int val) : data(val), child({}) {};
 };
 
 int main() {

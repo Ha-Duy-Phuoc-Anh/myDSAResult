@@ -13,3 +13,6 @@ Nút ở trên cùng của một cây được gọi là **root** (tạm dịch:
 - [[Một số thuật ngữ của Cây]]
 - [[Tại sao Cây lại là cấu trúc dữ liệu phi tuyến tính]]
 - [[Cây/Khai báo kiểu dữ liệu|Khai báo kiểu dữ liệu]]
+- [[Cấu trúc dữ liệu cây]]
+- [[Các thao tác cơ bản của cây]]
+- [[Các loại cây]]
