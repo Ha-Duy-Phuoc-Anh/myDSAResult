@@ -5,4 +5,7 @@
 ![[Cây/IMG_2.png]]
 
 ---
-**Xem tiếp**: [[Khởi tạo kiểu dữ liệu]]
+**Xem tiếp**: 
+- [[Khởi tạo kiểu dữ liệu]]
+- [[Các giá trị trong cây nhị phân]]
+- [[Duyệt qua Cây nhị phân]]

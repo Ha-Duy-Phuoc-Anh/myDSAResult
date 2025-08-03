@@ -14,6 +14,8 @@ class Node {
     Node(int val) : data(val), child({}) {};
 };
 
+
+
 int main() {
 
     return 0;
