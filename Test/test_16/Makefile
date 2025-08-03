@@ -8,9 +8,8 @@ run_cpp_msvc:
 	test_cpp.exe
 
 run_cpp_gcc:
-	cd cpp
-	g++ -O3 -Wall -Wextra -std=c++17 test.cpp -o test_cpp
-	./test_cpp
+	g++ -O3 -Wall -Wextra -std=c++17 cpp/test.cpp -o cpp/test_cpp
+	./cpp/test_cpp
 
 debug_leak_drmemory:
 	cd cpp
@@ -18,9 +17,8 @@ debug_leak_drmemory:
 	drmemory.exe -- test_cpp.exe
 
 debug_leak_valgrind:
-	cd cpp
-	g++ -g -O0 -Wall -Wextra -std=c++17 test.cpp -o test_cpp
-	valgrind --leak-check=full ./test_cpp
+	g++ -g -O0 -Wall -Wextra -std=c++17 cpp/test.cpp -o cpp/test_cpp
+	valgrind --leak-check=full ./cpp/test_cpp
 
 clean:
 	@for /R cpp %%F in (*) do ( \

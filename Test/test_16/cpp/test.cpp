@@ -1,6 +1,5 @@
 // Thêm các thư viện cần thiết
 #include <iostream>
-#include <vector>
     
 // Khởi tạo kiểu dữ liệu
 class Node {
@@ -8,10 +7,11 @@ class Node {
     int data;
 
     // Nút con
-    std::vector<Node*> child;
+    Node* left;
+    Node* right;
 
     // Khai báo dữ liệu
-    Node(int val) : data(val), child({}) {};
+    Node(int val) : data(val), left(nullptr), right(nullptr) {};
 };
 
 int main() {
