@@ -10,5 +10,20 @@
 ### Thực hiện thuật toán **Preorder Traversal** trong **DFS**
 ---
 ``` cpp
+// Preoder Traversal trong Binary Tree
+void preorderPrint(Node* root)
+{
+    // Nếu đã hết nhánh thì thoát đệ quy
+    if (root == nullptr) return;
+    
+    // In ra cửa sổ dòng lệnh
+    std::cout << root->data << " ";
 
+    // Đệ quy nút con trái và nút con phải
+    preorderPrint(root->left);
+    preorderPrint(root->right);
+}
 ```
+
+> **Time complexity**: $O(n)$
+> **Space complexity**: $O(h)$

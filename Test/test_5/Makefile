@@ -1,29 +1,18 @@
-.PHONY: all run_cpp_msvc debug_leak_drmemory run_cpp_gcc debug_leak_valgrind clean
+.PHONY: all run_c debug_leak_drmemory debug_leak_valgrind clean
 
-all: run_cpp_msvc debug_leak_drmemory run_cpp_gcc debug_leak_valgrind
+all: run_c debug_leak_drmemory debug_leak_valgrind
 
-run_cpp_msvc:
-	cd cpp
-	cl.exe /O2 /EHsc /W4 /std:c++17 test.cpp /Fe:test_cpp.exe
-	test_cpp.exe
-
-run_cpp_gcc:
-	cd cpp
-	g++ -O3 -Wall -Wextra -std=c++17 test.cpp -o test_cpp
-	./test_cpp
+run_c:
+	gcc -O3 -Wall -Wextra test.c -o test
+	./test
 
 debug_leak_drmemory:
-	cd cpp
-	cl.exe /Zi /Od /EHsc /MDd /W4 /std:c++17 test.cpp /Fe:test_cpp.exe
-	drmemory.exe -- test_cpp.exe
+	gcc -g -O0 -Wall -Wextra test.c -o test.exe
+	drmemory.exe -- test.exe
 
 debug_leak_valgrind:
-	cd cpp
-	g++ -g -O0 -Wall -Wextra -std=c++17 test.cpp -o test_cpp
-	valgrind --leak-check=full ./test_cpp
-
+	gcc -g -O0 -Wall -Wextra test.c -o test
+	valgrind --leak-check=full ./test
 
 clean:
-	@for /R cpp %%F in (*) do ( \
-		if /I not "%%~nxF"=="test.cpp" if /I not "%%~nF"=="linkedlist" del "%%F" \
-	)
+	del test.exe

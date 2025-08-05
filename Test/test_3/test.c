@@ -1,25 +1,32 @@
-#include <iostream>
-#include <vector>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include "cnarr.h"
 
 // Khởi tạo kiểu dữ liệu của Danh sách liên kết đơn
-struct Node {
+typedef struct Node {
     // Phần dữ liệu của Danh sách liên kết đơn
     int data;
     
     // Con trỏ đến nút tiếp theo
-    Node* next;
+    struct Node* next;
+} Node;
 
-    // Hàm khởi tạo Nút
-    Node(int value) : data(value), next(nullptr) {};
-};
+// Hàm khởi tạo nút
+Node* init(int data) {
+    Node* head = (Node*) malloc(sizeof(Node));  // Cấp phát bộ nhớ
+    head->next = head;  // Nối con trỏ vào chính nó
+    head->data = data;  // Cấp dữ liệu
+    return head;    // Trả về nút đã được cấp bộ nhớ dữ liệu đầy đủ
+}
 
 // Hàm thêm nút vào Danh sách liên kết rỗng
 Node* insertEmpty(Node* last, int data) {
     // Kiểm tra nếu danh sách không rỗng
-    if (last != nullptr) return last;
+    if (last != NULL) return last;
 
     // Tạo một nút mới và trỏ đến chính nó
-    Node* newNode = new Node(data);
+    Node* newNode = init(data);
     newNode->next = newNode;
 
     // Chuyển last đến nút mới
@@ -30,13 +37,13 @@ Node* insertEmpty(Node* last, int data) {
 // Hàm thêm nút vào đầu Danh sách liên kết
 Node* insert(Node* last, int data) {
 	// Kiểm tra nếu danh sách rỗng
-	if (last == nullptr) {
+	if (last == NULL) {
 		last = insertEmpty(last, data);
 		return last;
 	}
 
 	// Tạo một nút mới với dữ liệu được cho
-	Node* newNode = new Node(data);
+	Node* newNode = init(data);
 
 	// Điều chỉnh con trỏ để thêm nút mới vào danh sách
 	newNode->next = last->next;
@@ -49,13 +56,13 @@ Node* insert(Node* last, int data) {
 // Hàm thêm nút vào cuối Danh sách liên kết
 Node* append(Node* last, int data) {
     // Kiểm tra nếu danh sách là rỗng
-    if (last == nullptr) {
+    if (last == NULL) {
         last = insertEmpty(last, data);
         return last;
     }
 
     // Tạo một nút mới với dữ liệu được cho
-    Node* newNode = new Node(data);
+    Node* newNode = init(data);
 
     // Cập nhật con trỏ đên thêm nút vào Danh sách
     newNode->next = last->next;
@@ -69,9 +76,9 @@ Node* append(Node* last, int data) {
 // Hàm thêm nút ở vị trí cụ thể trong danh sách liên kết
 Node* add(Node* last, int pos, int data) {
     // Kiểm tra nếu danh sách rỗng và vị trí người dùng đưa ra không phải là 0
-    if (last == nullptr) {
+    if (last == NULL) {
         if (pos != 0) {
-            std::cout << "ERROR 001: Position out of range\n";
+            printf("ERROR 001: Position out of range\n");
             return last;
         }
         last = insertEmpty(last, data);
@@ -89,13 +96,13 @@ Node* add(Node* last, int pos, int data) {
     for (int i = 1; i < pos; ++i) {
         temp = temp->next;
         if (temp == last) {
-            std::cout << "ERROR 001: Position out of range\n";
+            printf("ERROR 001: Position out of range\n");
             return last;
         }
     }
 
     // Tạo nút với dữ liệu đã cho và chèn nút
-    Node* newNode = new Node(data);
+    Node* newNode = init(data);
     newNode->next = temp->next;
     temp->next = newNode;
 
@@ -107,38 +114,38 @@ Node* add(Node* last, int pos, int data) {
 }
 
 // Hàm xóa nút ở đầu danh sách liên kết
-Node* remove(Node* last) {
+Node* removeNode(Node* last) {
     // Kiểm tra nếu Danh sách rỗng
-    if (last == nullptr) {
-        std::cout << "ERROR 002: Nothing to delete\n";
-        return nullptr;
+    if (last == NULL) {
+        printf("ERROR 002: Nothing to delete\n");
+        return NULL;
     }
 
-    // Kiểm tra nếu nút tiếp theo là nullptr
-    if (last->next == nullptr) {
-        delete last;
-        return nullptr;
+    // Kiểm tra nếu nút tiếp theo là NULL
+    if (last->next == NULL) {
+        free(last);
+        return NULL;
     }
 
     // Nếu không thì xóa như bình thường
     Node* head = last->next;
     last->next = head->next;
-    delete head;
+    free(head);
     return last;
 } 
 
 // Xóa nút ở cuối danh sách liên kết
 Node* delette(Node* last) {
     // Kiểm tra nếu Danh sách rỗng
-    if (last == nullptr) {
-        std::cout << "ERROR 002: Nothing to delete\n";
-        return nullptr;
+    if (last == NULL) {
+        printf("ERROR 002: Nothing to delete\n");
+        return NULL;
     }
 
-    // Kiểm tra nếu nút tiếp theo là nullptr
-    if (last->next == nullptr) {
-        delete last;
-        return nullptr;
+    // Kiểm tra nếu nút tiếp theo là NULL
+    if (last->next == NULL) {
+        free(last);
+        return NULL;
     }
 
     // Nếu không thì tạo nút duyệt đến nút trước nút cuối cùng và xóa
@@ -148,7 +155,7 @@ Node* delette(Node* last) {
 
     // Chỉnh con trỏ để tránh lỗi không thể truy cập bộ nhớ
     temp->next = head;
-    delete last;
+    free(last);
     last = temp;
 
     // Trả về Danh sách đã được chỉnh sửa
@@ -158,9 +165,9 @@ Node* delette(Node* last) {
 // Xóa nút ở nút cụ thể trong danh sách liên kết
 Node* delAt(Node* last, int val) {
     // Kiểm tra nếu Danh sách rỗng
-    if (last == nullptr) {
-        std::cout << "ERROR 002: Nothing to delete\n";
-        return nullptr;
+    if (last == NULL) {
+        printf("ERROR 002: Nothing to delete\n");
+        return NULL;
     }
 
     // Tạo nút duyệt đến vị trí người dùng đưa ra
@@ -169,15 +176,15 @@ Node* delAt(Node* last, int val) {
 
     // Nếu nút để xóa là nút duy nhất trong danh sách
     if (tmp == last && prev->data == val) {
-        delete tmp;
-        last = nullptr;
+        free(tmp);
+        last = NULL;
         return last;
     }
 
     // Nêu nút để xóa là nút đâu tiên
     if (tmp->data == val) {
         last->next = tmp->next;
-        delete tmp;
+        free(tmp);
         return last;
     }
 
@@ -193,10 +200,10 @@ Node* delAt(Node* last, int val) {
         if (tmp == last) {
             last = prev;
         }
-        delete tmp;
+        free(tmp);
     }
     else {
-        std::cout << "Node with data " << val << " was not found\n";
+        printf("Node with data %i was not found\n", val);
     }
     return last;
 }
@@ -222,7 +229,7 @@ bool search(Node* last, int target) {
 }
 
 void deleteList(Node* last) {
-    if (last == nullptr) return;
+    if (last == NULL) return;
 
     Node* current = last->next;
     Node* temp;
@@ -230,28 +237,28 @@ void deleteList(Node* last) {
     while (current != last) {
         temp = current;
         current = current->next;
-        delete temp;
+        free(temp);
     }
-    delete last; // Free the last node
-    last = nullptr; // Avoid dangling pointer
+    free(last); // Free the last node
+    last = NULL; // Avoid dangling pointer
 }
 
 void print(Node* last) {
-    if (last == nullptr) return;
+    if (last == NULL) return;
 
     Node* current = last->next;
     do {
-        std::cout << current->data << " ";
+        printf("%i ", current->data);
         current = current->next;
     } while (current != last->next);
-    std::cout << std::endl;
+    printf("\n");
 }
 
 
 
 int main() {
     // Khởi tạo danh sách liên kết vòng tròn
-    Node* last = nullptr;
+    Node* last = NULL;
     last = insertEmpty(last, 1);
     last = insert(last, 2);
     last = insert(last, 3);
@@ -264,21 +271,21 @@ int main() {
     last = add(last, 2, 10);
     last = add(last, 10, 10);
 
-    std::cout << "Before delete: ";
+    printf("Before delete: ");
     print(last);
 
-    last = remove(last);
-    last = remove(last);
+    last = removeNode(last);
+    last = removeNode(last);
     last = delette(last);
     last = delette(last);
     last = delAt(last, 3);
     last = delAt(last, 3);
 
-    std::cout << "After delete: ";
+    printf("After delete: ");
     print(last);
 
-    std::cout << (search(last, 4) ? "TRUE" : "FALSE") << std::endl;
-    std::cout << (search(last, 3) ? "TRUE" : "FALSE") << std::endl;
+    printf("%s\n", (search(last, 4) ? "TRUE" : "FALSE"));
+    printf("%s\n", (search(last, 3) ? "TRUE" : "FALSE"));
 
     // Giải phóng bộ nhớ
     deleteList(last);

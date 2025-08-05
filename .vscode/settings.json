@@ -57,6 +57,20 @@
         "xmemory": "cpp",
         "xstring": "cpp",
         "xtr1common": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "linkedlist": "c",
+        "array": "c",
+        "cstdarg": "c",
+        "cwctype": "c",
+        "string": "c",
+        "functional": "c",
+        "memory_resource": "c",
+        "numeric": "c",
+        "string_view": "c",
+        "numbers": "c",
+        "ranges": "c",
+        "span": "c",
+        "text_encoding": "c",
+        "variant": "c"
     }
 }
