@@ -1,29 +1,38 @@
 // Thêm các thư viện cần thiết
-#include <iostream>
-#include <vector>
-#include <cmath>
-#include <random>
-
-// Tạo số ngẫu nhiên
-static const double RANDOM_NUMBER = []() {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_real_distribution<double> dist(0.0, 1.0);
-    return dist(gen);
-}();
-    
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <time.h>
+#include <math.h>
+#include "cnarr.h"
 
 // Mặc định cho SLOT rỗng
-const int EMPTY_SLOT = EMPTY_SLOT;
+int EMPTY_SLOT = INT_MAX;
 
-// Khởi tạo hàm băm
-class Hash {
-    // Số thùng
+typedef struct Hash {
     int bucketCount;
+    int elementCount;
+    double hashRand;
+    Cnarr* hashMap;
+} Hash;
 
-    // Bảng băm
-    std::vector<int> table;
+Hash* init(int size) {
+    Hash* tmp = (Hash*) malloc(sizeof(Hash));
+    tmp->bucketCount = size;
+    tmp->elementCount = 0;
 
+    srand(time(NULL));
+    tmp->hashRand = (double)rand() / RAND_MAX;
+
+    tmp->hashMap = Cnarr_init(4);
+    for (int i = 0; i < Cnarr_getFullSize(tmp->hashMap); i++) {
+        
+    }
+}
+
+
+/*
 public:
     // Hàm khởi tạo bảng băm
     Hash(int buckets) {
@@ -111,8 +120,10 @@ private:
         }
     }
 };
+*/
 
 int main() {
+    /*
     Hash hashTable(6);
 
     hashTable.insert(14);
@@ -135,4 +146,5 @@ int main() {
     hashTable.display();
 
     return 0;
+    */
 }
