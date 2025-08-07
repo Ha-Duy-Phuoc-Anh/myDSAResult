@@ -37,6 +37,9 @@ int Hash_hashIndex(Hash* hashTable, int key) {
     if (step < 0) step++;
     return (int) (hashTable->bucketCount * step);
 }
+int Hash_jumpStep(Hash* hashTable, int key) {
+    return 1 + (key % (hashTable->bucketCount - 1));
+}
 bool Hash_getLoadFactor(Hash* hashTable) {
     return ((double) hashTable->elementCount / hashTable->bucketCount) > 0.75;
 }
@@ -47,10 +50,14 @@ Hash* Hash_insert(Hash* hashTable, int key) {
     if (Hash_getLoadFactor(hashTable)) {
         Hash_rehash(hashTable);
     }
+
+    int i = 0;
     int index = Hash_hashIndex(hashTable, key);
     while (Cnarr_get(hashTable->hashMap, index) != EMPTY_SLOT) {
-        index = (index + 1) % hashTable->bucketCount;
+        i++;
+        index = (index + (i * Hash_jumpStep(hashTable, key))) % hashTable->bucketCount;
     }
+
     hashTable->hashMap->data[index] = key;
     hashTable->elementCount++;
     return hashTable;
@@ -58,13 +65,15 @@ Hash* Hash_insert(Hash* hashTable, int key) {
 Hash* Hash_remove(Hash* hashTable, int key) {
     int index = Hash_hashIndex(hashTable, key);
     int startIndex = index;
+    int i = 0;
     while (Cnarr_get(hashTable->hashMap, index) != EMPTY_SLOT) {
         if (Cnarr_get(hashTable->hashMap, index) == key) {
             hashTable->hashMap->data[index] = EMPTY_SLOT;
             hashTable->elementCount--;
             return hashTable;
         }
-        index = (index + 1) % hashTable->bucketCount;
+        i++;
+        index = (index + (i * Hash_jumpStep(hashTable, key))) % hashTable->bucketCount;
         if (index == startIndex) break;
     }
     printf("ERROR 001: Item not found!\n");

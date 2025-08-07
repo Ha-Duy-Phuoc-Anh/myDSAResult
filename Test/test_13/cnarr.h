@@ -4,11 +4,12 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include "phixah.h"
 
 // -------------------------- DEFINE DATA TYPE -------------------------- //
 // Cnarr
 typedef struct {
-    int* data;
+    string** data;
     size_t size;
     size_t capacity;
 } Cnarr;
@@ -22,7 +23,7 @@ Cnarr* Cnarr_init(size_t initialSize) {
         exit(EXIT_FAILURE);
     }
 
-    arr->data = (int*) malloc(initialSize * sizeof(int));
+    arr->data = (string**) malloc(initialSize * sizeof(string*));
     if (!arr->data) {
         fprintf(stderr, "ERROR 002: Faild to allocate memory for array's data");
         free(arr);
@@ -37,11 +38,11 @@ Cnarr* Cnarr_init(size_t initialSize) {
 // -------------------------- CREATE ARRAY DEFINITION -------------------------- //
 
 // -------------------------- APPEND ELEMENT INTO ARRAY FUNCTION -------------------------- //
-void Cnarr_append(Cnarr *arr, int element) {
+void Cnarr_append(Cnarr *arr, string *element) {
     if (arr->size == arr->capacity) {
         arr->capacity *= 2;    // Auto resize array
 
-        int* new_data = (int*) realloc(arr->data, arr->capacity * sizeof(int));
+        string** new_data = (string**) realloc(arr->data, arr->capacity * sizeof(string*));
         if (!new_data) {
             fprintf(stderr, "ERROR 003: Failed to resize array");
             exit(EXIT_FAILURE);
@@ -63,7 +64,7 @@ void Cnarr_pop(Cnarr *arr) {
 
     if (arr->size <= arr->capacity / 4 && arr->capacity > 4) {
         arr->capacity /= 2;
-        int* newData = (int*) realloc(arr->data, arr->capacity * sizeof(int));
+        string** newData = (string**) realloc(arr->data, arr->capacity * sizeof(string*));
         if (!newData) {
             fprintf(stderr, "ERROR 005: Faild to remove array element");
             exit(EXIT_FAILURE);
@@ -74,7 +75,7 @@ void Cnarr_pop(Cnarr *arr) {
 // -------------------------- REMOVE ELEMENT FROM ARRAY FUNCTION -------------------------- //
 
 // -------------------------- GET ARRAY ELEMENT FUNCTION -------------------------- //
-int Cnarr_get(Cnarr *arr, size_t index) {
+string* Cnarr_get(Cnarr *arr, size_t index) {
     if (index >= arr->size) {
         fprintf(stderr, "ERROR 006: Index out of range");
         exit(EXIT_FAILURE);
@@ -105,7 +106,7 @@ Cnarr* Cnarr_slice(Cnarr *arr, size_t start, size_t stop) {
 void Cnarr_print(Cnarr *arr) {
     printf("[");
     for (int i = 0; i < (int) arr->size; i++) {
-        printf("%d", Cnarr_get(arr, i));
+        strprint(Cnarr_get(arr, i), false);
         if (i < (int) arr->size - 1) {
             printf(", ");
         }
@@ -122,30 +123,19 @@ void Cnarr_swap(Cnarr *arr, int index1, int index2) {
     }
 
     if (index1 != index2) {
-        int temp = arr->data[index1];
+        string* temp = arr->data[index1];
         arr->data[index1] = arr->data[index2];
         arr->data[index2] = temp;
     }
 }
 // -------------------------- SWAP ARRAY ELEMENT FUNCTION -------------------------- //
 
-// -------------------------- GET CURRENT ARRAY SIZE -------------------------- //
-int Cnarr_getSize(Cnarr *arr) {
-    return (int) arr->size;
-}
-// -------------------------- GET CURRENT ARRAY SIZE -------------------------- //
-
-// -------------------------- GET CURRENT ARRAY MAX SIZE -------------------------- //
-int Cnarr_getFullSize(Cnarr *arr) {
-    return (int) arr->capacity;
-}
-// -------------------------- GET CURRENT ARRAY MAX SIZE -------------------------- //
-
 // -------------------------- FREE ALL RAM DATA -------------------------- //
 void Cnarr_free(Cnarr *arr) {
+    for (size_t i = 0; i < arr->size; i++) {
+        strfree(*arr->data);
+    }
     free(arr->data);
-    arr->data = NULL;
-    arr->size = arr->capacity = 0;
     free(arr);
 }
 // -------------------------- FREE ALL RAM DATA -------------------------- //

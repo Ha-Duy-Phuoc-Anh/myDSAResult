@@ -6,3 +6,4 @@ _Hệ số tải là tổng số phần tử trên một băng băm chia cho kí
 
 ---
 **Bài trước**: [[Va chạm trong băm]]
+**Bài sau**: [[Thuật toán băm các ký tự đặc biệt thành số]]

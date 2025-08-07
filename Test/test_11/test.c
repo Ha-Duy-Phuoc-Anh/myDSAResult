@@ -47,10 +47,14 @@ Hash* Hash_insert(Hash* hashTable, int key) {
     if (Hash_getLoadFactor(hashTable)) {
         Hash_rehash(hashTable);
     }
+
+    int i = 0;
     int index = Hash_hashIndex(hashTable, key);
     while (Cnarr_get(hashTable->hashMap, index) != EMPTY_SLOT) {
-        index = (index + 1) % hashTable->bucketCount;
+        i++;
+        index = (index + (i * i)) % hashTable->bucketCount;
     }
+
     hashTable->hashMap->data[index] = key;
     hashTable->elementCount++;
     return hashTable;
@@ -58,13 +62,15 @@ Hash* Hash_insert(Hash* hashTable, int key) {
 Hash* Hash_remove(Hash* hashTable, int key) {
     int index = Hash_hashIndex(hashTable, key);
     int startIndex = index;
+    int i = 0;
     while (Cnarr_get(hashTable->hashMap, index) != EMPTY_SLOT) {
         if (Cnarr_get(hashTable->hashMap, index) == key) {
             hashTable->hashMap->data[index] = EMPTY_SLOT;
             hashTable->elementCount--;
             return hashTable;
         }
-        index = (index + 1) % hashTable->bucketCount;
+        i++;
+        index = (index + (i * i)) % hashTable->bucketCount;
         if (index == startIndex) break;
     }
     printf("ERROR 001: Item not found!\n");
