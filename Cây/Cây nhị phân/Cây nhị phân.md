@@ -9,3 +9,5 @@
 - [[Khởi tạo kiểu dữ liệu]]
 - [[Các giá trị trong cây nhị phân]]
 - [[Duyệt qua Cây nhị phân]]
+- [[Thêm nút vào cây nhị phân]]
+- [[Xóa nút khỏi Cây nhị phân]]

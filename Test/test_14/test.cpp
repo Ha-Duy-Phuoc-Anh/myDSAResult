@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 
 // Kiểu dữ liệu nút của cây nhị phân
 struct Node {
@@ -61,15 +62,220 @@ void Tree_RecursionBFS_Print(Node* root, int level, std::vector<std::vector<int>
     if (root == nullptr) return;
 
     // Thêm một cấp vào kết quả nếu cần
-    if (res.size() <= level) {
+    if (res.size() <= (long long unsigned int)level) res.push_back({});
+    
+    // Thêm dữ liệu của nút vào cấp phù hợp
+    res[level].push_back(root->data);
 
+    // Đệ quy cho nút trái và nút phải
+    Tree_RecursionBFS_Print(root->left, level + 1, res);
+    Tree_RecursionBFS_Print(root->right, level + 1, res);
+}
+void Tree_RecursionBFS_Print(Node* root) {
+    // Khởi tạo vùng lưu trữ kết quả
+    std::vector<std::vector<int>> result;
+
+    // Đệ quy overloading
+    Tree_RecursionBFS_Print(root, 0, result);
+
+    // In kết quả ra console
+    for (const auto& level_bucket : result) {
+        std::cout << "[";
+        for (size_t i = 0; i < level_bucket.size(); i++) {
+            std::cout << level_bucket[i];
+            if (i != level_bucket.size() - 1) {
+                std::cout << ", ";
+            }
+        }
+        std::cout << "]" << std::endl;
+    }
+}
+
+// Hàm in theo kiểu hàng đợi trong BFS
+void Tree_QueueBFS_Print(Node* root) {
+    // Nếu root là NULL thì in một mảng rỗng và thoát
+    if (root == nullptr) {
+        std::cout << "[]" << std::endl;
+        return;
     }
 
+    // Tạo một hàng đợi và một mảng để lưu trữ dữ liệu
+    std::queue<Node*> q;
+    std::vector<std::vector<int>> res;
+
+    // Thêm root vào queue
+    q.push(root);
+
+    // Tạo biến lưu trữ cấp hiện tại
+    int currentLevel = 0;
+
+    // Lặp cho đến khi hàng đợi rỗng
+    while (!q.empty()) {
+        // Tạo biến lưu trữ kích thước của queue
+        int len = q.size();
+
+        // Đẩy một mảng rỗng vào mảng lưu trữ dữ liệu
+        res.push_back({});
+
+        // Duyệt qua các phần tử của Queue
+        for (int i = 0; i < len; i++) {
+            // Lưu front của queue và xóa phần tử front
+            Node* node = q.front();
+            q.pop();
+
+            // Đẩy dữ liệu vào mảng lưu trữ
+            res[currentLevel].push_back(node->data);
+
+            // Đảy dữ liệu của nút trái và nút phải vào queue
+            if (node->left != nullptr) q.push(node->left);
+            if (node->right != nullptr) q.push(node->right);
+        }
+
+        // Nâng cấp lên một cấp
+        currentLevel++;
+    }
+
+    // In dữ liệu ra của sổ dòng lệnh
+    for (const auto& level_bucket : res) {
+        std::cout << "[";
+        for (size_t i = 0; i < level_bucket.size(); i++) {
+            std::cout << level_bucket[i];
+            if (i != level_bucket.size() - 1) {
+                std::cout << ", ";
+            }
+        }
+        std::cout << "]" << std::endl;
+    }
 }
-std::vector<std::vector<int>> Tree_RecursionBFS_Print(Node* root) {
-    std::vector<std::vector<int>> result;
-    Tree_RecursionBFS_Print(root, 0, result);
-    return result;
+
+// Hàm thêm nút vào cây
+Node* Tree_Insert(Node* root, int value) {
+    // Nếu cây rỗng, nút mới sẽ là root của cây
+    if (root == nullptr) {
+        root = new Node(value);
+        return root;
+    }
+
+    // Nếu không, chạy BFS cho đến khi tìm thấy vị trí phù hợp
+    std::queue<Node*> q;
+    q.push(root);
+
+    // Lặp cho đến khi hàng đợi rỗng
+    while (!q.empty()) {
+        // Tạo một nút tạm đảy nút đầu của queue vào
+        Node* curr = q.front();
+        q.pop();
+
+        // Kiểm tra nút bên trái, nếu không phải null thì push vào hàng đợi, nếu phải thì chèn nút
+        if (curr->left != nullptr) {
+            q.push(curr->left);
+        }
+        else {
+            curr->left = new Node(value);
+            return root;
+        }
+
+        // Làm điều tương tự đối với bên phải
+        if (curr->right != nullptr) {
+            q.push(curr->right);
+        }
+        else {
+            curr->right = new Node(value);
+            return root;
+        }
+    }
+}
+
+// Hàm xóa nút khỏi cây
+void Tree_Delete(Node* root, Node* DNode) {
+    std::queue<Node*> q;
+    q.push(root);
+
+    Node* curr;
+    while (!q.empty()) {
+        curr = q.front();
+        q.pop();
+
+        // Nếu curr là nút sâu nhất thì xóa nó
+        if (curr == DNode) {
+            curr = nullptr;
+            delete DNode;
+            return;
+        }
+
+        // Kiểm tra nút phải trước  
+        if (curr->right != nullptr) {
+            // Nếu nút phải là nút sâu nhất thì xoa nó
+            if (curr->right == DNode) {
+                curr->right = nullptr;
+                delete DNode;
+                return;
+            }
+            // Nếu không phải thì đẩy nút vào hàng đợi
+            q.push(curr->right);
+        }
+
+        // Làm điều tương tự ở bên trái
+        if (curr->left != nullptr) {
+            if (curr->left == DNode) {
+                curr->left = nullptr;
+                delete DNode;
+                return;
+            }
+            q.push(curr->left);
+        }
+    }
+}
+Node* Tree_Delete(Node* root, int value) {
+    // Nếu như cây rỗng, trả về Null
+    if (root == nullptr) return nullptr;
+
+    // Nếu cây chỉ có một nút duy nhát
+    if (root->left == nullptr && root->right == nullptr) {
+        // Nếu nút đó chính là key
+        if (root->data == value) {
+            delete root;
+            return nullptr;
+        }
+        else return root;   // Nếu không thì trả về root
+    }
+
+    // Nếu không thì duyệt BFS
+    std::queue<Node*> q;
+    q.push(root);
+
+    Node* curr;
+    Node* keyNode = nullptr;
+
+    while (!q.empty()) {
+        curr = q.front();
+        q.pop();
+
+        // Nếu nút được lấy là key
+        if (curr->data == value) {
+            keyNode = curr;
+            break;
+        }  
+        
+        // Nếu không thì push nút trái và nút phải
+        if (curr->left != nullptr) q.push(curr->left);
+        if (curr->right != nullptr) q.push(curr->right);
+    }
+
+    // Nếu như tìm thấy, chỉnh sửa dữ liệu của nó ở nút cấp thấp nhất
+    if (keyNode != nullptr) {
+        // Lấy dữ liệu của nút sâu nhất
+        int x = curr->data;
+
+        // Thay thế dữ liệu của nó với nút sâu nhất
+        keyNode->data = x;
+
+        // Xóa nút sâu nhất đi
+        Tree_Delete(root, curr);
+    }
+
+    // Trả về dữ liệu đã được xóa
+    return root;
 }
 
 // Hàm giải phóng bộ nhớ của Cây
@@ -87,16 +293,25 @@ void Tree_Free(Node* root) {
 
 int main() {
     // Khởi tạo Cây nhị phân
-    Node* root = new Node(1);
+    Node* root = new Node(5);
+    root = Tree_Insert(root, 12);
+    root = Tree_Insert(root, 13);
 
-    root->left = new Node(2);
-    root->left->left = new Node(4);
-    root->left->right = new Node(5);
+    root = Tree_Insert(root, 7);
+    root = Tree_Insert(root, 14);
 
-    root->right = new Node(3);
-    root->right->right = new Node(6);
+    root = Tree_Insert(root, 2);
 
-    Tree_Postorder_Print(root);
+    root = Tree_Insert(root, 17);
+    root = Tree_Insert(root, 23);
+
+    root = Tree_Insert(root, 27);
+    root = Tree_Insert(root, 3);
+
+    root = Tree_Insert(root, 8);
+    root = Tree_Insert(root, 11);
+
+    Tree_QueueBFS_Print(root);
 
     // Giải phóng bộ nhớ
     Tree_Free(root);

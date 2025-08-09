@@ -14,6 +14,6 @@ struct Node {
     Node(int value) : data(value), left(nullptr), right(nullptr) {};
 };
 ```
----
+
 **Bài trước**: [[Cây nhị phân]]
 **Bài sau**: [[Các giá trị trong cây nhị phân]]

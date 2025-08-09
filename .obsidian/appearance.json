@@ -1,5 +1,7 @@
 {
-  "theme": "obsidian",
+  "theme": "moonstone",
   "accentColor": "",
-  "cssTheme": "Obsidianite"
+  "cssTheme": "GitHub Theme",
+  "interfaceFontFamily": "",
+  "textFontFamily": ""
 }
