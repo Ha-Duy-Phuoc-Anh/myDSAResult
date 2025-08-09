@@ -7,12 +7,12 @@ Install this repository by GIT clone (if you have git) or direct install in gith
 In case if you have GIT, then enter these:
 
 ``` bash
-git clone -depth=1 https://github.com/Little-Blueberries/myDSAResult.git
+git clone --depth=1 https://github.com/Little-Blueberries/myDSAResult.git
 ```
 
 Then install Obsidian and open this repository folder
-If you want to run code, you need to have Python3.10 or newer version install and MSVC compiler or GCC compiler to compile C++.
-To run the code, open Developer command prompt for VS 2022 (if you have, else use normal command prompt if you use GCC) and run these command:
+If you want to run code, you need to have Python3.10 or newer version install and GCC compiler to compile C++.
+To run the code, open command prompt and type these command:
 
 ``` bash
 cd "YourPath\Of\File"
@@ -21,27 +21,14 @@ cd "test_<number>"
 ```
 
 Then run these specific type of run:
-
-**Python**:
-
-_MSVC:_
-``` bash
-nmake run_py
-```
-_MAKE_:
-``` bash
-make run_py
-```
-
 **C++**:
-
-_MSVC_:
+From test_1 to test_13:
 ``` bash
-nmake run_cpp_msvc
+make run_c
 ```
-_MAKE_:
+From test_14 after:
 ``` bash
-make run_cpp_gcc
+make run_cpp
 ```
 
 Now everything is ready for you!

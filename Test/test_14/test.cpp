@@ -1,9 +1,7 @@
 #include <iostream>
+#include <vector>
 
-/**
- * @brief Hàm khởi tạo nút của Cây nhị phân
- * 
- */
+// Kiểu dữ liệu nút của cây nhị phân
 struct Node {
     // Dữ liệu của nút
     int data;
@@ -55,6 +53,23 @@ void Tree_Postorder_Print(Node* root) {
 
     // In ra cửa sổ dòng lệnh dữ liệu
     std::cout << root->data << " ";
+}
+
+// Hàm in theo kiểu Đệ quy trong BFS
+void Tree_RecursionBFS_Print(Node* root, int level, std::vector<std::vector<int>>& res) {
+    // Nếu nút đã đến hết nhánh, thoát đệ quy
+    if (root == nullptr) return;
+
+    // Thêm một cấp vào kết quả nếu cần
+    if (res.size() <= level) {
+
+    }
+
+}
+std::vector<std::vector<int>> Tree_RecursionBFS_Print(Node* root) {
+    std::vector<std::vector<int>> result;
+    Tree_RecursionBFS_Print(root, 0, result);
+    return result;
 }
 
 // Hàm giải phóng bộ nhớ của Cây
