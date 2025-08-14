@@ -171,158 +171,200 @@ void Tree_QueueBFS_Print(Node *root)
     }
 }
 
-// Hàm thêm nút vào cây
-Node *Tree_Insert(Node *root, int value)
+// Hàm thêm nút vào cây (đệ quy)
+Node *Tree_Recursion_Insert(Node *root, int value)
 {
-    // Nếu cây rỗng, nút mới sẽ là root của cây
+    // Nếu cây rỗng, nút mới sẽ là root của cây (hoặc là cây phụ)
     if (root == nullptr)
     {
         root = new Node(value);
         return root;
     }
 
-    // Nếu không, chạy BFS cho đến khi tìm thấy vị trí phù hợp
-    std::queue<Node *> q;
-    q.push(root);
+    // Nếu nút trùng với giá trị của một nút khác trong cây thì từ chối chèn
+    if (value == root->data)
+        return root;
 
-    // Lặp cho đến khi hàng đợi rỗng
-    while (!q.empty())
-    {
-        // Tạo một nút tạm đảy nút đầu của queue vào
-        Node *curr = q.front();
-        q.pop();
+    // Kiểm tra nếu lớn hơn nút gốc thì đệ quy bên phải
+    if (value > root->data)
+        root->right = Tree_Recursion_Insert(root->right, value);
 
-        // Kiểm tra nút bên trái, nếu không phải null thì push vào hàng đợi, nếu phải thì chèn nút
-        if (curr->left != nullptr)
-        {
-            q.push(curr->left);
-        }
-        else
-        {
-            curr->left = new Node(value);
-            return root;
-        }
+    // Kiểm tra nếu bé hơn nút gốc thì đệ quy bên trái
+    if (value < root->data)
+        root->left = Tree_Recursion_Insert(root->left, value);
 
-        // Làm điều tương tự đối với bên phải
-        if (curr->right != nullptr)
-        {
-            q.push(curr->right);
-        }
-        else
-        {
-            curr->right = new Node(value);
-            return root;
-        }
-    }
+    // Trả về cây đã chỉnh sửa
     return root;
 }
 
-// Hàm xóa nút khỏi cây
-void Tree_Delete(Node *root, Node *DNode)
+// Hàm thêm nút vào cây (tuần tự)
+Node *Tree_Iterative_Insert(Node *root, int value)
 {
-    std::queue<Node *> q;
-    q.push(root);
-
-    Node *curr;
-    while (!q.empty())
-    {
-        curr = q.front();
-        q.pop();
-
-        // Nếu curr là nút sâu nhất thì xóa nó
-        if (curr == DNode)
-        {
-            curr = nullptr;
-            delete DNode;
-            return;
-        }
-
-        // Kiểm tra nút phải trước
-        if (curr->right != nullptr)
-        {
-            // Nếu nút phải là nút sâu nhất thì xoa nó
-            if (curr->right == DNode)
-            {
-                curr->right = nullptr;
-                delete DNode;
-                return;
-            }
-            // Nếu không phải thì đẩy nút vào hàng đợi
-            q.push(curr->right);
-        }
-
-        // Làm điều tương tự ở bên trái
-        if (curr->left != nullptr)
-        {
-            if (curr->left == DNode)
-            {
-                curr->left = nullptr;
-                delete DNode;
-                return;
-            }
-            q.push(curr->left);
-        }
-    }
-}
-Node *Tree_Delete(Node *root, int value)
-{
-    // Nếu như cây rỗng, trả về Null
+    Node *tmp = new Node(value);
     if (root == nullptr)
-        return nullptr;
+        return tmp;
 
-    // Nếu cây chỉ có một nút duy nhát
-    if (root->left == nullptr && root->right == nullptr)
+    Node *parent = nullptr;
+    Node *curr = root;
+    while (curr != nullptr)
     {
-        // Nếu nút đó chính là key
-        if (root->data == value)
-        {
-            delete root;
-            return nullptr;
-        }
+        parent = curr;
+        if (value < curr->data)
+            curr = curr->left;
+        else if (value > curr->data)
+            curr = curr->right;
         else
-            return root; // Nếu không thì trả về root
+        {
+            delete tmp; // Đã tồn tại, không chèn
+            return root;
+        }
     }
 
-    // Nếu không thì duyệt BFS
-    std::queue<Node *> q;
-    q.push(root);
+    if (value < parent->data)
+        parent->left = tmp;
+    else
+        parent->right = tmp;
 
-    Node *curr;
-    Node *keyNode = nullptr;
+    return root;
+}
 
-    while (!q.empty())
+// Hàm con dùng để lấy nút kế nhiệm duyệt trung tự
+Node *Tree_GetSuccessor(Node *root)
+{
+    root = root->right;
+    while (root != nullptr && root->left != nullptr)
+        root = root->left;
+    return root;
+}
+
+// Hàm xóa nút khỏi cây (tiếp cận đệ quy)
+Node *Tree_Recursion_Delete(Node *root, int value)
+{
+    // Trường hợp 1
+    if (root == nullptr)
+        return root;
+
+    // Trường hợp 2
+    if (root->data == value)
+        root->left = Tree_Recursion_Delete(root->left, value);
+    else if (root->data == value)
+        root->right = Tree_Recursion_Delete(root->right, value);
+    else
     {
-        curr = q.front();
-        q.pop();
-
-        // Nếu nút được lấy là key
-        if (curr->data == value)
+        // Xử lí Trường hợp 2
+        if (root->left == nullptr)
         {
-            keyNode = curr;
-            break;
+            Node *temp = root->right;
+            delete root;
+            return temp;
+        }
+        else if (root->right == nullptr)
+        {
+            Node *temp = root->left;
+            delete root;
+            return temp;
         }
 
-        // Nếu không thì push nút trái và nút phải
-        if (curr->left != nullptr)
-            q.push(curr->left);
-        if (curr->right != nullptr)
-            q.push(curr->right);
+        // Xử lí phát sinh trường hợp 3
+        Node *successor = Tree_GetSuccessor(root);
+        root->data = successor->data;
+        root->right = Tree_Recursion_Delete(root, successor->data);
     }
 
-    // Nếu như tìm thấy, chỉnh sửa dữ liệu của nó ở nút cấp thấp nhất
-    if (keyNode != nullptr)
+    // Trả về cây đã được chỉnh sửa
+    return root;
+}
+
+// Hàm xóa nút khỏi cây (tiếp cận đệ quy tối ưu)
+Node *Tree_OpRecursion_Delete(Node *root, int value)
+{
+    // Trường hợp 1
+    if (root == nullptr)
+        return root;
+
+    // Trường hợp 2
+    if (value < root->data)
     {
-        // Lấy dữ liệu của nút sâu nhất
-        int x = curr->data;
-
-        // Thay thế dữ liệu của nó với nút sâu nhất
-        keyNode->data = x;
-
-        // Xóa nút sâu nhất đi
-        Tree_Delete(root, curr);
+        root->left = Tree_OpRecursion_Delete(root->left, value);
+        return root;
+    }
+    else if (value > root->data)
+    {
+        root->right = Tree_OpRecursion_Delete(root->right, value);
+        return root;
     }
 
-    // Trả về dữ liệu đã được xóa
+    if (root->left == nullptr)
+    {
+        Node *temp = root->right;
+        delete root;
+        return temp;
+    }
+    else if (root->right == nullptr)
+    {
+        Node *temp = root->left;
+        delete root;
+        return temp;
+    }
+
+    // Trường hợp 3
+    Node *parent_succesor = root;
+    Node *successor = root->right;
+    if (root->left != nullptr)
+    {
+        parent_succesor = successor;
+        successor = successor->left;
+    }
+    root->data = successor->data;
+    if (parent_succesor->left == successor)
+        parent_succesor->left = successor->right;
+    else
+        parent_succesor->right = successor->right;
+    delete successor;
+
+    // Trả về cây đã được chỉnh sửa
+    return root;
+}
+
+// Hàm xóa nút khỏi cây (tiếp cận tuần tự)
+Node *Tree_Iterative_Delete(Node *root, int value)
+{
+    Node *parent = nullptr;
+    Node *curr = root;
+
+    // Tìm nút cần xóa
+    while (curr && curr->data != value)
+    {
+        parent = curr;
+        if (value < curr->data)
+            curr = curr->left;
+        else
+            curr = curr->right;
+    }
+
+    if (!curr)
+        return root; // Không tìm thấy
+
+    // Trường hợp nút có hai con
+    if (curr->left && curr->right)
+    {
+        Node *succParent = curr;
+        Node *succ = curr->right;
+        while (succ->left)
+        {
+            succParent = succ;
+            succ = succ->left;
+        }
+        curr->data = succ->data;
+        // Xóa successor
+        if (succParent->left == succ)
+            succParent->left = succ->right;
+        else
+            succParent->right = succ->right;
+        delete succ;
+        return root;
+    }
+    delete curr;
     return root;
 }
 
@@ -345,19 +387,19 @@ int main()
 {
     // Khởi tạo Cây nhị phân
     Node *root = new Node(50);
-    root = Tree_Insert(root, 30);
-    root = Tree_Insert(root, 70);
-    root = Tree_Insert(root, 20);
-    root = Tree_Insert(root, 40);
-    root = Tree_Insert(root, 60);
-    root = Tree_Insert(root, 80);
+    root = Tree_Iterative_Insert(root, 30);
+    root = Tree_Iterative_Insert(root, 70);
+    root = Tree_Iterative_Insert(root, 20);
+    root = Tree_Iterative_Insert(root, 40);
+    root = Tree_Iterative_Insert(root, 60);
+    root = Tree_Iterative_Insert(root, 80);
 
     std::cout << "Before delete: " << std::endl;
     Tree_QueueBFS_Print(root);
 
-    root = Tree_Delete(root, 20);
-    root = Tree_Delete(root, 30);
-    root = Tree_Delete(root, 50);
+    root = Tree_Iterative_Delete(root, 20);
+    root = Tree_Iterative_Delete(root, 30);
+    root = Tree_Iterative_Delete(root, 50);
 
     std::cout << "After delete: " << std::endl;
     Tree_QueueBFS_Print(root);

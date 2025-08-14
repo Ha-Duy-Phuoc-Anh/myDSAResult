@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cây/Cây nhị phân/Xóa nút khỏi Cây nhị phân.md",
+                "file": "Cây/Cây BST/Cây BST.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Xóa nút khỏi Cây nhị phân"
+              "title": "Cây BST"
+            }
+          },
+          {
+            "id": "035b8997d788e047",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cây/Cây BST/Xóa nút trong cây BST.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Xóa nút trong cây BST"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -54,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#file",
+                "query": "tag:#subtitle1",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -187,21 +202,32 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "84e16849911fa6b5",
+  "active": "035b8997d788e047",
   "lastOpenFiles": [
-    "Test/gtest_example/build/CMakeFiles/4.1.0/CMakeSystem.cmake",
-    "Test/gtest_example/build/CMakeFiles/cmake.check_cache",
-    "Test/gtest_example/build/CMakeFiles/4.1.0",
-    "Test/gtest_example/build/CMakeFiles/CMakeConfigureLog.yaml",
-    "Test/gtest_example/build/CMakeFiles/pkgRedirects",
-    "Test/gtest_example/build/CMakeCache.txt",
-    "Test/gtest_example/build/CMakeFiles",
-    "Test/gtest_example/build",
-    "Test/gtest_example/hello_test.cpp",
-    "Test/gtest_example/CMakeLists.txt",
-    "Test/gtest_example",
-    "Cây/Cây nhị phân/Xóa nút khỏi Cây nhị phân.md",
+    "Test/build/test_15/test.pdb",
+    "Test/build/test_15/test.ilk",
+    "Test/test.obj",
+    "Test/vc140.pdb",
+    "Test/build/test_15/test.exe",
+    "$RECYCLE.BIN/$RDJCX4G.pdb",
+    "$RECYCLE.BIN/$IDJCX4G.pdb",
+    "$RECYCLE.BIN/$RQYSNPX.obj",
+    "$RECYCLE.BIN/$IQYSNPX.obj",
+    "$RECYCLE.BIN/$RZFE88M.pdb",
+    "$RECYCLE.BIN/$IZFE88M.pdb",
+    "Cây/Cây BST/Xóa nút trong cây BST.md",
+    "Cây/Cây BST/Chèn nút trong cây BST.md",
+    "Cây/Cây BST/Cây BST.md",
+    "Cây/Cây nhị phân/Khởi tạo kiểu dữ liệu.md",
     "Cây/Cây nhị phân/Duyệt qua Cây nhị phân.md",
+    "Cây/Cây nhị phân/Cây nhị phân.md",
+    "Cây/Cây nhị phân/Các giá trị trong cây nhị phân.md",
+    "Cây/Các loại cây.md",
+    "Excalidraw/Cây_BST_IMG_1.excalidraw.md",
+    "$RECYCLE.BIN/$RPJAY8L.md",
+    "$RECYCLE.BIN/$IPJAY8L.md",
+    "Cây/Cây nhị phân/Xóa nút khỏi Cây nhị phân.md",
+    "Cây/Cây nhị phân/Thêm nút vào cây nhị phân.md",
     "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/Tầm quan trọng của Danh sách liên kết.md",
     "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/So sánh giữa Danh sách liên kết và Mảng.md",
     "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/Phân tích thời gian của các thao tác trong Danh sách liên kết và Mảng.md",
@@ -214,17 +240,6 @@
     "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Xóa nút trong Danh sách liên kết đơn.md",
     "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Tìm kiếm trong Danh sách liên kết đơn.md",
     "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Sửa đổi Danh sách liên kết đơn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Số lượng nút trong danh sách liên kết đơn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Khai báo kiểu dữ liệu.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Duyệt qua danh sách liên kết đơn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Danh sách liên kết đơn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Chèn nút trong Danh sách liên kết đơn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết vòng tròn/Xóa nút trong Danh sách liên kết vòng tròn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết vòng tròn/Tìm kiếm trong Danh sách liên kết vòng tròn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết vòng tròn/Khai báo kiểu dữ liệu.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết vòng tròn/Danh sách liên kết vòng tròn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết vòng tròn/Chèn nút trong Danh sách liên kết vòng tròn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đôi/Xóa nút trong Danh sách liên kết đôi.md",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_7.png",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_6.png",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_5.png",

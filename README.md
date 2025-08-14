@@ -11,24 +11,24 @@ git clone --depth=1 https://github.com/Little-Blueberries/myDSAResult.git
 ```
 
 Then install Obsidian and open this repository folder
-If you want to run code, you need to have Python3.10 or newer version install and GCC compiler to compile C++.
+If you want to run code, you need to have Python3.10 or newer version install and GCC compiler to compile C from test_1 to test_13, MSVC to compile CPP from test_14 after.
 To run the code, open command prompt and type these command:
-
-``` bash
-cd "YourPath\Of\File"
-cd Test
-cd "test_<number>"
-```
 
 Then run these specific type of run:
 **C++**:
 From test_1 to test_13:
 ``` bash
+cd "YourPath\Of\File"
+cd Test
+cd "test_<number>"
 make run_c
 ```
+
 From test_14 after:
 ``` bash
-make run_cpp
+cd "YourPath\Of\File"
+cd Test
+.\run.bat "test_<number>" /rebuild
 ```
 
 Now everything is ready for you!
