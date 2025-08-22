@@ -124,5 +124,5 @@
         "**/Thumbs.db": true,
         "**/$RECYCLE.BIN": true,
         "**/System Volume Information": true
-    }
+    },
 }
