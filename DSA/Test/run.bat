@@ -3,12 +3,18 @@ setlocal
 
 :: Kiểm tra tham số
 if "%~1"=="" (
-    echo Usage: run.bat [test_<number>] [/rebuild] [/debug]
+    echo Usage: run.bat [test_<number>] [/debug|/release]
     exit /b 1
 )
+
 set "TEST_FOLDER=%~1"
-set "REBUILD=%~2"
-set "DEBUG=%~3"
+set "BUILD_MODE=%~2"
+
+:: Kiểm tra BUILD_MODE hợp lệ
+if /i not "%BUILD_MODE%"=="/debug" if /i not "%BUILD_MODE%"=="/release" (
+    echo Error: second argument must be /debug or /release
+    exit /b 1
+)
 
 :: Tên file test cố định
 set "TEST_FILE=test.cpp"
@@ -37,27 +43,13 @@ if not exist "%~dp0build\%TEST_FOLDER%" (
     mkdir "%~dp0build\%TEST_FOLDER%"
 )
 
-:: Nếu không phải rebuild thì check timestamp
-if /i not "%REBUILD%"=="/rebuild" (
-    if exist "%TEST_OUTPUT%" (
-        for %%A in ("%TEST_PATH_FULL%") do for %%B in ("%TEST_OUTPUT%") do (
-            if "%%~tB" GEQ "%%~tA" (
-                echo Skipping compile: %TEST_OUTPUT% is up to date.
-                goto run
-            )
-        )
-    )
-)
-
 :compile
-echo Compiling %TEST_FILE% in %TEST_FOLDER%...
-if /i "%DEBUG%"=="/debug" (
+echo Compiling %TEST_FILE% in %TEST_FOLDER% (%BUILD_MODE%)...
+if /i "%BUILD_MODE%"=="/debug" (
     cl.exe /Od /EHsc /Zi /MDd "%TEST_PATH_FULL%" /Fe:"%TEST_OUTPUT%"
 ) else (
     cl.exe /O2 /GL /Gy /Oi /arch:AVX2 /favor:blend /EHsc /Zi "%TEST_PATH_FULL%" /link /LTCG /OPT:REF /OPT:ICF /INCREMENTAL:NO /OUT:"%TEST_OUTPUT%"
 )
-
-
 
 if errorlevel 1 (
     echo Compilation failed!
@@ -66,9 +58,7 @@ if errorlevel 1 (
 
 :run
 echo Running program...
-
-:: Nếu option /debug được truyền → chạy DrMemory
-if /i "%DEBUG%"=="/debug" (
+if /i "%BUILD_MODE%"=="/debug" (
     echo Running under Dr. Memory...
     drmemory -batch "%TEST_OUTPUT%"
 ) else (
