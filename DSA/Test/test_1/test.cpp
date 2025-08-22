@@ -189,21 +189,6 @@ public:
         return popedValue;
     }
 
-    // Hàm tìm kiếm nút trong Danh sách liên kết
-    bool search(int data) const {
-        // Tạo nút tạm duyệt đến khi tìm thấy giá trí đầu vào
-        Node* current = head;
-        while (current != nullptr) {
-            if (current->key == data)
-                return true;
-
-            current = current->next;
-        }
-
-        // Nếu tới đây mà vẫn chưa thoát hàm thì coi như chưa tìm thấy
-        return false;
-    }
-
     // Hàm lấy kích thước danh sách liên kết
     size_t size() const {
         size_t length = 0;
@@ -258,12 +243,6 @@ int main() {
 
     std::cout << "After delete: ";
     newList.display();
-
-    std::cout << (newList.search(12) ? "TRUE" : "FALSE")
-              << ENTER;
-
-    std::cout << (newList.search(3) ? "TRUE" : "FALSE") 
-              << ENTER;
 
     std::cout << newList.size()
               << ENTER;
