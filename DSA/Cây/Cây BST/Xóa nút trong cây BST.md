@@ -51,6 +51,7 @@ Node* Tree_Recursion_Delete(Node* root, int value) {
 
 **Thời gian**: $O(h)$
 **Bộ nhớ**: $O(h)$
+
 ### Tiếp cận đệ quy tối ưu
 ``` cpp
 // Hàm xóa nút khỏi cây (tiếp cận đệ quy tối ưu)
@@ -98,6 +99,7 @@ Node* Tree_OpRecursion_Delete(Node* root, int value) {
 
 **Thời gian**: $O(h)$
 **Không gian**: $O(h)$
+
 ### Tiếp cận tuần tự
 ``` cpp
 // Hàm xóa nút khỏi cây (tiếp cận tuần tự)
@@ -144,3 +146,5 @@ Node* Tree_Iterative_Delete(Node* root, int value) {
 **Thời gian**: $O(h)$
 **Bộ nhớ**: $O(1)$
 
+**Bài trước**: [[Chèn nút trong cây BST]]
+**Bài sau**: [[Xóa nút trong cây BST]]

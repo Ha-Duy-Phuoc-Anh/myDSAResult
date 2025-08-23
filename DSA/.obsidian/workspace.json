@@ -4,25 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "3801bd0862ecb7ef",
+        "id": "71b3cd3bb4001c80",
         "type": "tabs",
         "children": [
           {
-            "id": "569230012898affa",
+            "id": "0a580443047aa63c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cây/Cây BST/Cây BST.md",
+                "file": "Cây/Cây BST/Tìm nút trong cây BST.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cây BST"
+              "title": "Tìm nút trong cây BST"
             }
           },
           {
-            "id": "035b8997d788e047",
+            "id": "7216c1617f952595",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,7 +48,6 @@
       {
         "id": "27976a4ea7da48e5",
         "type": "tabs",
-        "dimension": 66.76384839650146,
         "children": [
           {
             "id": "0e5dd752a84a2da0",
@@ -88,23 +87,6 @@
               "state": {},
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
-            }
-          }
-        ]
-      },
-      {
-        "id": "b78837224d135287",
-        "type": "tabs",
-        "dimension": 33.23615160349854,
-        "children": [
-          {
-            "id": "84e16849911fa6b5",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Xem biểu đồ"
             }
           }
         ]
@@ -193,31 +175,33 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Mở bộ chuyển đổi nhanh": false,
       "graph:Mở xem biểu đồ": false,
+      "bases:Create new base": false,
       "canvas:Tạo bảng mới": false,
       "daily-notes:Mở ghi chú hôm nay": false,
       "templates:Chèn mẫu": false,
       "command-palette:Mở khay lệnh": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "switcher:Mở bộ chuyển đổi nhanh": false
     }
   },
-  "active": "035b8997d788e047",
+  "active": "0e5dd752a84a2da0",
   "lastOpenFiles": [
+    "Cây/Cây AVL",
+    "Cây/Cây BST/Tìm nút trong cây BST.md",
+    "Cây/Cây BST/Chèn nút trong cây BST.md",
+    "Cây/Cây BST/Xóa nút trong cây BST.md",
     "Test/build/test_15/test.pdb",
-    "Test/build/test_15/test.ilk",
     "Test/test.obj",
     "Test/vc140.pdb",
+    "Test/build/test_15/test.ilk",
+    "Cây/Cây BST/Cây BST.md",
     "Test/build/test_15/test.exe",
     "$RECYCLE.BIN/$RDJCX4G.pdb",
     "$RECYCLE.BIN/$IDJCX4G.pdb",
     "$RECYCLE.BIN/$RQYSNPX.obj",
     "$RECYCLE.BIN/$IQYSNPX.obj",
     "$RECYCLE.BIN/$RZFE88M.pdb",
-    "$RECYCLE.BIN/$IZFE88M.pdb",
-    "Cây/Cây BST/Xóa nút trong cây BST.md",
-    "Cây/Cây BST/Chèn nút trong cây BST.md",
-    "Cây/Cây BST/Cây BST.md",
     "Cây/Cây nhị phân/Khởi tạo kiểu dữ liệu.md",
     "Cây/Cây nhị phân/Duyệt qua Cây nhị phân.md",
     "Cây/Cây nhị phân/Cây nhị phân.md",
@@ -239,7 +223,6 @@
     "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Đảo ngược Danh sách liên kết đơn.md",
     "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Xóa nút trong Danh sách liên kết đơn.md",
     "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Tìm kiếm trong Danh sách liên kết đơn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Sửa đổi Danh sách liên kết đơn.md",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_7.png",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_6.png",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_5.png",
