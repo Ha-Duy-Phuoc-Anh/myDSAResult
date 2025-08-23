@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "71b3cd3bb4001c80",
+        "id": "8add54d62483358b",
         "type": "tabs",
         "children": [
           {
-            "id": "0a580443047aa63c",
+            "id": "aafa3fe39bfa05fe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cây/Cây BST/Tìm nút trong cây BST.md",
+                "file": "Cây/Cây AVL/Xóa nút trong cây AVL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tìm nút trong cây BST"
-            }
-          },
-          {
-            "id": "7216c1617f952595",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cây/Cây BST/Xóa nút trong cây BST.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Xóa nút trong cây BST"
+              "title": "Xóa nút trong cây AVL"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -185,28 +170,37 @@
       "switcher:Mở bộ chuyển đổi nhanh": false
     }
   },
-  "active": "0e5dd752a84a2da0",
+  "active": "aafa3fe39bfa05fe",
   "lastOpenFiles": [
+    "Cây/Cây AVL/Chèn nút trong cây AVL.md",
+    "Cây/Cây AVL/Xóa nút trong cây AVL.md",
+    "Test/build/test_16/test.pdb",
+    "Test/test.obj",
+    "Test/vc140.pdb",
+    "Test/build/test_16/test.ilk",
+    "Cây/Cây AVL/Cây AVL.md",
+    "Test/build/test_16/test.exe",
+    "Test/build/test_16",
+    "Cây/Cây AVL/Các thao tác xoay của cây AVL.md",
+    "Chưa đặt tên.base",
+    "Excalidraw/Drawing 2025-08-23 16.42.24.excalidraw.md",
+    "Cây/Cây AVL/IMG_1 (1).png",
+    "Excalidraw/Drawing 2025-08-23 17.31.58.excalidraw.md",
+    "Cây/Cây AVL/IMG_2 (1).png",
+    "Cây/Cây AVL/IMG_2.png",
+    "Cây/Cây AVL/IMG_1.png",
+    "Cây/Các loại cây.md",
+    "Cây/Cây BST/Xóa nút trong cây BST.md",
     "Cây/Cây AVL",
     "Cây/Cây BST/Tìm nút trong cây BST.md",
     "Cây/Cây BST/Chèn nút trong cây BST.md",
-    "Cây/Cây BST/Xóa nút trong cây BST.md",
     "Test/build/test_15/test.pdb",
-    "Test/test.obj",
-    "Test/vc140.pdb",
     "Test/build/test_15/test.ilk",
     "Cây/Cây BST/Cây BST.md",
-    "Test/build/test_15/test.exe",
-    "$RECYCLE.BIN/$RDJCX4G.pdb",
-    "$RECYCLE.BIN/$IDJCX4G.pdb",
-    "$RECYCLE.BIN/$RQYSNPX.obj",
-    "$RECYCLE.BIN/$IQYSNPX.obj",
-    "$RECYCLE.BIN/$RZFE88M.pdb",
     "Cây/Cây nhị phân/Khởi tạo kiểu dữ liệu.md",
     "Cây/Cây nhị phân/Duyệt qua Cây nhị phân.md",
     "Cây/Cây nhị phân/Cây nhị phân.md",
     "Cây/Cây nhị phân/Các giá trị trong cây nhị phân.md",
-    "Cây/Các loại cây.md",
     "Excalidraw/Cây_BST_IMG_1.excalidraw.md",
     "$RECYCLE.BIN/$RPJAY8L.md",
     "$RECYCLE.BIN/$IPJAY8L.md",
@@ -217,21 +211,11 @@
     "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/Phân tích thời gian của các thao tác trong Danh sách liên kết và Mảng.md",
     "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/Một số thuật ngữ cơ bản của danh sách liên kết.md",
     "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/Giới thiệu về danh sách liên kết.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đơn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đôi.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết vòng tròn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Đảo ngược Danh sách liên kết đơn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Xóa nút trong Danh sách liên kết đơn.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Danh sách liên kết đơn/Tìm kiếm trong Danh sách liên kết đơn.md",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_7.png",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_6.png",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_5.png",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_4.png",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_3.png",
-    "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_2.png",
-    "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_1.png",
-    "$RECYCLE.BIN/$REG38VY/Hàng đợi/IMG_3.png",
-    "$RECYCLE.BIN/$REG38VY/Hàng đợi/IMG_2.png",
-    "$RECYCLE.BIN/$REG38VY/Hàng đợi/IMG_1.png"
+    "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_2.png"
   ]
 }
