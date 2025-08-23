@@ -218,111 +218,71 @@ Node *Tree_Insert(Node *root, int value)
 }
 
 // Hàm xóa nút khỏi cây
-void Tree_Delete(Node *root, Node *DNode)
-{
-    std::queue<Node *> q;
+void Tree_Delete(Node* root, Node* d_node) {
+    std::queue<Node*> q;
     q.push(root);
 
-    Node *curr;
-    while (!q.empty())
-    {
+    Node* curr;
+    while (!q.empty()) {
         curr = q.front();
         q.pop();
 
-        // Nếu curr là nút sâu nhất thì xóa nó
-        if (curr == DNode)
-        {
-            curr = nullptr;
-            delete DNode;
-            return;
-        }
-
-        // Kiểm tra nút phải trước
-        if (curr->right != nullptr)
-        {
-            // Nếu nút phải là nút sâu nhất thì xoa nó
-            if (curr->right == DNode)
-            {
-                curr->right = nullptr;
-                delete DNode;
-                return;
-            }
-            // Nếu không phải thì đẩy nút vào hàng đợi
-            q.push(curr->right);
-        }
-
-        // Làm điều tương tự ở bên trái
-        if (curr->left != nullptr)
-        {
-            if (curr->left == DNode)
-            {
+        if (curr->left) {
+            if (curr->left == d_node) {
                 curr->left = nullptr;
-                delete DNode;
+                delete d_node;
                 return;
+            } else {
+                q.push(curr->left);
             }
-            q.push(curr->left);
+        }
+        if (curr->right) {
+            if (curr->right == d_node) {
+                curr->right = nullptr;
+                delete d_node;
+                return;
+            } else {
+                q.push(curr->right);
+            }
         }
     }
 }
-Node *Tree_Delete(Node *root, int value)
-{
-    // Nếu như cây rỗng, trả về Null
-    if (root == nullptr)
+Node* Tree_Delete(Node* root, int value) {
+    if (!root)
         return nullptr;
 
-    // Nếu cây chỉ có một nút duy nhát
-    if (root->left == nullptr && root->right == nullptr)
-    {
-        // Nếu nút đó chính là key
-        if (root->data == value)
-        {
+    // Nếu cây chỉ có một nút
+    if (!root->left && !root->right) {
+        if (root->data == value) {
             delete root;
             return nullptr;
-        }
-        else
-            return root; // Nếu không thì trả về root
+        } else
+            return root;
     }
 
-    // Nếu không thì duyệt BFS
-    std::queue<Node *> q;
+    std::queue<Node*> q;
     q.push(root);
 
-    Node *curr;
-    Node *keyNode = nullptr;
+    Node* keyNode = nullptr;
+    Node* curr = nullptr;
 
-    while (!q.empty())
-    {
+    while (!q.empty()) {
         curr = q.front();
         q.pop();
 
-        // Nếu nút được lấy là key
         if (curr->data == value)
-        {
             keyNode = curr;
-            break;
-        }
 
-        // Nếu không thì push nút trái và nút phải
-        if (curr->left != nullptr)
-            q.push(curr->left);
-        if (curr->right != nullptr)
-            q.push(curr->right);
+        if (curr->left) q.push(curr->left);
+        if (curr->right) q.push(curr->right);
     }
 
-    // Nếu như tìm thấy, chỉnh sửa dữ liệu của nó ở nút cấp thấp nhất
-    if (keyNode != nullptr)
-    {
-        // Lấy dữ liệu của nút sâu nhất
-        int x = curr->data;
-
-        // Thay thế dữ liệu của nó với nút sâu nhất
-        keyNode->data = x;
-
-        // Xóa nút sâu nhất đi
+    // Nếu tìm thấy node cần xóa
+    if (keyNode) {
+        keyNode->data = curr->data; // curr là node cuối cùng trong BFS
         Tree_Delete(root, curr);
     }
 
-    // Trả về dữ liệu đã được xóa
     return root;
 }
 

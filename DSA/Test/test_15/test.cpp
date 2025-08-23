@@ -245,9 +245,9 @@ Node *Tree_Recursion_Delete(Node *root, int value)
         return root;
 
     // Trường hợp 2
-    if (root->data == value)
+    if (root->data > value)
         root->left = Tree_Recursion_Delete(root->left, value);
-    else if (root->data == value)
+    else if (root->data < value)
         root->right = Tree_Recursion_Delete(root->right, value);
     else
     {
@@ -356,14 +356,25 @@ Node *Tree_Iterative_Delete(Node *root, int value)
             succ = succ->left;
         }
         curr->data = succ->data;
+
         // Xóa successor
-        if (succParent->left == succ)
-            succParent->left = succ->right;
-        else
-            succParent->right = succ->right;
-        delete succ;
-        return root;
+        curr = succ;
+        parent = succParent;
     }
+
+    // Trường hợp một con hoặc nút lá
+    Node* child = curr->left ? curr->left : curr->right;
+    
+    // Xóa root
+    if (!parent) {
+        delete curr;
+        return child;
+    }
+
+    // Dịch chuyển các nút sang vị trí an toàn để tránh unaddressible access
+    if (parent->left == curr) parent->left = child;
+    else parent->right = child; 
+
     delete curr;
     return root;
 }
