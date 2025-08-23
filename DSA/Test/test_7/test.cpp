@@ -51,7 +51,6 @@ public:
 		}
 		std::cout << ENTER;
 	}
-
 };
 
 int main() {
