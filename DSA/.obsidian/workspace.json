@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "aafa3fe39bfa05fe",
+            "id": "941b56357f1636e5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cây/Cây AVL/Xóa nút trong cây AVL.md",
+                "file": "Cây/Cây B/Chèn dữ liệu vào cây B.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Xóa nút trong cây AVL"
+              "title": "Chèn dữ liệu vào cây B"
             }
           }
         ]
@@ -170,10 +170,23 @@
       "switcher:Mở bộ chuyển đổi nhanh": false
     }
   },
-  "active": "aafa3fe39bfa05fe",
+  "active": "941b56357f1636e5",
   "lastOpenFiles": [
-    "Cây/Cây AVL/Chèn nút trong cây AVL.md",
+    "Test/test_17/BTree.cpp",
+    "Test/test_17/BTree.h",
+    "Cây/Cây B/Khởi tạo cây B.md",
+    "Cây/Cây B/Chèn dữ liệu vào cây B.md",
+    "Cây/Cây B/Những điểm đặc biệt của cây B.md",
+    "Cây/Cây B/Một số đặc điểm của cây B.md",
+    "Cây/Cây B/Cây B.md",
+    "Test/test_17/test.cpp",
+    "Test/test_17",
+    "Cây/Các loại cây.md",
+    "Excalidraw/Drawing 2025-08-24 16.21.54.excalidraw.md",
+    "Cây/Cây AVL/IMG_3.png",
+    "Cây/Cây B",
     "Cây/Cây AVL/Xóa nút trong cây AVL.md",
+    "Cây/Cây AVL/Chèn nút trong cây AVL.md",
     "Test/build/test_16/test.pdb",
     "Test/test.obj",
     "Test/vc140.pdb",
@@ -182,20 +195,15 @@
     "Test/build/test_16/test.exe",
     "Test/build/test_16",
     "Cây/Cây AVL/Các thao tác xoay của cây AVL.md",
-    "Chưa đặt tên.base",
     "Excalidraw/Drawing 2025-08-23 16.42.24.excalidraw.md",
     "Cây/Cây AVL/IMG_1 (1).png",
     "Excalidraw/Drawing 2025-08-23 17.31.58.excalidraw.md",
     "Cây/Cây AVL/IMG_2 (1).png",
     "Cây/Cây AVL/IMG_2.png",
     "Cây/Cây AVL/IMG_1.png",
-    "Cây/Các loại cây.md",
     "Cây/Cây BST/Xóa nút trong cây BST.md",
-    "Cây/Cây AVL",
     "Cây/Cây BST/Tìm nút trong cây BST.md",
     "Cây/Cây BST/Chèn nút trong cây BST.md",
-    "Test/build/test_15/test.pdb",
-    "Test/build/test_15/test.ilk",
     "Cây/Cây BST/Cây BST.md",
     "Cây/Cây nhị phân/Khởi tạo kiểu dữ liệu.md",
     "Cây/Cây nhị phân/Duyệt qua Cây nhị phân.md",
@@ -205,17 +213,10 @@
     "$RECYCLE.BIN/$RPJAY8L.md",
     "$RECYCLE.BIN/$IPJAY8L.md",
     "Cây/Cây nhị phân/Xóa nút khỏi Cây nhị phân.md",
-    "Cây/Cây nhị phân/Thêm nút vào cây nhị phân.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/Tầm quan trọng của Danh sách liên kết.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/So sánh giữa Danh sách liên kết và Mảng.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/Phân tích thời gian của các thao tác trong Danh sách liên kết và Mảng.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/Một số thuật ngữ cơ bản của danh sách liên kết.md",
-    "$RECYCLE.BIN/$REG38VY/Danh sách liên kết/Giới thiệu về Danh sách liên kết/Giới thiệu về danh sách liên kết.md",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_7.png",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_6.png",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_5.png",
     "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_4.png",
-    "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_3.png",
-    "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_2.png"
+    "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_3.png"
   ]
 }
