@@ -11,24 +11,42 @@ git clone --depth=1 https://github.com/Little-Blueberries/myDSAResult.git
 ```
 
 Then install Obsidian and open this repository folder
-If you want to run code, you need to have Python3.10 or newer version install and GCC compiler to compile C from test_1 to test_13, MSVC to compile CPP from test_14 after.
-To run the code, open command prompt and type these command:
+To run the code, you must installed MSVC compiler from the Visual Studio main page (if you use Windows) or GCC compiler from Linux.
 
-Then run these specific type of run:
-**C++**:
-From test_1 to test_13:
+## Windows user
+Command `winget` to install Visual Build Tools:
 ``` bash
-cd "YourPath\Of\File"
-cd Test
-cd "test_<number>"
-make run_c
+winget install Microsoft.VisualStudio.2022.BuildTools --force --override "--wait --passive --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64
+```
+Then, if they ask you to choose what to install, choose Desktop Development with C++, check the left, check if C++ Address Sanitizer is ticked, because it is necessary for debug mode. Then check the WinSDK as well, choose Windows 10 SDK if you use Windows 10, Windows 11 SDK if you use Windows 11. After press install, you will have to wait some of 10 minutes.
+
+Next, open Developer command prompt for VS 2022 and type these command:
+``` bash
+cd \\path\\to\\file
+cd DSA\\Test
+.\run.bat test_<number> [/debug][/release]
 ```
 
-From test_14 after:
+## Linux user
+Command to install g++ and valgrind:
+
+### Debian/Ubuntu:
 ``` bash
-cd "YourPath\Of\File"
-cd Test
-.\run.bat "test_<number>" /rebuild
+sudo apt update && sudo apt upgrade
+sudo apt install gcc valgrind
 ```
 
-Now everything is ready for you!
+### Arch Linux:
+``` bash
+sudo pacman -Syu --needed gcc valgrind
+```
+
+_There's more, but u should search at the internet_
+
+Run files:
+``` bash
+cd /path/to/file
+cd DSA/Test
+chmod +x run.sh
+./run.sh test_<number> [/debug][/release]
+```
