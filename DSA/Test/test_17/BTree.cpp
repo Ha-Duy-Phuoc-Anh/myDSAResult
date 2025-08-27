@@ -161,3 +161,19 @@ void BNode::splitChild(int i, BNode* y) {
 
     this->n++;
 }
+
+// Một hàm để tìm kiếm chỉ số của khóa đầu tiên lớn hơn hoặc bằng target
+int BNode::findKey(int target) const {
+	int idx = 0;	// Khởi tạo chỉ số
+	// Lặp cho tới khi tìm thấy khóa lớn hơn
+	while (idx < this->n && this->keys[idx] < target)
+		idx++;
+
+	// Trả về chỉ số của nó
+	return idx;
+}
+
+// Một hàm bọc để xóa khóa trong cây phụ có gôc là nút này
+void remove(int key) {
+
+}
