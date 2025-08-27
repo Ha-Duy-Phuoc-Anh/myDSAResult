@@ -1,9 +1,5 @@
 #pragma once
 
-#include <iostream>
-
-using namespace std;
-
 // Khởi tạo nút của cây B
 class BNode {
 private:

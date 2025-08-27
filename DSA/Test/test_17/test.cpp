@@ -1,75 +1,27 @@
-#include <vector>
+#include "BTree.hpp"
+#include "stdc++.hpp"
 
 using namespace std;
 
-class Node {
-	// Số lượng khóa trong nút
-	int n;
+int main() {
+	BTree t(3); // A B-Tree with minimum degree 3
+	t.insert(10);
+	t.insert(20);
+	t.insert(5);
+	t.insert(6);
+	t.insert(12);
+	t.insert(30);
+	t.insert(7);
+	t.insert(17);
 
-	// Mảng lưu trữ khóa trong nút
-	vector<int> keys;
+	cout << "Traversal of the constructed tree is ";
+	t.display();
 
-	// Mảng lưu trữ con trỏ đến các nút trong trong cây
-	vector<Node*> children;
+	int k = 6;
+	(t.search(k) != NULL) ? cout << "\nPresent" : cout << "\nNot Present";
 
-	// Boolean cho biết nút đó có phải nút lá ko
-	bool isLeaf;
+	k = 15;
+	(t.search(k) != NULL) ? cout << "\nPresent" : cout << "\nNot Present";
 
-	// Hàm khởi tạo đối tượng Nút
-	Node(bool _isLeaf = false, int _m = 0) : n(0), isLeaf(_isLeaf) {
-		// Khởi tạo đủ bộ nhớ cho mảng lưu trữ khóa
-		keys.resize(_m);
-
-		// Khởi tạo đủ bộ nhớ cho mảng lưu trữ đến các nút trong cây
-		if (!isLeaf)
-			children.resize(_m + 1);
-	}
-
-	
-};
-class BTree {
-private:
-	Node* root = nullptr;
-
-  // Hàm overload hỗ trợ tìm kiếm
-  bool search(Node *overloadRoot, int key) const {
-		int i = 0;
-    while (i < overloadRoot->n && key > overloadRoot->keys[i]) {
-      i++;
-    }
-    if (i < overloadRoot->n && key == overloadRoot->keys[i]) {
-      return true;
-    }
-    if (overloadRoot->isLeaf) {
-      return false;
-    }
-    return search(overloadRoot->children[i], key);
-	}
-
-public:
-	// Hàm khởi tạo cây
-	BTree() {
-		root = nullptr;
-	};
-
-	// Hàm tìm kiếm nút trong cây
-	bool search(int key) const {
-		if (!root) return false;
-		return search(root, key);
-	}
-
-	// Hàm duyệt cây
-	void display() const {
-		// Có n khóa và n + 1 nút con, duyệt qua những khóa n
-		// và nút con đầu tiền
-		int i;
-		for (int i = 0; i < root->n; i++) {
-			// Nếu đây không phải là nút lá, thì trước khi in ra khóa[i]
-			// Duyệt cây con có gốc là C[i]
-			if (!root->isLeaf) {
-			}
-
-		}
-	}
-};
-
+	return 0;
+}
