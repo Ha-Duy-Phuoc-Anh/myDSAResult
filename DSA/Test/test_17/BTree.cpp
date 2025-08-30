@@ -54,7 +54,7 @@ BNode* BNode::search(int target) const {
 }
 
 // Hàm chèn một khóa mới vào B-Tree
-void BTree::insert(int k) {
+void BTree::insert(int k) { 
 	// Nếu cây rỗng
 	if (this->root == nullptr) {
 		// Cấp phát bộ nhớ cho nút gốc mới
@@ -174,6 +174,12 @@ int BNode::findKey(int target) const {
 }
 
 // Một hàm bọc để xóa khóa trong cây phụ có gôc là nút này
-void remove(int key) {
+void BNode::remove(int key) {
+	// Tìm kiếm chỉ số của khóa
+	int idx = this->findKey(key);
+	
+	// Khóa được xóa sẽ có trong nút này
+	if (idx < n && keys[idx] == key) {
 
+	}
 }
