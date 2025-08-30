@@ -180,6 +180,6 @@ void BNode::remove(int key) {
 	
 	// Khóa được xóa sẽ có trong nút này
 	if (idx < n && keys[idx] == key) {
-
+		
 	}
 }
