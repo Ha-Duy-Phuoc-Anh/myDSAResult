@@ -1,6 +1,7 @@
 #include "BTree.hpp"
 #include "stdc++.hpp"
 
+
 using namespace std;
 
 // Constructor khởi tạo nút của một cây
@@ -54,7 +55,7 @@ BNode* BNode::search(int target) const {
 }
 
 // Hàm chèn một khóa mới vào B-Tree
-void BTree::insert(int k) { 
+void BTree::insert(int k) {
 	// Nếu cây rỗng
 	if (this->root == nullptr) {
 		// Cấp phát bộ nhớ cho nút gốc mới
@@ -133,38 +134,38 @@ void BNode::insertNoneFull(int key) {
 // Một hàm tách nút y của nút này ra hai phần, i là chỉ số của y trong mảng
 // nút con. Nút con y bắt buộc phải đầy trước khi gọi hàm này
 void BNode::splitChild(int i, BNode* y) {
-    BNode* z = new BNode(y->isLeaf, y->t);
-    z->n = y->t - 1;
+	BNode* z = new BNode(y->isLeaf, y->t);
+	z->n = y->t - 1;
 
-    // Sao chép khóa
-    for (int j = 0; j < y->t - 1; j++)
-        z->keys[j] = y->keys[j + y->t];
+	// Sao chép khóa
+	for (int j = 0; j < y->t - 1; j++)
+		z->keys[j] = y->keys[j + y->t];
 
-    // Sao chép con (nếu có)
-    if (!y->isLeaf) {
-        for (int j = 0; j < y->t; j++)
-            z->children[j] = y->children[j + y->t];
-    }
+	// Sao chép con (nếu có)
+	if (!y->isLeaf) {
+		for (int j = 0; j < y->t; j++)
+			z->children[j] = y->children[j + y->t];
+	}
 
-    // Giảm số khóa y
-    y->n = y->t - 1;
+	// Giảm số khóa y
+	y->n = y->t - 1;
 
-    // Dịch con của node hiện tại để chèn z
-    for (int j = this->n; j >= i + 1; j--)
-        this->children[j + 1] = this->children[j];
-    this->children[i + 1] = z;
+	// Dịch con của node hiện tại để chèn z
+	for (int j = this->n; j >= i + 1; j--)
+		this->children[j + 1] = this->children[j];
+	this->children[i + 1] = z;
 
-    // Dịch khóa của node hiện tại để chèn median
-    for (int j = this->n - 1; j >= i; j--)
-        this->keys[j + 1] = this->keys[j];
-    this->keys[i] = y->keys[y->t - 1];
+	// Dịch khóa của node hiện tại để chèn median
+	for (int j = this->n - 1; j >= i; j--)
+		this->keys[j + 1] = this->keys[j];
+	this->keys[i] = y->keys[y->t - 1];
 
-    this->n++;
+	this->n++;
 }
 
 // Một hàm để tìm kiếm chỉ số của khóa đầu tiên lớn hơn hoặc bằng target
 int BNode::findKey(int target) const {
-	int idx = 0;	// Khởi tạo chỉ số
+	int idx = 0; // Khởi tạo chỉ số
 	// Lặp cho tới khi tìm thấy khóa lớn hơn
 	while (idx < this->n && this->keys[idx] < target)
 		idx++;
@@ -177,9 +178,40 @@ int BNode::findKey(int target) const {
 void BNode::remove(int key) {
 	// Tìm kiếm chỉ số của khóa
 	int idx = this->findKey(key);
-	
+
 	// Khóa được xóa sẽ có trong nút này
 	if (idx < n && keys[idx] == key) {
-		
+		// Nếu đây là một nút lá, gọi removeFromLeaf
+		// Nếu không thì gọi removeFromNonLeaf
+		if (this->isLeaf)
+			removeFromLeaf(idx);
+		else
+			removeFromNonLeaf(idx);
 	}
+	else {
+		// Nếu đây là một nút lá thì khóa đó sẽ không nằm trong đây
+		if (this->isLeaf) {
+			cerr << "ERROR 001: Key is not found" << endl;
+			return;
+		}
+
+		// Chìa khóa cần bị xóa có mặt trong cây con bắt đầu từ nút này.
+		// Cờ hiệu chỉ ra liệu chìa khóa có mặt trong cây
+		// con bắt đầu từ đứa con cuối cùng của nút này
+		bool flag = (idx == this->n) ? true : false;
+
+		// Nếu nút con nơi khóa dự kiến tồn tại có ít hơn t khóa,
+		// chúng ta sẽ điền đầy cho nút con đó.
+		if (this->children[idx]->n < this->t )
+			this->fill(idx);
+
+		// Nếu nút con cuối đã bị gộp, nó phải đã gộp với nút con trước đó,
+		// vì vậy chúng ta sẽ đệ quy trên nút con thứ (idx-1). Nếu không, chúng ta sẽ đệ quy trên
+		// nút con thứ (idx) hiện có ít nhất t khóa.
+		if (flag && idx > this->n) 
+			this->children[idx - 1]->remove(key);
+		else
+		 	children[idx]->remove(key);
+	}
+	return;
 }
