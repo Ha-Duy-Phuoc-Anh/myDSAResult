@@ -82,4 +82,7 @@ public:
 
 	// Hàm chèn nút vào trong cây
 	void insert(int key);
+
+	// Hàm xóa nút khỏi cây
+	void remove(int key);
 };

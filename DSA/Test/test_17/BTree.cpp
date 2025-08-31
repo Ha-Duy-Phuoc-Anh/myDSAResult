@@ -330,7 +330,7 @@ void BNode::borrowFromPrevious(int idx) {
 	// Chỉnh khóa đầu tiên trong child bằng với keys[idx - 1] từ nút hiện tại
 	child->keys[0] = this->keys[idx - 1];
 
-	// Di chuyển nút con cuối cùng của anh chị em bằng với nút con đầu tiên children[idx] 
+	// Di chuyển nút con cuối cùng của anh chị em bằng với nút con đầu tiên children[idx]
 	if (!child->isLeaf)
 		child->children[0] = sibling->children[sibling->n];
 
@@ -356,11 +356,63 @@ void BNode::borrowFromNext(int idx) {
 	if (!child->isLeaf)
 		child->children[(child->n) + 1] = sibling->children[0];
 
+	// Khóa đầu tiên từ anh chị em được chèn vào keys[idx]
+	this->keys[idx] = sibling->keys[0];
+
+	// Di chuyển tất cả các khóa trong nút anh chị em một bước về phía sau
+	for (int i = 1; i < sibling->n; ++i)
+		sibling->keys[i - 1] = sibling->keys[i];
+
+	// Di chuyển con trỏ con một bước về phía sau
+	if (!sibling->isLeaf) {
+		for (int i = 1; i <= sibling->n; ++i)
+			sibling->children[i - 1] = sibling->children[i];
+	}
+
+	// Tăng và giảm số lượng khóa trong children[idx] và children[idx + 1] tương ứng
+	child->n++;
+	sibling->n--;
+
+	return;
+}
+
+// Hàm để gộp cây con thứ idx của nút với cây con thứ (idx+1) của nút (ngược với split)
+void BNode::merge(int idx) {
+	BNode* child = this->children[idx];
+	BNode* sibling = this->children[idx + 1];
+
+	// Đẩy một khóa từ nút current và chèn nó vào vị trí (t - 1)th của children[idx]
+	child->keys[this->t - 1] = this->keys[idx];
+
+	// Sao chép khóa từ children[idx + 1] tới children[idx] ở cuối cùng
+	for (int i = 0; i < sibling->n; ++i)
+		child->keys[i + this->t] = sibling->keys[i];
+
 	// Sao chép con trỏ con từ children[idx + 1] tới children[idx]
 	if (!child->isLeaf) {
 		for (int i = 0; i <= sibling->n; ++i)
 			child->children[i + this->t] = sibling->children[i];
 	}
 
-	// Di chuyển tất cả các khóa sao idx trong nút current một bước 
+	// Di chuyển toàn bộ khóa đằng sau idx trong nút current một bước trước khi điền đầy các khoảng trống được tạo ra để
+	// di chuyển keys[idx] tới children[idx]
+	for (int i = idx + 1; i < this->n; ++i)
+		this->keys[i - 1] = this->keys[i];
+
+	// Di chuyển các con trỏ con đằng sau (idx + 1) trong nút hiện tại một bước về sau
+	for (int i = idx + 2; i <= this->n; ++i)
+		this->children[i - 1] = this->children[i];
+
+	// Cập nhật số lượng khóa trong nút con và nút này
+	child->n += sibling->n + 1;
+	this->n--;
+
+	// Giải phóng bộ nhớ bị anh chị em chiếm giữ
+	delete sibling;
+	return;
+}
+
+// Hàm xóa nút khỏi cây
+void BTree::remove(int key) {
+	if (!)
 }
