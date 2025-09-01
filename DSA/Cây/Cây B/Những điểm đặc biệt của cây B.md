@@ -4,4 +4,4 @@
 2. Chiều cao của một **Cây B** khi nó được điền ít nhất $$h_{max} = [\log_{t}(\frac{n + 1}{2})]$$
 
 **Bài trước**: [[Một số đặc điểm của cây B]]
-**Bài sau**: [[Khởi tạo cây B]]
+**Bài sau**: [[Toàn bộ mã nguồn mẫu cây B]]

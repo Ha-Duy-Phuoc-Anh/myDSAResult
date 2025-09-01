@@ -14,8 +14,14 @@ int main() {
 	t.insert(7);
 	t.insert(17);
 
-	cout << "Traversal of the constructed tree is ";
+	cout << "Before delete:";
 	t.display();
+	cout << '\n';
+
+	t.remove(17);
+	cout << "After delete:";
+	t.display();
+	cout << '\n';
 
 	int k = 6;
 	(t.search(k) != NULL) ? cout << "\nPresent" : cout << "\nNot Present";

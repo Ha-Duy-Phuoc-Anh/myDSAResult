@@ -17,7 +17,7 @@ BraceWrapping:
   SplitEmptyFunction: true
   SplitEmptyRecord: true
 BreakBeforeBraces: Custom
-ColumnLimit: 120
+ColumnLimit: 80
 Cpp11BracedListStyle: false
 FixNamespaceComments: false
 IndentCaseLabels: false

@@ -10,5 +10,3 @@
 **Xem tiếp**:
 - [[Một số đặc điểm của cây B]]
 - [[Những điểm đặc biệt của cây B]]
-- [[Khởi tạo cây B]]
-- [[Chèn dữ liệu vào cây B]]

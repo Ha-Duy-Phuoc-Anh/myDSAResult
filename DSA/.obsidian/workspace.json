@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8add54d62483358b",
+        "id": "ab6b1b752e364ad6",
         "type": "tabs",
         "children": [
           {
-            "id": "941b56357f1636e5",
+            "id": "46b01ed3fe85f874",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cây/Cây B/Chèn dữ liệu vào cây B.md",
+                "file": "Cây/Cây B/Cây B.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chèn dữ liệu vào cây B"
+              "title": "Cây B"
             }
           }
         ]
@@ -170,15 +170,15 @@
       "switcher:Mở bộ chuyển đổi nhanh": false
     }
   },
-  "active": "941b56357f1636e5",
+  "active": "46b01ed3fe85f874",
   "lastOpenFiles": [
-    "Test/test_17/BTree.cpp",
-    "Test/test_17/BTree.h",
-    "Cây/Cây B/Khởi tạo cây B.md",
+    "Cây/Cây B/Toàn bộ mã nguồn mẫu cây B.md",
+    "Cây/Cây B/Một số đặc điểm của cây B.md",
     "Cây/Cây B/Chèn dữ liệu vào cây B.md",
     "Cây/Cây B/Những điểm đặc biệt của cây B.md",
-    "Cây/Cây B/Một số đặc điểm của cây B.md",
     "Cây/Cây B/Cây B.md",
+    "Test/test_17/BTree.cpp",
+    "Test/test_17/BTree.h",
     "Test/test_17/test.cpp",
     "Test/test_17",
     "Cây/Các loại cây.md",
@@ -193,7 +193,6 @@
     "Test/build/test_16/test.ilk",
     "Cây/Cây AVL/Cây AVL.md",
     "Test/build/test_16/test.exe",
-    "Test/build/test_16",
     "Cây/Cây AVL/Các thao tác xoay của cây AVL.md",
     "Excalidraw/Drawing 2025-08-23 16.42.24.excalidraw.md",
     "Cây/Cây AVL/IMG_1 (1).png",
