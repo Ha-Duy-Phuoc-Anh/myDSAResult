@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ab6b1b752e364ad6",
+        "id": "22e7d19dc6e9ee40",
         "type": "tabs",
         "children": [
           {
-            "id": "46b01ed3fe85f874",
+            "id": "90d1e367702148a4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cây/Cây B/Cây B.md",
+                "file": "Cây/Cây Heap/Các thao tác hỗ trợ Cây Heap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cây B"
+              "title": "Các thao tác hỗ trợ Cây Heap"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Trình duyệt tệp"
+              "title": "Files"
             }
           },
           {
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 302.5
+    "width": 200
   },
   "right": {
     "id": "5925326fffbdaef7",
@@ -160,62 +160,62 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "graph:Mở xem biểu đồ": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "canvas:Tạo bảng mới": false,
-      "daily-notes:Mở ghi chú hôm nay": false,
-      "templates:Chèn mẫu": false,
-      "command-palette:Mở khay lệnh": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "switcher:Mở bộ chuyển đổi nhanh": false
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "46b01ed3fe85f874",
+  "active": "90d1e367702148a4",
   "lastOpenFiles": [
+    "Cây/Cây Heap/Thực hiện cấu trúc dữ liệu Heap.md",
+    "Test/test_18/stdc++.hpp",
+    "Test/test_18/stdc++.cpp",
+    "Test/test_18/test.cpp",
+    "Test/test_18",
+    "Cây/Cây Heap/Cây Heap.md",
+    "Cây/Cây Heap/Các thao tác hỗ trợ Cây Heap.md",
+    "Cây/Cây Heap/Các thành phần của Heap.md",
+    "Excalidraw/Drawing 2025-09-05 20.07.24.excalidraw.md",
+    "Cây/Cây Heap/IMG_4.png",
+    "Excalidraw/Drawing 2025-09-05 19.33.08.excalidraw.md",
+    "Cây/Cây Heap/IMG_3.png",
+    "Excalidraw/Drawing 2025-09-04 15.37.51.excalidraw.md",
+    "Excalidraw/Drawing 2025-09-04 16.08.41.excalidraw.md",
+    "Cây/Cây Heap/IMG_2.png",
+    "Excalidraw/Drawing 2025-08-24 16.21.54.excalidraw.md",
+    "Cây/Cây Heap/IMG_1 (1).png",
+    "Cây/Cây Heap/IMG_1.png",
+    "Cây/Các loại cây.md",
+    "Cây/Cây BST/Cây BST.md",
+    "Cây/Cây Heap",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đôi.md",
+    "Danh sách liên kết/IMG_1.png",
+    "Cây/Cây B/Cây B.md",
     "Cây/Cây B/Toàn bộ mã nguồn mẫu cây B.md",
     "Cây/Cây B/Một số đặc điểm của cây B.md",
     "Cây/Cây B/Chèn dữ liệu vào cây B.md",
     "Cây/Cây B/Những điểm đặc biệt của cây B.md",
-    "Cây/Cây B/Cây B.md",
     "Test/test_17/BTree.cpp",
     "Test/test_17/BTree.h",
     "Test/test_17/test.cpp",
     "Test/test_17",
-    "Cây/Các loại cây.md",
-    "Excalidraw/Drawing 2025-08-24 16.21.54.excalidraw.md",
     "Cây/Cây AVL/IMG_3.png",
     "Cây/Cây B",
     "Cây/Cây AVL/Xóa nút trong cây AVL.md",
     "Cây/Cây AVL/Chèn nút trong cây AVL.md",
-    "Test/build/test_16/test.pdb",
-    "Test/test.obj",
-    "Test/vc140.pdb",
-    "Test/build/test_16/test.ilk",
     "Cây/Cây AVL/Cây AVL.md",
-    "Test/build/test_16/test.exe",
     "Cây/Cây AVL/Các thao tác xoay của cây AVL.md",
     "Excalidraw/Drawing 2025-08-23 16.42.24.excalidraw.md",
     "Cây/Cây AVL/IMG_1 (1).png",
     "Excalidraw/Drawing 2025-08-23 17.31.58.excalidraw.md",
     "Cây/Cây AVL/IMG_2 (1).png",
     "Cây/Cây AVL/IMG_2.png",
-    "Cây/Cây AVL/IMG_1.png",
     "Cây/Cây BST/Xóa nút trong cây BST.md",
-    "Cây/Cây BST/Tìm nút trong cây BST.md",
-    "Cây/Cây BST/Chèn nút trong cây BST.md",
-    "Cây/Cây BST/Cây BST.md",
-    "Cây/Cây nhị phân/Khởi tạo kiểu dữ liệu.md",
-    "Cây/Cây nhị phân/Duyệt qua Cây nhị phân.md",
-    "Cây/Cây nhị phân/Cây nhị phân.md",
-    "Cây/Cây nhị phân/Các giá trị trong cây nhị phân.md",
-    "Excalidraw/Cây_BST_IMG_1.excalidraw.md",
-    "$RECYCLE.BIN/$RPJAY8L.md",
-    "$RECYCLE.BIN/$IPJAY8L.md",
-    "Cây/Cây nhị phân/Xóa nút khỏi Cây nhị phân.md",
-    "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_7.png",
-    "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_6.png",
-    "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_5.png",
-    "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_4.png",
-    "$RECYCLE.BIN/$REG38VY/Ngăn xếp/IMG_3.png"
+    "Cây/Cây BST/Tìm nút trong cây BST.md"
   ]
 }
