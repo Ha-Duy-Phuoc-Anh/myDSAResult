@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "22e7d19dc6e9ee40",
+        "id": "572d58fd01f8f3d1",
         "type": "tabs",
         "children": [
           {
-            "id": "90d1e367702148a4",
+            "id": "0297913e5cbe329c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cây/Cây Heap/Các thao tác hỗ trợ Cây Heap.md",
+                "file": "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Một số thuật ngữ cơ bản của danh sách liên kết.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Các thao tác hỗ trợ Cây Heap"
+              "title": "Một số thuật ngữ cơ bản của danh sách liên kết"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 311.5
   },
   "right": {
     "id": "5925326fffbdaef7",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ngăn xếp/Ngăn xếp.md",
+                "file": "Excalidraw/Drawing 2025-09-10 19.47.08.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Liên kết đến của Ngăn xếp"
+              "title": "Backlinks for Drawing 2025-09-10 19.47.08.excalidraw"
             }
           },
           {
@@ -170,15 +170,37 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "90d1e367702148a4",
+  "active": "0297913e5cbe329c",
   "lastOpenFiles": [
+    "Danh sách liên kết/ppt3DEF.tmp",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Giới thiệu về danh sách liên kết.md",
+    "Danh sách liên kết/LinkedList.pptx",
+    "Danh sách liên kết/~$LinkedList.pptx",
+    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đôi.md",
+    "Danh sách liên kết/Danh sách liên kết.md",
+    "Excalidraw/Drawing 2025-09-10 19.47.08.excalidraw.md",
+    "Excalidraw/Drawing 2025-09-10 19.42.52.excalidraw.md",
+    "Đồ thị/Các kiểu đồ thị.md",
+    "Đồ thị/Cấu trúc dữ liệu đồ thị là gì.md",
+    "Đồ thị/IMG_5.png",
+    "Excalidraw/Drawing 2025-09-10 19.37.50.excalidraw.md",
+    "Excalidraw/Drawing 2025-09-10 19.29.40.excalidraw.md",
+    "Đồ thị/IMG_4.png",
+    "Đồ thị/Đồ Thị.md",
+    "Excalidraw/Drawing 2025-09-10 19.23.47.excalidraw.md",
+    "Đồ thị/IMG_3.png",
+    "Đồ thị/IMG_2.png",
+    "Đồ thị/IMG_1.png",
+    "Excalidraw/Drawing 2025-09-10 14.02.00.excalidraw.md",
+    "DSA.md",
+    "Đồ thị",
+    "Cây/Cây Heap/Các thao tác hỗ trợ Cây Heap.md",
     "Cây/Cây Heap/Thực hiện cấu trúc dữ liệu Heap.md",
     "Test/test_18/stdc++.hpp",
     "Test/test_18/stdc++.cpp",
     "Test/test_18/test.cpp",
     "Test/test_18",
     "Cây/Cây Heap/Cây Heap.md",
-    "Cây/Cây Heap/Các thao tác hỗ trợ Cây Heap.md",
     "Cây/Cây Heap/Các thành phần của Heap.md",
     "Excalidraw/Drawing 2025-09-05 20.07.24.excalidraw.md",
     "Cây/Cây Heap/IMG_4.png",
@@ -193,29 +215,8 @@
     "Cây/Các loại cây.md",
     "Cây/Cây BST/Cây BST.md",
     "Cây/Cây Heap",
-    "Danh sách liên kết/Giới thiệu về Danh sách liên kết/Các thao tác của Danh sách liên kết đôi.md",
-    "Danh sách liên kết/IMG_1.png",
     "Cây/Cây B/Cây B.md",
-    "Cây/Cây B/Toàn bộ mã nguồn mẫu cây B.md",
-    "Cây/Cây B/Một số đặc điểm của cây B.md",
-    "Cây/Cây B/Chèn dữ liệu vào cây B.md",
-    "Cây/Cây B/Những điểm đặc biệt của cây B.md",
     "Test/test_17/BTree.cpp",
-    "Test/test_17/BTree.h",
-    "Test/test_17/test.cpp",
-    "Test/test_17",
-    "Cây/Cây AVL/IMG_3.png",
-    "Cây/Cây B",
-    "Cây/Cây AVL/Xóa nút trong cây AVL.md",
-    "Cây/Cây AVL/Chèn nút trong cây AVL.md",
-    "Cây/Cây AVL/Cây AVL.md",
-    "Cây/Cây AVL/Các thao tác xoay của cây AVL.md",
-    "Excalidraw/Drawing 2025-08-23 16.42.24.excalidraw.md",
-    "Cây/Cây AVL/IMG_1 (1).png",
-    "Excalidraw/Drawing 2025-08-23 17.31.58.excalidraw.md",
-    "Cây/Cây AVL/IMG_2 (1).png",
-    "Cây/Cây AVL/IMG_2.png",
-    "Cây/Cây BST/Xóa nút trong cây BST.md",
-    "Cây/Cây BST/Tìm nút trong cây BST.md"
+    "Test/test_17/BTree.h"
   ]
 }
